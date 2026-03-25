@@ -8,26 +8,50 @@ import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-function useInView(threshold = 0.1) {
+function useInView(threshold = 0.05) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
+    const checkAndSet = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
+          setInView(true);
+          return true;
+        }
+      }
+      return false;
+    };
+    if (checkAndSet()) return;
     const obs = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold }
+      { threshold, rootMargin: "100px 0px 100px 0px" }
     );
     if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
+    const onScroll = () => { if (checkAndSet()) { window.removeEventListener("scroll", onScroll); obs.disconnect(); } };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { obs.disconnect(); window.removeEventListener("scroll", onScroll); };
   }, [threshold]);
   return { ref, inView };
 }
 
-const AURAFIT_CASE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/MyAIApp'sCaseStudy_235c8d77.png";
+// High-res 1434×1920px WebP — replaces the broken 122px-wide PNG
+const AURAFIT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/aurafit-preview-aDDXmmY7Bhcn7ar7cAPefs.webp";
 
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   const { ref, inView } = useInView();
   return (
-    <div ref={ref} className={className} style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(28px)", transition: "opacity 0.7s ease, transform 0.7s ease", ...style }}>
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(20px)",
+        transition: "opacity 0.6s ease, transform 0.6s ease",
+        willChange: "opacity, transform",
+        ...style,
+      }}
+    >
       {children}
     </div>
   );
@@ -73,8 +97,20 @@ export default function AuraFit() {
                 </button>
               </a>
             </div>
-            <div>
-              <img src={AURAFIT_CASE} alt="AuraFit Case Study" className="w-full rounded-2xl object-cover shadow-lg" style={{ maxHeight: "600px", objectPosition: "top" }} />
+            {/* Hero image — portrait phone mockup, contained properly */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "320px", width: "100%" }}>
+                <img
+                  src={AURAFIT_IMG}
+                  alt="AuraFit Case Study"
+                  width={320}
+                  height={428}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-auto block"
+                  style={{ objectFit: "cover", objectPosition: "top" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -178,8 +214,17 @@ export default function AuraFit() {
                   <p className="text-2xl font-mono" style={{ color: "oklch(0.2 0.04 230)" }}>Aa — Mono Sans</p>
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid oklch(0.88 0.015 270 / 0.3)" }}>
-                <img src={AURAFIT_CASE} alt="AuraFit Moodboard" className="w-full object-cover" style={{ maxHeight: "400px", objectFit: "cover", objectPosition: "30% 35%" }} />
+              <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 270 / 0.3)", background: "oklch(0.15 0.01 270)" }}>
+                <img
+                  src={AURAFIT_IMG}
+                  alt="AuraFit Moodboard"
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={533}
+                  className="block"
+                  style={{ maxHeight: "400px", width: "auto", objectFit: "contain" }}
+                />
               </div>
             </div>
           </Section>
@@ -247,8 +292,18 @@ export default function AuraFit() {
                 </p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid oklch(0.88 0.015 270 / 0.3)" }}>
-              <img src={AURAFIT_CASE} alt="AuraFit Full Case Study" className="w-full object-cover" />
+            {/* Full case study image — displayed as a contained portrait strip */}
+            <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 270 / 0.3)", background: "oklch(0.15 0.01 270)" }}>
+              <img
+                src={AURAFIT_IMG}
+                alt="AuraFit Full Case Study"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={800}
+                className="block w-full"
+                style={{ maxHeight: "700px", objectFit: "contain", objectPosition: "top" }}
+              />
             </div>
           </Section>
         </div>
@@ -278,7 +333,12 @@ export default function AuraFit() {
             <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>BEHAVIORAL FRAMEWORK</p>
             <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Behavioral Framework</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[{ num: "01", title: "Goal Structuring", desc: "Define realistic goals based on lifestyle patterns" }, { num: "02", title: "Cognitive Load Reduction", desc: "Simplify daily decisions through guided actions" }, { num: "03", title: "Contextual Adaptation", desc: "Workouts adjust to schedule changes and energy levels" }, { num: "04", title: "Consistency Reinforcement", desc: "Missed sessions trigger adjustments instead of penalties" }].map((f) => (
+              {[
+                { num: "01", title: "Goal Structuring", desc: "Define realistic goals based on lifestyle patterns" },
+                { num: "02", title: "Cognitive Load Reduction", desc: "Simplify daily decisions through guided actions" },
+                { num: "03", title: "Contextual Adaptation", desc: "Workouts adjust to schedule changes and energy levels" },
+                { num: "04", title: "Consistency Reinforcement", desc: "Missed sessions trigger adjustments instead of penalties" },
+              ].map((f) => (
                 <div key={f.num} className="rounded-2xl p-6" style={{ background: "oklch(0.93 0.015 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
                   <p className="text-3xl font-light mb-3" style={{ color: "oklch(0.45 0.12 270 / 0.3)", fontFamily: "'DM Serif Display', serif" }}>{f.num}</p>
                   <h3 className="text-base font-semibold mb-2" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{f.title}</h3>

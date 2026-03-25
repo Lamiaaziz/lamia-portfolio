@@ -7,23 +7,50 @@ import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-function useInView(threshold = 0.1) {
+function useInView(threshold = 0.05) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
-    const obs = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) setInView(true); }, { threshold });
+    const checkAndSet = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
+          setInView(true);
+          return true;
+        }
+      }
+      return false;
+    };
+    if (checkAndSet()) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold, rootMargin: "100px 0px 100px 0px" }
+    );
     if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
+    const onScroll = () => { if (checkAndSet()) { window.removeEventListener("scroll", onScroll); obs.disconnect(); } };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { obs.disconnect(); window.removeEventListener("scroll", onScroll); };
   }, [threshold]);
   return { ref, inView };
 }
 
-const VOKO_CASE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/E-comCaseStudy_5299936a.png";
+// High-res 1434×1920px WebP — replaces the broken 126px-wide PNG
+const VOKO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/voko-preview-EAzR7gjACG8AqB7YhWBEeZ.webp";
 
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   const { ref, inView } = useInView();
   return (
-    <div ref={ref} className={className} style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(28px)", transition: "opacity 0.7s ease, transform 0.7s ease", ...style }}>
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(20px)",
+        transition: "opacity 0.6s ease, transform 0.6s ease",
+        willChange: "opacity, transform",
+        ...style,
+      }}
+    >
       {children}
     </div>
   );
@@ -66,8 +93,20 @@ export default function VOKO() {
                 </button>
               </a>
             </div>
-            <div>
-              <img src={VOKO_CASE} alt="VOKO Case Study" className="w-full rounded-2xl object-cover shadow-lg" style={{ maxHeight: "600px", objectPosition: "top" }} />
+            {/* Hero image — portrait phone mockup, contained properly */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "320px", width: "100%" }}>
+                <img
+                  src={VOKO_IMG}
+                  alt="VOKO Case Study"
+                  width={320}
+                  height={428}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-auto block"
+                  style={{ objectFit: "cover", objectPosition: "top" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -166,8 +205,17 @@ export default function VOKO() {
                   <p className="text-2xl font-bold" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Aa — Bold Display</p>
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-                <img src={VOKO_CASE} alt="VOKO Moodboard" className="w-full object-cover" style={{ maxHeight: "400px", objectFit: "cover", objectPosition: "30% 35%" }} />
+              <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.96 0.018 75)" }}>
+                <img
+                  src={VOKO_IMG}
+                  alt="VOKO Moodboard"
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={533}
+                  className="block"
+                  style={{ maxHeight: "400px", width: "auto", objectFit: "contain" }}
+                />
               </div>
             </div>
           </Section>
@@ -185,7 +233,7 @@ export default function VOKO() {
                 <div>
                   <div className="w-16 h-16 rounded-full mb-4 flex items-center justify-center text-2xl font-bold" style={{ background: "oklch(0.98 0.005 230 / 0.15)", color: "oklch(0.98 0.005 230)" }}>N</div>
                   <h3 className="text-xl font-semibold mb-1" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>Nora, 24</h3>
-                  <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>University Student, Riyadh</p>
+                  <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>Fashion Enthusiast, Riyadh</p>
                 </div>
                 <div>
                   <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>GOALS</p>
@@ -235,8 +283,18 @@ export default function VOKO() {
                 </p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-              <img src={VOKO_CASE} alt="VOKO Full Case Study" className="w-full object-cover" />
+            {/* Full case study image — displayed as a contained portrait strip */}
+            <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.96 0.018 75)" }}>
+              <img
+                src={VOKO_IMG}
+                alt="VOKO Full Case Study"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={800}
+                className="block w-full"
+                style={{ maxHeight: "700px", objectFit: "contain", objectPosition: "top" }}
+              />
             </div>
           </Section>
         </div>
