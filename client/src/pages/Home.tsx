@@ -1,7 +1,6 @@
 /*
  * HOME PAGE — Lamia Portfolio "Soft Blueprint"
- * Sections: Hero, About, Tools, Selected Work (4 projects), Contact CTA
- * Design: Asymmetric editorial layout, DM Serif Display headings, circle motifs, numbered sections
+ * Updated to reflect real CV background and align with EY Wavespace requirements
  */
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
@@ -23,15 +22,12 @@ function useInView(threshold = 0.05) {
       }
       return false;
     };
-    // Check immediately on mount
     if (checkAndSet()) return;
-    // Also observe for future scroll
     const obs = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setInView(true); },
       { threshold, rootMargin: "200px 0px 200px 0px" }
     );
     if (ref.current) obs.observe(ref.current);
-    // Also check on scroll
     const onScroll = () => { if (checkAndSet()) { window.removeEventListener('scroll', onScroll); obs.disconnect(); } };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => { obs.disconnect(); window.removeEventListener('scroll', onScroll); };
@@ -45,22 +41,14 @@ const TRAVEL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivU
 const VOKO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/voko-preview-EAzR7gjACG8AqB7YhWBEeZ.webp";
 const WEBDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Desktop-1_d79b0fb8.png";
 
-const tools = [
-  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Webflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", label: "W" },
-  { name: "Illustrator", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
-  { name: "Photoshop", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
-  { name: "InDesign", icon: null, label: "Id" },
-];
-
 const projects = [
   {
     num: "01",
     title: "AuraFit",
     subtitle: "Behavioral Fitness System",
-    type: "UX Product Concept · Bootcamp Project",
-    description: "A behavioral fitness system designed to help Saudi professionals maintain workout consistency despite irregular schedules — reframing fitness as an adaptive system, not a motivation challenge.",
-    tags: ["Behavioral UX", "Product Strategy", "Mobile App", "Saudi Market"],
+    type: "Conceptual UX Research · Bootcamp Project",
+    description: "A behavioral fitness system designed to help Saudi professionals maintain workout consistency despite irregular schedules. Grounded in independent user research, behavioral pattern analysis, and human-centered design — reframing fitness as an adaptive system, not a motivation challenge.",
+    tags: ["Behavioral UX", "User Research", "Product Strategy", "Mobile App", "Saudi Market"],
     href: "/aurafit",
     img: AURAFIT_IMG,
     accent: "oklch(0.35 0.09 230)",
@@ -70,9 +58,9 @@ const projects = [
     num: "02",
     title: "Travel Tales",
     subtitle: "Travel Planning Experience",
-    type: "UX Product Concept",
-    description: "A mobile travel experience that simplifies destination discovery and booking through a clear, visual, step-by-step flow — reducing friction from exploration to confirmation.",
-    tags: ["UX Research", "User Flow", "Mobile App", "Information Architecture"],
+    type: "Conceptual UX Research",
+    description: "A mobile travel experience that simplifies destination discovery and booking through a clear, visual, step-by-step flow. Developed through independent research, user flow mapping, and information architecture design — reducing friction from exploration to confirmation.",
+    tags: ["UX Research", "User Flow", "Information Architecture", "Mobile App", "Wireframing"],
     href: "/traveltales",
     img: TRAVEL_IMG,
     accent: "oklch(0.45 0.1 220)",
@@ -82,9 +70,9 @@ const projects = [
     num: "03",
     title: "VOKO",
     subtitle: "Fashion E-commerce Experience",
-    type: "UX Product Concept",
-    description: "A fashion shopping mobile experience that streamlines product discovery and checkout — turning a complex purchase journey into a smooth, intuitive flow.",
-    tags: ["E-commerce UX", "Visual Design", "Mobile App", "Checkout Flow"],
+    type: "Conceptual UX Research",
+    description: "A fashion shopping mobile experience that streamlines product discovery and checkout. Developed through independent research and iterative prototyping — translating complex purchase journeys into smooth, intuitive flows with clear visual hierarchy.",
+    tags: ["E-commerce UX", "Visual Design", "Prototyping", "Mobile App", "Checkout Flow"],
     href: "/voko",
     img: VOKO_IMG,
     accent: "oklch(0.55 0.1 75)",
@@ -95,8 +83,8 @@ const projects = [
     title: "Web Design",
     subtitle: "Full Website Design & Webflow Development",
     type: "Web Design · Webflow",
-    description: "Two complete website designs built and deployed in Webflow — a business consulting platform and a team collaboration website with integrated CMS blog. Demonstrating end-to-end design-to-development skills.",
-    tags: ["Webflow", "Web Design", "CMS", "Responsive"],
+    description: "Two complete website designs built and deployed in Webflow — a business consulting platform and a team collaboration website with integrated CMS blog. Demonstrating end-to-end design-to-development skills with responsive layouts and visual systems.",
+    tags: ["Webflow", "Web Design", "CMS", "Responsive", "Visual Systems"],
     href: "/webdesign",
     img: WEBDESIGN_IMG,
     accent: "oklch(0.28 0.1 155)",
@@ -218,6 +206,7 @@ export default function Home() {
   const aboutSection = useInView();
   const toolsSection = useInView();
   const workSection = useInView();
+  const experienceSection = useInView();
 
   return (
     <Layout>
@@ -256,7 +245,7 @@ export default function Home() {
                 className="section-num"
                 style={{ letterSpacing: "0.2em" }}
               >
-                PRODUCT DESIGNER · 2026
+                EXPERIENCE DESIGNER · RIYADH, KSA
               </span>
             </div>
 
@@ -266,7 +255,6 @@ export default function Home() {
               style={{
                 color: "oklch(0.45 0.06 230)",
                 fontFamily: "'DM Sans', sans-serif",
-                letterSpacing: "0.05em",
               }}
             >
               Lamia Alrowaished
@@ -282,9 +270,9 @@ export default function Home() {
             >
               Designing
               <br />
-              <em style={{ color: "oklch(0.35 0.09 230)" }}>adaptive</em>
+              <em style={{ color: "oklch(0.35 0.09 230)" }}>experiences</em>
               <br />
-              digital products.
+              that navigate.
             </h1>
 
             <p
@@ -294,8 +282,7 @@ export default function Home() {
                 fontFamily: "'DM Sans', sans-serif",
               }}
             >
-              I combine behavioral design, product thinking, and clear visual systems
-              to create experiences that reduce complexity and support long-term user engagement.
+              I translate complex challenges into clear, human-centered experiences — from spatial wayfinding systems to digital product design. I bring a rare combination of business acumen, design thinking, and real-world implementation across Saudi Arabia's leading organizations.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 fade-up fade-up-delay-3">
@@ -361,26 +348,27 @@ export default function Home() {
                 className="text-4xl lg:text-5xl mb-6"
                 style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}
               >
-                4 years of designing
+                Where business
                 <br />
-                <em>with purpose.</em>
+                <em>meets design.</em>
               </h2>
               <p
                 className="text-base leading-relaxed mb-4"
                 style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                I'm a Product and UX Designer with 4 years of experience focused on designing
-                adaptive digital products. My work combines behavioral design, product thinking,
-                and clear visual systems to create experiences that reduce complexity and support
-                long-term user engagement.
+                I'm an Experience Designer based in Riyadh with a background that spans marketing design, business development, and UX — giving me a rare ability to connect user needs with business outcomes.
+              </p>
+              <p
+                className="text-base leading-relaxed mb-4"
+                style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Currently at <strong style={{ color: "oklch(0.35 0.09 230)" }}>Dar Al Riyadh</strong>, I lead user-centered design for wayfinding and environmental systems — mapping user journeys through physical space, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.
               </p>
               <p
                 className="text-base leading-relaxed"
                 style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                I specialize in understanding the <strong style={{ color: "oklch(0.35 0.09 230)" }}>behavioral patterns</strong> behind
-                user decisions — particularly in the Saudi market context — and translating
-                those insights into product systems that genuinely adapt to real life.
+                My earlier experience in <strong style={{ color: "oklch(0.35 0.09 230)" }}>account development and client management</strong> at Winclex — where I applied UX principles to internal dashboards and drove measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for <strong style={{ color: "oklch(0.35 0.09 230)" }}>impact</strong>.
               </p>
             </div>
 
@@ -388,9 +376,9 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { num: "4+", label: "Years of Experience" },
-                { num: "4", label: "Projects" },
-                { num: "5", label: "Design Tools" },
-                { num: "KSA", label: "Market Focus" },
+                { num: "3", label: "Industries Worked In" },
+                { num: "McKinsey", label: "Forward Program" },
+                { num: "AR / EN", label: "Bilingual Designer" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -401,7 +389,7 @@ export default function Home() {
                   }}
                 >
                   <p
-                    className="text-4xl font-light mb-1"
+                    className="text-3xl font-light mb-1"
                     style={{ color: "oklch(0.35 0.09 230)", fontFamily: "'DM Serif Display', serif" }}
                   >
                     {stat.num}
@@ -419,10 +407,112 @@ export default function Home() {
         </div>
       </section>
 
+      {/* EXPERIENCE TIMELINE SECTION */}
+      <section
+        className="py-20"
+        style={{ background: "oklch(0.96 0.008 230)" }}
+      >
+        <div className="container">
+          <div
+            ref={experienceSection.ref}
+            style={{
+              opacity: experienceSection.inView ? 1 : 0,
+              transform: experienceSection.inView ? "translateY(0)" : "translateY(24px)",
+              transition: "opacity 0.7s ease, transform 0.7s ease",
+            }}
+          >
+            <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>EXPERIENCE</p>
+            <h3
+              className="text-3xl mb-10"
+              style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}
+            >
+              Professional Journey
+            </h3>
+            <div className="flex flex-col gap-5">
+              {[
+                {
+                  role: "UX/UI Designer — Wayfinding & Environmental Design",
+                  company: "Dar Al Riyadh",
+                  period: "Sep 2025 – Present",
+                  highlights: ["User journey mapping & spatial flow design", "Cross-functional team collaboration", "Visual systems: signage hierarchy, typography, iconography"],
+                  accent: "oklch(0.35 0.09 230)",
+                },
+                {
+                  role: "Account Development Officer",
+                  company: "Winclex",
+                  period: "Dec 2022 – Sep 2025",
+                  highlights: ["Applied UX to internal dashboards — 20% usability improvement", "Client relationship management & business development", "15% growth in account renewals through data-driven processes"],
+                  accent: "oklch(0.45 0.1 220)",
+                },
+                {
+                  role: "Marketing Graphic Designer",
+                  company: "Casapiu",
+                  period: "Jun 2021 – Dec 2022",
+                  highlights: ["Website interface design & digital campaigns", "25% increase in user engagement through visual restructuring", "Brand identity & content hierarchy design"],
+                  accent: "oklch(0.28 0.1 155)",
+                },
+              ].map((exp, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl p-6 lg:p-8"
+                  style={{
+                    background: "oklch(1 0 0)",
+                    border: "1px solid oklch(0.88 0.015 230 / 0.5)",
+                  }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                    <div>
+                      <p
+                        className="text-lg font-semibold"
+                        style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {exp.role}
+                      </p>
+                      <p
+                        className="text-sm font-medium mt-1"
+                        style={{ color: exp.accent, fontFamily: "'DM Sans', sans-serif" }}
+                      >
+                        {exp.company}
+                      </p>
+                    </div>
+                    <span
+                      className="text-xs px-3 py-1 rounded-full shrink-0"
+                      style={{
+                        background: exp.accent + "15",
+                        color: exp.accent,
+                        fontFamily: "'DM Sans', sans-serif",
+                      }}
+                    >
+                      {exp.period}
+                    </span>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {exp.highlights.map((h, j) => (
+                      <div key={j} className="flex items-start gap-2">
+                        <div
+                          className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
+                          style={{ background: exp.accent }}
+                        />
+                        <p
+                          className="text-sm leading-relaxed"
+                          style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+                        >
+                          {h}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TOOLS SECTION */}
       <section
         className="py-16"
-        style={{ background: "oklch(0.96 0.008 230)" }}
+        style={{ background: "oklch(0.98 0.005 230)" }}
       >
         <div className="container">
           <div
@@ -446,6 +536,8 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 {[
                   { name: "Figma", color: "#F24E1E", letter: "F" },
+                  { name: "Miro", color: "#FFD02F", letter: "M" },
+                  { name: "Canva", color: "#00C4CC", letter: "C" },
                   { name: "Webflow", color: "#4353FF", letter: "W" },
                   { name: "Illustrator", color: "#FF9A00", letter: "Ai" },
                   { name: "Photoshop", color: "#31A8FF", letter: "Ps" },
@@ -500,14 +592,16 @@ export default function Home() {
                   className="text-4xl lg:text-5xl"
                   style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}
                 >
-                  My Creative Journey
+                  Design Research
+                  <br />
+                  <em>& Case Studies</em>
                 </h2>
               </div>
               <p
                 className="hidden md:block text-sm max-w-xs text-right"
                 style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                Imaginative ideas that transform dreams into reality.
+                Conceptual UX research projects grounded in authentic user research and human-centered design methodology.
               </p>
             </div>
           </div>
@@ -564,7 +658,9 @@ export default function Home() {
                 fontFamily: "'DM Serif Display', serif",
               }}
             >
-              Ready to work together?
+              Ready to create
+              <br />
+              <em>meaningful experiences?</em>
             </h2>
             <p
               className="text-base mb-10 max-w-lg mx-auto relative z-10"
@@ -573,8 +669,7 @@ export default function Home() {
                 fontFamily: "'DM Sans', sans-serif",
               }}
             >
-              I'm open to mid-level Product Designer roles in Saudi Arabia.
-              Let's create something meaningful together.
+              I bring a unique blend of business development, client management, and experience design to every project. Based in Riyadh, fluent in Arabic and English — let's build something that matters.
             </p>
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
               <a
@@ -590,7 +685,7 @@ export default function Home() {
                 <ArrowRight size={14} />
               </a>
               <a
-                href="https://linkedin.com/lamia"
+                href="https://linkedin.com/in/lamia-alrowaished"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-medium border transition-all duration-300 hover:scale-105"
