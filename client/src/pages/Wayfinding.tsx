@@ -1,6 +1,6 @@
 /*
  * WAYFINDING CASE STUDY PAGE — Lamia Portfolio
- * Real-world project: Abdali Views Wayfinding Signage System
+ * Real-world project: Mixed-Use Tower Wayfinding Signage System (Confidential Client)
  * Dar Al Riyadh | Sep 2025 – Present
  */
 import Layout from "@/components/Layout";
@@ -75,10 +75,10 @@ export default function Wayfinding() {
                 <em style={{ color: ACCENT }}>Signage Design</em>
               </h1>
               <p className="text-xl mb-6 font-medium" style={{ color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>
-                Abdali Views — Multi-Zone Wayfinding System, Amman
+                Mixed-Use Tower — Multi-Zone Wayfinding System, Amman
               </p>
               <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                A comprehensive wayfinding signage system for Abdali Views — a 24-floor contemporary high-rise in Amman, Jordan. The project involved designing a complete visual navigation language across parking, commercial, and residential zones, serving diverse user groups including residents, hotel guests, medical staff, and international visitors.
+                A comprehensive wayfinding signage system for a 24-floor contemporary mixed-use high-rise in Amman, Jordan. The project involved designing a complete visual navigation language across parking, commercial, and residential zones, serving diverse user groups including residents, hotel guests, medical staff, and international visitors.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
@@ -126,7 +126,7 @@ export default function Wayfinding() {
             <div className="grid lg:grid-cols-2 gap-10">
               <div>
                 <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Abdali Views is among the first contemporary high-rise towers in Jordan, rising 24 floors above Abdali Boulevard. The development integrates residential apartments, commercial retail, a hospital, hotels, and underground parking — creating a complex multi-use environment with diverse navigation needs.
+                  This project is one of the first contemporary high-rise towers in Jordan, rising 24 floors in central Amman. The development integrates residential apartments, commercial retail, a hospital, hotels, and underground parking — creating a complex multi-use environment with diverse navigation needs.
                 </p>
                 <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
                   My role was to design and build a comprehensive wayfinding signage system — establishing guidelines and rules that encompass color, typeface, materials, pictograms, arrows, and layouts — ensuring every user group can navigate confidently and efficiently.

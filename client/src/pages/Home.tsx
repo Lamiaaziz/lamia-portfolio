@@ -684,7 +684,7 @@ export default function Home() {
                     className="text-base font-medium mb-4"
                     style={{ color: "oklch(0.32 0.1 155)", fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    Abdali Views — 24-Floor Mixed-Use Development, Amman
+                    Mixed-Use Tower — 24-Floor Development, Amman
                   </p>
                   <p
                     className="text-sm leading-relaxed mb-6"
