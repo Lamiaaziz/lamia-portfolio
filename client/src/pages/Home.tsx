@@ -205,6 +205,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 export default function Home() {
   const aboutSection = useInView();
   const toolsSection = useInView();
+  const featuredSection = useInView();
   const workSection = useInView();
   const experienceSection = useInView();
 
@@ -566,6 +567,162 @@ export default function Home() {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED REAL-WORLD PROJECT */}
+      <section className="py-24 lg:py-32" style={{ background: "oklch(0.97 0.006 230)" }}>
+        <div className="container">
+          <div
+            ref={featuredSection.ref}
+            style={{
+              opacity: featuredSection.inView ? 1 : 0,
+              transform: featuredSection.inView ? "translateY(0)" : "translateY(24px)",
+              transition: "opacity 0.7s ease, transform 0.7s ease",
+            }}
+          >
+            <div className="flex items-end justify-between mb-14">
+              <div>
+                <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>
+                  FEATURED WORK
+                </p>
+                <h2
+                  className="text-4xl lg:text-5xl"
+                  style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}
+                >
+                  Real-World
+                  <br />
+                  <em style={{ color: "oklch(0.32 0.1 155)" }}>Professional Project</em>
+                </h2>
+              </div>
+              <p
+                className="hidden md:block text-sm max-w-xs text-right"
+                style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Delivered at Dar Al Riyadh — a live, production-grade wayfinding system for a major mixed-use development in Amman, Jordan.
+              </p>
+            </div>
+
+            {/* Wayfinding Feature Card */}
+            <div
+              className="rounded-3xl overflow-hidden"
+              style={{
+                background: "oklch(0.94 0.015 155)",
+                border: "1px solid oklch(0.88 0.015 155 / 0.5)",
+                boxShadow: "0 8px 40px oklch(0.32 0.1 155 / 0.12)",
+              }}
+            >
+              <div className="flex flex-col lg:flex-row min-h-[480px]">
+                {/* Visual panel */}
+                <div
+                  className="lg:w-2/5 relative flex items-center justify-center p-12"
+                  style={{ background: "oklch(0.28 0.1 155)" }}
+                >
+                  <div className="text-center">
+                    <div className="text-7xl mb-6">🗺️</div>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { num: "24", label: "Floors" },
+                        { num: "6", label: "Parking Levels" },
+                        { num: "5+", label: "User Groups" },
+                        { num: "AR/EN", label: "Bilingual" },
+                      ].map((stat) => (
+                        <div
+                          key={stat.label}
+                          className="rounded-xl p-3 text-center"
+                          style={{ background: "oklch(1 0 0 / 0.1)" }}
+                        >
+                          <p
+                            className="text-2xl font-light mb-0.5"
+                            style={{ color: "oklch(0.95 0.01 155)", fontFamily: "'DM Serif Display', serif" }}
+                          >
+                            {stat.num}
+                          </p>
+                          <p
+                            className="text-xs"
+                            style={{ color: "oklch(0.75 0.04 155)", fontFamily: "'DM Sans', sans-serif" }}
+                          >
+                            {stat.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span
+                      className="section-num"
+                      style={{ color: "oklch(0.32 0.1 155)", opacity: 0.7 }}
+                    >
+                      LIVE PROJECT
+                    </span>
+                    <span
+                      className="text-xs font-medium px-3 py-1 rounded-full"
+                      style={{
+                        background: "oklch(0.32 0.1 155 / 0.15)",
+                        color: "oklch(0.28 0.1 155)",
+                        fontFamily: "'DM Sans', sans-serif",
+                      }}
+                    >
+                      Environmental Design · Dar Al Riyadh
+                    </span>
+                  </div>
+
+                  <h3
+                    className="text-3xl lg:text-4xl mb-2"
+                    style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}
+                  >
+                    Wayfinding & Signage Design
+                  </h3>
+                  <p
+                    className="text-base font-medium mb-4"
+                    style={{ color: "oklch(0.32 0.1 155)", fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    Abdali Views — 24-Floor Mixed-Use Development, Amman
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed mb-6"
+                    style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+                  >
+                    A comprehensive wayfinding signage system for one of Jordan's first contemporary high-rises. Designed a complete visual navigation language — color-coding, ISO 7001 pictograms, bilingual (Arabic/English) typography, and modular layout templates — serving residents, hotel guests, medical staff, shoppers, and office workers across parking, commercial, and residential zones.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {["Environmental Design", "Spatial UX", "Bilingual AR/EN", "ISO 7001 Standards", "Color Systems", "Stakeholder Collaboration", "Dar Al Riyadh"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1 rounded-full"
+                        style={{
+                          background: "oklch(0.32 0.1 155 / 0.12)",
+                          color: "oklch(0.28 0.1 155)",
+                          fontFamily: "'DM Sans', sans-serif",
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link href="/wayfinding">
+                    <button
+                      className="inline-flex items-center gap-2 text-sm font-medium group self-start px-6 py-3 rounded-full transition-all duration-300 hover:gap-3"
+                      style={{
+                        background: "oklch(0.32 0.1 155)",
+                        color: "oklch(0.98 0.005 230)",
+                        fontFamily: "'DM Sans', sans-serif",
+                      }}
+                    >
+                      View Full Case Study
+                      <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

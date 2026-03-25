@@ -24,6 +24,7 @@ export default function Layout({ children }: LayoutProps) {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/wayfinding", label: "Wayfinding" },
     { href: "/aurafit", label: "AuraFit" },
     { href: "/traveltales", label: "Travel Tales" },
     { href: "/voko", label: "VOKO" },

@@ -9,11 +9,13 @@ import AuraFit from "./pages/AuraFit";
 import TravelTales from "./pages/TravelTales";
 import VOKO from './pages/VOKO';
 import WebDesign from './pages/WebDesign';
+import Wayfinding from './pages/Wayfinding';
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/wayfinding"} component={Wayfinding} />
       <Route path={"/aurafit"} component={AuraFit} />
       <Route path={"/traveltales"} component={TravelTales} />
       <Route path={"/voko"} component={VOKO} />
