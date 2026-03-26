@@ -34,8 +34,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   "hero.h1.line2": { en: "experiences", ar: "تجارب" },
   "hero.h1.line3": { en: "that navigate.", ar: "تقود وتُلهم." },
   "hero.subtitle": {
-    en: "I translate complex challenges into clear, human-centered experiences — from spatial wayfinding systems to digital products. I design fluently in Arabic and English, facilitate co-creation workshops, and bring a rare combination of design thinking, visual storytelling, and consulting acumen to every project.",
-    ar: "أُحوّل التحديات المعقدة إلى تجارب إنسانية واضحة — من أنظمة التوجيه البصري إلى المنتجات الرقمية. أصمّم بطلاقة بالعربية والإنجليزية، وأُيسّر ورش العمل الإبداعية، وأجمع بين التفكير التصميمي والسرد البصري والعقلية الاستشارية في كل مشروع.",
+    en: "I transform complex challenges into clear, human-centered experiences — from spatial wayfinding systems to digital products. I design fluently in Arabic and English, facilitate collaborative creative workshops, and bring a unique blend of design thinking, visual storytelling, and consulting expertise to every project.",
+    ar: "أُحوّل التحديات المعقدة إلى تجارب واضحة تتمحور حول الإنسان، بدءًا من أنظمة التوجيه المكاني وصولًا إلى المنتجات الرقمية. أتقن التصميم بالعربية والإنجليزية، وأسهّل ورش عمل إبداعية جماعية، وأجمع بين التفكير التصميمي، والسرد البصري، والاستشارات بخبرة فريدة لكل مشروع.",
   },
   "hero.cta.work": { en: "View My Work", ar: "استعرض أعمالي" },
   "hero.cta.contact": { en: "Get in Touch", ar: "تواصل معي" },
