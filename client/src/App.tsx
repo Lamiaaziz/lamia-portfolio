@@ -10,6 +10,7 @@ import TravelTales from "./pages/TravelTales";
 import VOKO from './pages/VOKO';
 import WebDesign from './pages/WebDesign';
 import Wayfinding from './pages/Wayfinding';
+import VisualDesign from './pages/VisualDesign';
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/traveltales"} component={TravelTales} />
       <Route path={"/voko"} component={VOKO} />
       <Route path={"/webdesign"} component={WebDesign} />
+      <Route path={"/visualdesign"} component={VisualDesign} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

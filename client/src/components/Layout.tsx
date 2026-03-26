@@ -29,6 +29,7 @@ export default function Layout({ children }: LayoutProps) {
     { href: "/traveltales", label: "Travel Tales" },
     { href: "/voko", label: "VOKO" },
     { href: "/webdesign", label: "Web Design" },
+    { href: "/visualdesign", label: "Visual Design" },
   ];
 
   return (
