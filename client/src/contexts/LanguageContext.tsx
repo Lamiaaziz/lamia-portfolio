@@ -45,20 +45,20 @@ export const translations: Record<string, Record<Lang, string>> = {
   "about.h2.line1": { en: "Where business", ar: "حيث تلتقي الأعمال" },
   "about.h2.line2": { en: "meets design.", ar: "بالتصميم." },
   "about.p1": {
-    en: "I'm an Experience Designer based in Riyadh with a background that spans marketing design, business development, and UX — giving me a rare ability to connect user needs with business outcomes.",
-    ar: "أنا مصممة تجارب مقيمة في الرياض، تمتد خلفيتي المهنية لتشمل التصميم التسويقي وتطوير الأعمال وتجربة المستخدم — مما يمنحني قدرة نادرة على ربط احتياجات المستخدم بأهداف الأعمال.",
+    en: "I am a User Experience Designer based in Riyadh, with extensive experience in marketing design, business development, and UX — giving me a unique ability to connect user needs with business outcomes.",
+    ar: "أنا مصممة تجارب مستخدم في الرياض، ولدي خبرة واسعة في التصميم التسويقي، وتطوير الأعمال، وتجربة المستخدم، مما يمنحني قدرة فريدة على ربط احتياجات المستخدمين بنتائج الأعمال.",
   },
   "about.p2": {
-    en: "Currently leading user-centered design for wayfinding and environmental systems — mapping user journeys through physical space, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.",
-    ar: "أقود حاليًا تصميم أنظمة التوجيه البصري والبيئي المتمحورة حول المستخدم — برسم مسارات المستخدمين عبر الفضاء المادي، والتعاون مع فرق متعددة التخصصات، وترجمة البيانات المكانية المعقدة إلى تواصل بصري واضح.",
+    en: "I currently lead user-centered design for wayfinding and environmental systems — mapping user journeys through physical spaces, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.",
+    ar: "أقود حاليًا تصميمًا يركز على المستخدم لأنظمة التوجيه والأنظمة البيئية، حيث أرسم مسارات المستخدمين في المساحات المادية، وأتعاون مع فرق متعددة التخصصات، وأحوّل البيانات المكانية المعقدة إلى تواصل بصري واضح.",
   },
   "about.p3": {
-    en: "My earlier experience in client-facing consulting and account management at Winclex — where I applied UX principles to internal dashboards and drove measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for impact.",
-    ar: "خبرتي السابقة في الاستشارات المباشرة مع العملاء وإدارة الحسابات في Winclex — حيث طبّقت مبادئ تجربة المستخدم على لوحات التحكم الداخلية وحققت نتائج أعمال قابلة للقياس — منحتني عقلية استشارية تتجاوز الجماليات. أصمّم من أجل الأثر.",
+    en: "My earlier experience in client-facing consulting and account management at Winclex — where I applied UX principles to internal dashboards and delivered measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for impact.",
+    ar: "خبرتي السابقة في الاستشارات المباشرة مع العملاء وإدارة الحسابات في شركة Winclex، حيث طبقت مبادئ تجربة المستخدم على لوحات المعلومات الداخلية وحققت نتائج أعمال ملموسة، تمنحني عقلية استشارية تتجاوز الجماليات. أصمم لإحداث تأثير.",
   },
   "about.p4": {
-    en: "I also bring experience in facilitating co-creation sessions and design workshops — structuring narratives, translating ambiguous challenges into clear visual artifacts, and guiding teams from insight to action. I design fluently in both Arabic and English, with a deep understanding of the Saudi and MENA context.",
-    ar: "أمتلك أيضًا خبرة في تيسير جلسات الإبداع المشترك وورش التصميم — بناء السرديات، وترجمة التحديات الغامضة إلى مخرجات بصرية واضحة، وقيادة الفرق من الرؤية إلى التنفيذ. أصمّم بطلاقة بالعربية والإنجليزية، مع فهم عميق للسياق السعودي والإقليمي.",
+    en: "I also bring experience in facilitating co-creation innovation sessions and design workshops — structuring narratives, translating ambiguous challenges into clear visual artifacts, and guiding teams from idea to execution. I design fluently in both Arabic and English, with a deep understanding of the Saudi and MENA context.",
+    ar: "لديّ أيضًا خبرة في تيسير جلسات الابتكار المشترك وورش عمل التصميم، حيث أقوم بهيكلة السرد، وتحويل التحديات الغامضة إلى عناصر بصرية واضحة، وتوجيه الفرق من الفكرة إلى التنفيذ. أتقن التصميم باللغتين العربية والإنجليزية بطلاقة، مع إلمام وثيق بالسياق السعودي ومنطقة الشرق الأوسط وشمال إفريقيا.",
   },
   "about.stat.years": { en: "Years of Experience", ar: "سنوات خبرة" },
   "about.stat.industries": { en: "Industries Worked In", ar: "قطاعات عملت فيها" },
