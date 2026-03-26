@@ -242,3 +242,9 @@
   color: oklch(0.42 0.06 230 / 0.85) !important;
   font-size: 0.8rem !important;
 }
+
+/* ── RTL: Table headers and cells right-aligned ── */
+[dir="rtl"] table th,
+[dir="rtl"] table td {
+  text-align: right !important;
+}
