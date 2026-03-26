@@ -24,7 +24,6 @@ const IMG = {
   wireframeOnboarding: "/traveltales/wireframe-onboarding.webp",
   wireframeHomepage: "/traveltales/wireframe-homepage.webp",
   wireframeRegisterPlaces: "/traveltales/wireframe-register-places.webp",
-  wireframeLogin: "/traveltales/wireframe-login.webp",
   wireframePlaceDetail: "/traveltales/wireframe-place-detail.webp",
   wireframeBooking: "/traveltales/wireframe-booking.webp",
 };
