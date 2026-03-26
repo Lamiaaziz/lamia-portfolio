@@ -45,8 +45,8 @@ const VISUALDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/3104196630284470
 
 export default function Home() {
   const { t, isRTL } = useLanguage();
-  const fontFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Sans', sans-serif";
-  const serifFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Serif Display', serif";
+  const fontFamily = isRTL ? "'Tajawal', sans-serif" : "'DM Sans', sans-serif";
+  const serifFamily = isRTL ? "'Tajawal', sans-serif" : "'DM Serif Display', serif";
 
   const aboutSection = useInView();
   const toolsSection = useInView();
