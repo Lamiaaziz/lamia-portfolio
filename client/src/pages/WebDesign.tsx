@@ -18,9 +18,8 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
-const CONSULTING_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Desktop-1_d79b0fb8.png";
-const CONSULTING_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Desktop-2_b3a05c68.png";
-const TEAM_PAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/ProjectPage_19d268e0.png";
+const CONSULTING_1 = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/AEFfqNJAEHcvuGaJ.png";
+const TEAM_PAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/sTLUJIhqnklRssQA.png";
 
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   const { ref, inView } = useInView();
@@ -146,14 +145,9 @@ export default function WebDesign() {
                 </div>
               </div>
             </div>
-            {/* Screenshots */}
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="rounded-2xl overflow-hidden shadow-md" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-                <img src={CONSULTING_1} alt="Consulting Website - Part 1" className="w-full object-cover object-top" />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-md" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-                <img src={CONSULTING_2} alt="Consulting Website - Part 2" className="w-full object-cover object-top" />
-              </div>
+            {/* Screenshot — single full-page high-res image */}
+            <div className="rounded-2xl overflow-hidden shadow-md" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
+              <img src={CONSULTING_1} alt="Consulting Website" loading="lazy" decoding="async" className="w-full h-auto block" />
             </div>
           </Section>
         </div>
