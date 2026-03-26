@@ -5,6 +5,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // ── CDN image URLs ────────────────────────────────────────────────────────────
 const IMG = {
@@ -48,6 +49,9 @@ function PhoneFrame({ src, alt, label }: { src: string; alt: string; label?: str
 }
 
 export default function VOKO() {
+  const { t, isRTL } = useLanguage();
+  const fontFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Sans', sans-serif";
+  const serifFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Serif Display', serif";
   return (
     <Layout>
 
@@ -57,22 +61,22 @@ export default function VOKO() {
         <div className="container relative z-10">
           <Link href="/">
             <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={14} /> {t("voko.back")}
             </button>
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="section-num" style={{ letterSpacing: "0.2em" }}>PROJECT 03</span>
-                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.55 0.12 75 / 0.12)", color: "oklch(0.42 0.12 75)", fontFamily: "'DM Sans', sans-serif" }}>UX Product Concept</span>
+                <span className="section-num" style={{ letterSpacing: "0.2em", fontFamily }}>PROJECT 03</span>
+                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.55 0.12 75 / 0.12)", color: "oklch(0.42 0.12 75)", fontFamily }}>{t("voko.badge")}</span>
               </div>
-              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>VOKO</h1>
-              <p className="text-xl mb-6" style={{ color: "oklch(0.42 0.12 75)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>Fashion E-commerce Shopping Experience</p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                VOKO is a fashion shopping mobile experience designed to help users discover clothing collections, explore products, and complete purchases through a smooth and intuitive shopping journey.
+              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>VOKO</h1>
+              <p className="text-xl mb-6" style={{ color: "oklch(0.42 0.12 75)", fontFamily, fontWeight: 500 }}>{t("voko.subtitle")}</p>
+              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("voko.intro")}
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Type", value: "UX Concept" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Focus", value: "E-commerce" }].map((item) => (
+                {[{ label: t("voko.meta.type"), value: t("voko.meta.type.val") }, { label: t("voko.meta.role"), value: t("voko.meta.role.val") }, { label: t("voko.meta.focus"), value: t("voko.meta.focus.val") }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.42 0.12 75)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>

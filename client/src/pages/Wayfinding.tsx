@@ -6,6 +6,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   return (
     <div className={className} style={style}>
@@ -19,6 +20,9 @@ const ACCENT_LIGHT = "oklch(0.94 0.015 155)";
 const ACCENT_MID = "oklch(0.28 0.1 155)";
 
 export default function Wayfinding() {
+  const { t, isRTL } = useLanguage();
+  const fontFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Sans', sans-serif";
+  const serifFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Serif Display', serif";
   return (
     <Layout>
       {/* HERO */}
@@ -28,34 +32,34 @@ export default function Wayfinding() {
         <div className="container relative z-10">
           <Link href="/">
             <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={14} /> {t("wf.back")}
             </button>
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="section-num" style={{ letterSpacing: "0.2em" }}>REAL-WORLD PROJECT</span>
-                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: ACCENT + "18", color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>
-                  Live Project · 2025
+                <span className="section-num" style={{ letterSpacing: "0.2em", fontFamily }}>{t("wf.badge")}</span>
+                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: ACCENT + "18", color: ACCENT, fontFamily }}>
+                  {t("wf.live")}
                 </span>
               </div>
-              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
-                Wayfinding &
+              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>
+                {t("wf.title1")}
                 <br />
-                <em style={{ color: ACCENT }}>Signage Design</em>
+                <em style={{ color: ACCENT }}>{t("wf.title2")}</em>
               </h1>
-              <p className="text-xl mb-6 font-medium" style={{ color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>
-                Mixed-Use Tower — Multi-Zone Wayfinding System
+              <p className="text-xl mb-6 font-medium" style={{ color: ACCENT, fontFamily }}>
+                {t("wf.subtitle")}
               </p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                A comprehensive wayfinding signage system for a 24-floor contemporary mixed-use high-rise. The project involved designing a complete visual navigation language across parking, commercial, and residential zones, serving diverse user groups including residents, hotel guests, medical staff, and international visitors.
+              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("wf.intro")}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
-                  { label: "Year", value: "2025" },
-                  { label: "Sector", value: "Mixed-Use Development" },
-                  { label: "Role", value: "UX/UI Designer" },
-                  { label: "Type", value: "Environmental Design" },
+                  { label: t("wf.meta.year"), value: "2025" },
+                  { label: t("wf.meta.sector"), value: t("wf.meta.sector.val") },
+                  { label: t("wf.meta.role"), value: t("wf.meta.role.val") },
+                  { label: t("wf.meta.type"), value: t("wf.meta.type.val") },
                 ].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
@@ -87,30 +91,30 @@ export default function Wayfinding() {
       <section className="py-20">
         <div className="container">
           <Section>
-            <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>PROJECT OVERVIEW</p>
-            <h2 className="text-3xl lg:text-4xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
-              Navigating a Complex
+            <p className="section-num mb-3" style={{ letterSpacing: "0.2em", fontFamily }}>{t("wf.overview.label")}</p>
+            <h2 className="text-3xl lg:text-4xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>
+              {t("wf.overview.h2.1")}
               <br />
-              <em>Urban Development</em>
+              <em>{t("wf.overview.h2.2")}</em>
             </h2>
             <div className="grid lg:grid-cols-2 gap-10">
               <div>
-                <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  This project is a 24-floor contemporary mixed-use high-rise development. It integrates residential apartments, commercial retail, a hospital, hotels, and underground parking — creating a complex multi-use environment with diverse navigation needs.
+                <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                  {t("wf.overview.p1")}
                 </p>
-                <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  My role was to design and build a comprehensive wayfinding signage system — establishing guidelines and rules that encompass color, typeface, materials, pictograms, arrows, and layouts — ensuring every user group can navigate confidently and efficiently.
+                <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                  {t("wf.overview.p2")}
                 </p>
               </div>
               <div className="rounded-2xl p-6" style={{ background: ACCENT_LIGHT, border: "1px solid oklch(0.88 0.015 155 / 0.4)" }}>
-                <p className="text-sm font-semibold mb-4" style={{ color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>Project Goals</p>
+                <p className="text-sm font-semibold mb-4" style={{ color: ACCENT, fontFamily }}>{t("wf.goals.title")}</p>
                 <div className="flex flex-col gap-3">
                   {[
-                    "Establish comprehensive design guidelines for a cohesive wayfinding system",
-                    "Develop a strategic color system that enhances navigation and accessibility",
-                    "Create a standardized pictogram system based on ISO 7001",
-                    "Design modular layout templates for consistent information presentation",
-                    "Serve 5+ distinct user groups with tailored navigation strategies",
+                    t("wf.goal.1"),
+                    t("wf.goal.2"),
+                    t("wf.goal.3"),
+                    t("wf.goal.4"),
+                    t("wf.goal.5"),
                   ].map((goal, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold text-white" style={{ background: ACCENT }}>
@@ -390,7 +394,7 @@ export default function Wayfinding() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <Link href="/">
               <button className="inline-flex items-center gap-2 text-sm font-medium px-6 py-3 rounded-full border transition-all duration-200 hover:scale-105" style={{ color: ACCENT, borderColor: ACCENT + "40", fontFamily: "'DM Sans', sans-serif" }}>
-                <ArrowLeft size={14} /> Back to Portfolio
+                <ArrowLeft size={14} /> {t("wf.back")}
               </button>
             </Link>
             <Link href="/aurafit">

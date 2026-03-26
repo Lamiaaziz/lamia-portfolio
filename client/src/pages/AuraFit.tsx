@@ -5,6 +5,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // All real design assets
 const IMG = {
@@ -49,6 +50,9 @@ function Section({ children, className = "", style = {} }: { children: React.Rea
 }
 
 export default function AuraFit() {
+  const { t, isRTL } = useLanguage();
+  const fontFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Sans', sans-serif";
+  const serifFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Serif Display', serif";
   return (
     <Layout>
 
@@ -59,24 +63,24 @@ export default function AuraFit() {
         <div className="container relative z-10">
           <Link href="/">
             <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={14} /> {t("af.back")}
             </button>
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="section-num" style={{ letterSpacing: "0.2em" }}>PROJECT 01</span>
-                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.45 0.12 270 / 0.12)", color: "oklch(0.35 0.12 270)", fontFamily: "'DM Sans', sans-serif" }}>
-                  UX Product Concept · Bootcamp
+                <span className="section-num" style={{ letterSpacing: "0.2em", fontFamily }}>PROJECT 01</span>
+                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.45 0.12 270 / 0.12)", color: "oklch(0.35 0.12 270)", fontFamily }}>
+                  {t("af.badge")}
                 </span>
               </div>
-              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>AuraFit</h1>
-              <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.12 270)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>Behavioral Fitness System for Saudi Professionals</p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                AuraFit is a behavioral fitness app designed to help users maintain workout consistency despite irregular schedules — reframing fitness as an adaptive behavioral system rather than a motivation challenge.
+              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>{t("af.title")}</h1>
+              <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.12 270)", fontFamily, fontWeight: 500 }}>{t("af.subtitle")}</p>
+              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("af.intro")}
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
+                {[{ label: t("af.meta.timeline"), value: t("af.meta.timeline.val") }, { label: t("af.meta.role"), value: t("af.meta.role.val") }, { label: t("af.meta.market"), value: t("af.meta.market.val") }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.35 0.12 270)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>
@@ -84,8 +88,8 @@ export default function AuraFit() {
                 ))}
               </div>
               <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.35 0.12 270)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  <ExternalLink size={14} /> View Prototype
+                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.35 0.12 270)", color: "oklch(0.98 0.005 230)", fontFamily }}>
+                  <ExternalLink size={14} /> {t("af.prototype")}
                 </button>
               </a>
             </div>

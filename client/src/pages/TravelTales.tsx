@@ -6,6 +6,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const IMG = {
   hifiShowcase: "/traveltales/hifi-showcase.webp",
@@ -51,6 +52,9 @@ function PhoneFrame({ src, alt, label }: { src: string; alt: string; label?: str
 }
 
 export default function TravelTales() {
+  const { t, isRTL } = useLanguage();
+  const fontFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Sans', sans-serif";
+  const serifFamily = isRTL ? "'IBM Plex Arabic', 'Noto Sans Arabic', sans-serif" : "'DM Serif Display', serif";
   return (
     <Layout>
 
@@ -61,28 +65,28 @@ export default function TravelTales() {
         <div className="container relative z-10">
           <Link href="/">
             <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
-              <ArrowLeft size={14} /> Back to Portfolio
+              <ArrowLeft size={14} /> {t("tt.back")}
             </button>
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="section-num" style={{ letterSpacing: "0.2em" }}>PROJECT 02</span>
-                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.45 0.10 200 / 0.12)", color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif" }}>
-                  UX Product Concept · Bootcamp
+                <span className="section-num" style={{ letterSpacing: "0.2em", fontFamily }}>PROJECT 02</span>
+                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.45 0.10 200 / 0.12)", color: "oklch(0.35 0.10 200)", fontFamily }}>
+                  {t("tt.badge")}
                 </span>
               </div>
-              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>
-                Travel Tales
+              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: serifFamily }}>
+                {t("tt.title")}
               </h1>
-              <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
-                Smart Travel Planning App for Saudi Explorers
+              <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.10 200)", fontFamily, fontWeight: 500 }}>
+                {t("tt.subtitle")}
               </p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
-                Travel Tales is a travel planning app designed to help users discover destinations, plan itineraries, and book experiences — combining smart recommendations with a seamless booking flow tailored for the Saudi market.
+              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 200)", fontFamily }}>
+                {t("tt.intro")}
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
+                {[{ label: t("tt.meta.timeline"), value: t("tt.meta.timeline.val") }, { label: t("tt.meta.role"), value: t("tt.meta.role.val") }, { label: t("tt.meta.market"), value: t("tt.meta.market.val") }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>
