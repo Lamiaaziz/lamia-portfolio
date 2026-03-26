@@ -39,6 +39,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   },
   "hero.cta.work": { en: "View My Work", ar: "استعرض أعمالي" },
   "hero.cta.contact": { en: "Get in Touch", ar: "تواصل معي" },
+  "hero.cta.cv": { en: "Download CV", ar: "تحميل السيرة الذاتية" },
+  "nav.cv": { en: "Download CV", ar: "تحميل السيرة الذاتية" },
 
   // ── ABOUT ──
   "about.label": { en: "ABOUT ME", ar: "عن لميا" },

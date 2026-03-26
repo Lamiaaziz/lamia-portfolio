@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LayoutProps {
@@ -90,6 +90,20 @@ export default function Layout({ children }: LayoutProps) {
               </Link>
             ))}
             <a
+              href="/LamiaAlrowaished-CV.pdf"
+              download="LamiaAlrowaished-CV.pdf"
+              className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 hover:scale-105"
+              style={{
+                borderColor: "oklch(0.35 0.09 230)",
+                color: "oklch(0.35 0.09 230)",
+                background: "transparent",
+                fontFamily,
+              }}
+            >
+              <Download size={13} />
+              {t("nav.cv")}
+            </a>
+            <a
               href="mailto:Lamiaaziz90@gmail.com"
               className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
               style={{
@@ -162,6 +176,15 @@ export default function Layout({ children }: LayoutProps) {
                   </span>
                 </Link>
               ))}
+              <a
+                href="/LamiaAlrowaished-CV.pdf"
+                download="LamiaAlrowaished-CV.pdf"
+                className="inline-flex items-center gap-1.5 text-sm font-medium py-2"
+                style={{ color: "oklch(0.35 0.09 230)", fontFamily }}
+              >
+                <Download size={13} />
+                {t("nav.cv")}
+              </a>
               <a
                 href="mailto:Lamiaaziz90@gmail.com"
                 className="text-sm font-medium py-2"

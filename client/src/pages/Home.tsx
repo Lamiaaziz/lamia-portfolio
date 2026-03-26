@@ -5,7 +5,7 @@
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Download } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Intersection observer hook for scroll animations
@@ -184,6 +184,15 @@ export default function Home() {
               >
                 <ExternalLink size={14} />
                 {t("hero.cta.contact")}
+              </a>
+              <a
+                href="/LamiaAlrowaished-CV.pdf"
+                download="LamiaAlrowaished-CV.pdf"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-medium border transition-all duration-300 hover:scale-105"
+                style={{ color: "oklch(0.35 0.09 230)", borderColor: "oklch(0.35 0.09 230 / 0.4)", fontFamily, background: "oklch(1 0 0 / 0.5)", backdropFilter: "blur(8px)" }}
+              >
+                <Download size={14} />
+                {t("hero.cta.cv")}
               </a>
             </div>
           </div>
