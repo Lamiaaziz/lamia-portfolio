@@ -25,13 +25,13 @@ export default function Layout({ children }: LayoutProps) {
   }, [location]);
 
   const navLinks = [
-    { href: "/", key: "nav.home" },
-    { href: "/wayfinding", key: "nav.wayfinding" },
-    { href: "/aurafit", key: "nav.aurafit" },
-    { href: "/traveltales", key: "nav.traveltales" },
-    { href: "/voko", key: "nav.voko" },
-    { href: "/webdesign", key: "nav.webdesign" },
-    { href: "/visualdesign", key: "nav.visualdesign" },
+    { href: "/", key: "nav.home", label: null },
+    { href: "/wayfinding", key: "nav.wayfinding", label: null },
+    { href: "/aurafit", key: "nav.aurafit", label: "AuraFit" },
+    { href: "/traveltales", key: "nav.traveltales", label: "Travel Tales" },
+    { href: "/voko", key: "nav.voko", label: "VOKO" },
+    { href: "/webdesign", key: "nav.webdesign", label: null },
+    { href: "/visualdesign", key: "nav.visualdesign", label: null },
   ];
 
   const fontFamily = isRTL ? "'Tajawal', sans-serif" : "'DM Sans', sans-serif";
@@ -82,10 +82,10 @@ export default function Layout({ children }: LayoutProps) {
                   className="nav-link text-sm font-medium transition-colors duration-200"
                   style={{
                     color: location === link.href ? "oklch(0.35 0.09 230)" : "oklch(0.45 0.06 230)",
-                    fontFamily,
+                    fontFamily: link.label ? "'DM Sans', sans-serif" : fontFamily,
                   }}
                 >
-                  {t(link.key)}
+                  {link.label ?? t(link.key)}
                 </span>
               </Link>
             ))}
@@ -155,10 +155,10 @@ export default function Layout({ children }: LayoutProps) {
                     className="block text-sm font-medium py-2"
                     style={{
                       color: location === link.href ? "oklch(0.35 0.09 230)" : "oklch(0.45 0.06 230)",
-                      fontFamily,
+                      fontFamily: link.label ? "'DM Sans', sans-serif" : fontFamily,
                     }}
                   >
-                    {t(link.key)}
+                    {link.label ?? t(link.key)}
                   </span>
                 </Link>
               ))}
