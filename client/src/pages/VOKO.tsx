@@ -1,18 +1,47 @@
 /*
- * VOKO CASE STUDY PAGE — Lamia Portfolio "Soft Blueprint"
- * Full case study: Project Summary, Design Process, Moodboard, Persona, Wireframes, Hi-Fi, Prototype
+ * VOKO CASE STUDY PAGE — Lamia Portfolio
+ * Full case study with real screens: Splash → Onboarding → Welcome → Sign Up → Home → Product Detail → Cart → Checkout → Payment Success
  */
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
-// High-res 1434×1920px WebP — replaces the broken 126px-wide PNG
-const VOKO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/voko-preview-EAzR7gjACG8AqB7YhWBEeZ.webp";
+// ── CDN image URLs ────────────────────────────────────────────────────────────
+const IMG = {
+  // Hero / overview
+  hifiOverview:   "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/gEEMrpXSzECnHqAi.webp",
+  // Moodboard
+  moodboard:      "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/PzUiXfxIZApHcPBC.webp",
+  // Hi-fi flow
+  splash:         "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/GunAOhFfQKVvMqnZ.png",
+  onboarding1:    "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/ogPOCYiVDYYPjqHG.webp",
+  onboarding2:    "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/wfdyQnsunkJviUVC.webp",
+  onboarding3:    "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/pkNSFkSzMSMdcXXf.webp",
+  welcome:        "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/XsbFuLVqGBdcCAFd.png",
+  signup:         "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/NSJPXyOaNLcohGHV.png",
+  home:           "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/fTERbQTlfHGSrLGT.webp",
+  productDetail:  "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/BtWxDNXpnXMMrQIN.webp",
+  cart:           "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/ETSmbZhtCIsPwhzr.webp",
+  checkout:       "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/NbIhMPnjgUFYRCsh.webp",
+  paymentSuccess: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/VMajscanxVRWszys.webp",
+  // Wireframes
+  wfHome:         "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/fyQOcztNGVtAabKB.png",
+  wfProduct:      "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/JUrCoIDWGwkrLTDl.png",
+  wfProfile:      "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/bcBbclXXUnCayXnu.png",
+  wfCheckout:     "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/qywNOXiCDLrrgyXe.png",
+  wfFavorites:    "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/IzTfYHoJBnIUGaZP.png",
+};
 
-function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
+// Reusable phone frame wrapper
+function PhoneFrame({ src, alt, label }: { src: string; alt: string; label?: string }) {
   return (
-    <div className={className} style={style}>
-      {children}
+    <div className="flex flex-col items-center gap-3">
+      <div className="rounded-3xl overflow-hidden shadow-xl" style={{ width: "180px", border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
+        <img src={src} alt={alt} loading="lazy" decoding="async" className="w-full h-auto block" />
+      </div>
+      {label && (
+        <p className="text-xs text-center font-medium" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{label}</p>
+      )}
     </div>
   );
 }
@@ -20,7 +49,8 @@ function Section({ children, className = "", style = {} }: { children: React.Rea
 export default function VOKO() {
   return (
     <Layout>
-      {/* HERO */}
+
+      {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "oklch(0.96 0.018 75)" }}>
         <div className="circle-decor" style={{ width: 500, height: 500, top: -150, right: -100, opacity: 0.3 }} />
         <div className="container relative z-10">
@@ -48,24 +78,16 @@ export default function VOKO() {
                   </div>
                 ))}
               </div>
-              <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  <ExternalLink size={14} /> View Prototype
-                </button>
-              </a>
             </div>
-            {/* Hero image — portrait phone mockup, contained properly */}
+            {/* Hero — hi-fi overview banner */}
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "320px", width: "100%" }}>
+              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "420px", width: "100%" }}>
                 <img
-                  src={VOKO_IMG}
-                  alt="VOKO Case Study"
-                  width={320}
-                  height={428}
+                  src={IMG.hifiOverview}
+                  alt="VOKO Hi-Fi Overview"
                   loading="eager"
                   decoding="async"
                   className="w-full h-auto block"
-                  style={{ objectFit: "cover", objectPosition: "top" }}
                 />
               </div>
             </div>
@@ -73,257 +95,244 @@ export default function VOKO() {
         </div>
       </section>
 
-      {/* RESPONSIBILITIES */}
+      {/* ── RESPONSIBILITIES ─────────────────────────────────────────────────── */}
       <section className="py-16">
         <div className="container">
-          <Section>
-            <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-              <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>RESPONSIBILITIES</p>
-              <div className="grid md:grid-cols-4 gap-6">
-                {["UX Research Synthesis", "Behavioral Framework Design", "Product Flow Architecture", "UI Interface Design"].map((r) => (
-                  <div key={r} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.42 0.12 75)" }} />
-                    <p className="text-sm" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{r}</p>
+          <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
+            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>RESPONSIBILITIES</p>
+            <div className="grid md:grid-cols-4 gap-6">
+              {["UX Research Synthesis", "Behavioral Framework Design", "Product Flow Architecture", "UI Interface Design"].map((r) => (
+                <div key={r} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.42 0.12 75)" }} />
+                  <p className="text-sm" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{r}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CHALLENGE & SOLUTION ─────────────────────────────────────────────── */}
+      <section className="py-16">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-2xl p-8" style={{ background: "oklch(0.96 0.018 75)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
+              <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>CHALLENGE</p>
+              <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>The Challenge</h2>
+              <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+                Many fashion shopping apps create friction during product discovery and checkout. Users often struggle with navigating product categories, comparing items, and completing purchases through long or confusing checkout processes.
+              </p>
+            </div>
+            <div className="rounded-2xl p-8" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)" }}>
+              <p className="section-num mb-3" style={{ letterSpacing: "0.2em", color: "oklch(0.98 0.005 230 / 0.5)" }}>SOLUTION</p>
+              <h2 className="text-3xl mb-4" style={{ fontFamily: "'DM Serif Display', serif" }}>The Solution</h2>
+              <p className="text-sm leading-relaxed" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>
+                Design a fashion shopping experience that allows users to discover collections easily, explore product details clearly, add items to cart quickly, and complete checkout with a simple, confident flow — from splash screen to payment confirmation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DESIGN PROCESS ───────────────────────────────────────────────────── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>DESIGN PROCESS</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Design Process</h2>
+          <div className="flex flex-wrap items-center gap-2">
+            {["Problem Definition", "Research", "Moodboard", "Wireframes", "Hi-Fi Design", "Prototype"].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-2">
+                <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
+                {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MOODBOARD ────────────────────────────────────────────────────────── */}
+      <section className="py-16">
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>MOODBOARD</p>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Moodboard</h2>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+                The visual direction for VOKO uses an <strong>Orange + White</strong> palette — warm, energetic, and fashion-forward. Orange evokes enthusiasm and action, encouraging users to explore and make purchases. White balances it with clarity and simplicity, ensuring a clean and user-friendly interface.
+              </p>
+              <div className="flex gap-4 mb-6">
+                {[
+                  { hex: "#F0BD75", label: "#F0BD75" },
+                  { hex: "#F7DEBB", label: "#F7DEBB" },
+                  { hex: "#FFFFFF", label: "#FFFFFF" },
+                ].map((c) => (
+                  <div key={c.hex} className="flex flex-col items-center gap-2">
+                    <div className="w-12 h-12 rounded-2xl shadow-sm" style={{ background: c.hex, border: c.hex === "#FFFFFF" ? "1px solid oklch(0.88 0.015 230)" : "none" }} />
+                    <p className="text-xs font-mono" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{c.label}</p>
                   </div>
                 ))}
               </div>
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* PROJECT SUMMARY */}
-      <section className="py-16">
-        <div className="container">
-          <Section>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="rounded-2xl p-8" style={{ background: "oklch(0.96 0.018 75)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-                <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>CHALLENGE</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>The Challenge</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Many fashion shopping apps create friction during product discovery and checkout. Users often struggle with navigating product categories, comparing items, and completing purchases through long or confusing checkout processes.
-                </p>
-              </div>
-              <div className="rounded-2xl p-8" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)" }}>
-                <p className="section-num mb-3" style={{ letterSpacing: "0.2em", color: "oklch(0.98 0.005 230 / 0.5)" }}>SOLUTION</p>
-                <h2 className="text-3xl mb-4" style={{ fontFamily: "'DM Serif Display', serif" }}>The Solution</h2>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Design a fashion shopping experience that allows users to discover collections easily, explore product details clearly, add items to cart quickly, and complete checkout with a simple flow.
-                </p>
-                <div className="grid grid-cols-3 gap-3">
-                  {[{ label: "Research", val: "Secondary" }, { label: "Design", val: "UI Design" }, { label: "Type", val: "App" }].map((s) => (
-                    <div key={s.label} className="rounded-xl p-3 text-center" style={{ background: "oklch(0.98 0.005 230 / 0.1)" }}>
-                      <p className="text-xs mb-1" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif" }}>{s.label}</p>
-                      <p className="text-sm font-medium" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{s.val}</p>
-                    </div>
-                  ))}
-                </div>
+              <div className="p-4 rounded-xl" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
+                <p className="text-xs mb-1" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>TYPOGRAPHY</p>
+                <p className="text-2xl font-bold" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Aa — DM Serif Display</p>
               </div>
             </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* DESIGN PROCESS */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>DESIGN PROCESS</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Design Process</h2>
-            <div className="flex flex-wrap items-center gap-2">
-              {["Problem Definition", "Research", "Moodboard", "Wireframes", "Prototype", "Focus"].map((step, i, arr) => (
-                <div key={step} className="flex items-center gap-2">
-                  <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
-                  {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* MOODBOARD */}
-      <section className="py-16">
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>MOODBOARD</p>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Moodboard</h2>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  The visual direction for VOKO uses an Orange + White palette — warm, energetic, and fashion-forward. The bold typography creates a strong brand identity that stands out in the fashion space.
-                </p>
-                <div className="flex gap-3 mb-4">
-                  {[{ name: "Orange", color: "oklch(0.65 0.18 55)" }, { name: "White", color: "oklch(0.98 0.005 230)", border: true }, { name: "Dark", color: "oklch(0.2 0.04 230)" }].map((c) => (
-                    <div key={c.name} className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full" style={{ background: c.color, border: (c as any).border ? "1px solid oklch(0.88 0.015 230)" : "none" }} />
-                      <p className="text-xs" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{c.name}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="p-4 rounded-xl" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-                  <p className="text-xs mb-1" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>TYPOGRAPHY</p>
-                  <p className="text-2xl font-bold" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Aa — Bold Display</p>
-                </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.96 0.018 75)" }}>
-                <img
-                  src={VOKO_IMG}
-                  alt="VOKO Moodboard"
-                  loading="lazy"
-                  decoding="async"
-                  width={400}
-                  height={533}
-                  className="block"
-                  style={{ maxHeight: "400px", width: "auto", objectFit: "contain" }}
-                />
-              </div>
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* PERSONA */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>PERSONA</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>User Persona</h2>
-            <div className="rounded-2xl p-8" style={{ background: "oklch(0.42 0.12 75)" }}>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <div className="w-16 h-16 rounded-full mb-4 flex items-center justify-center text-2xl font-bold" style={{ background: "oklch(0.98 0.005 230 / 0.15)", color: "oklch(0.98 0.005 230)" }}>N</div>
-                  <h3 className="text-xl font-semibold mb-1" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>Nora, 24</h3>
-                  <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>Fashion Enthusiast, Riyadh</p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>GOALS</p>
-                  <ul className="space-y-2">
-                    {["Discover new fashion trends", "Shop quickly on mobile", "Complete checkout without friction"].map((g) => (
-                      <li key={g} className="flex items-start gap-2">
-                        <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
-                        <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{g}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>PAIN POINTS</p>
-                  <ul className="space-y-2">
-                    {["Hard to find specific styles", "Too many steps in checkout", "Unclear size and product details"].map((p) => (
-                      <li key={p} className="flex items-start gap-2">
-                        <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
-                        <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{p}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* WIREFRAMES + HI-FI */}
-      <section className="py-16">
-        <div className="container">
-          <Section>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div>
-                <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>WIREFRAMES</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Wireframes</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Low-fidelity wireframes mapped the complete shopping flow — from product discovery and browsing through cart management and checkout confirmation.
-                </p>
-              </div>
-              <div>
-                <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>The Design</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  High-fidelity screens brought the VOKO brand to life — bold orange accents on clean white, editorial product photography, and a streamlined checkout experience.
-                </p>
-              </div>
-            </div>
-            {/* Full case study image — displayed as a contained portrait strip */}
-            <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.96 0.018 75)" }}>
+            <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
               <img
-                src={VOKO_IMG}
-                alt="VOKO Full Case Study"
+                src={IMG.moodboard}
+                alt="VOKO Moodboard"
                 loading="lazy"
                 decoding="async"
-                width={600}
-                height={800}
-                className="block w-full"
-                style={{ maxHeight: "700px", objectFit: "contain", objectPosition: "top" }}
+                className="w-full h-auto block"
               />
             </div>
-          </Section>
+          </div>
         </div>
       </section>
 
-      {/* KEY SCREENS */}
+      {/* ── PERSONA ──────────────────────────────────────────────────────────── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
         <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>KEY SCREENS</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Key Screens</h2>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
-              {["Onboarding", "Sign In", "Home Page", "Product Detail", "My Cart", "Checkout"].map((screen, i) => (
-                <div key={screen} className="rounded-xl p-4 text-center" style={{ background: i % 2 === 0 ? "oklch(0.42 0.12 75)" : "oklch(1 0 0)", border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-                  <p className="text-sm font-medium" style={{ color: i % 2 === 0 ? "oklch(0.98 0.005 230)" : "oklch(0.42 0.12 75)", fontFamily: "'DM Sans', sans-serif" }}>{screen}</p>
-                </div>
-              ))}
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>PERSONA</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>User Persona</h2>
+          <div className="rounded-2xl p-8" style={{ background: "oklch(0.42 0.12 75)" }}>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <p className="text-xl font-semibold mb-1" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Serif Display', serif" }}>Sara, 26</p>
+                <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>Fashion Enthusiast, Riyadh</p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>GOALS</p>
+                <ul className="space-y-2">
+                  {["Discover new fashion trends", "Shop quickly on mobile", "Complete checkout without friction"].map((g) => (
+                    <li key={g} className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
+                      <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{g}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>PAIN POINTS</p>
+                <ul className="space-y-2">
+                  {["Hard to find specific styles", "Too many steps in checkout", "Unclear size and product details"].map((p) => (
+                    <li key={p} className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
+                      <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{p}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </Section>
+          </div>
         </div>
       </section>
 
-      {/* USER FLOW */}
+      {/* ── WIREFRAMES ───────────────────────────────────────────────────────── */}
       <section className="py-16">
         <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>USER FLOW</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Shopping Experience Flow</h2>
-            <div className="flex flex-wrap items-center gap-2">
-              {["Discover", "Product Details", "Cart", "Checkout", "Payment", "Order", "Confirmation"].map((step, i, arr) => (
-                <div key={step} className="flex items-center gap-2">
-                  <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
-                  {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
-                </div>
-              ))}
-            </div>
-          </Section>
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>WIREFRAMES</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Wireframes</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+            Low-fidelity wireframes mapped the complete shopping flow — from product discovery and browsing through cart management, checkout, and profile management.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { src: IMG.wfHome,      label: "Home" },
+              { src: IMG.wfProduct,   label: "Product Detail" },
+              { src: IMG.wfFavorites, label: "Favorites" },
+              { src: IMG.wfCheckout,  label: "Checkout" },
+              { src: IMG.wfProfile,   label: "Profile" },
+            ].map((s) => (
+              <PhoneFrame key={s.label} src={s.src} alt={`Wireframe — ${s.label}`} label={s.label} />
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* OUTCOME */}
+      {/* ── HI-FI: ONBOARDING FLOW ───────────────────────────────────────────── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Onboarding Flow</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+            The app opens with a bold splash screen, followed by three onboarding slides that introduce the VOKO brand proposition, then a welcome screen offering Login or Sign Up.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <PhoneFrame src={IMG.splash}      alt="Splash Screen"    label="Splash" />
+            <PhoneFrame src={IMG.onboarding1} alt="Onboarding 1"     label="Find Your Style" />
+            <PhoneFrame src={IMG.onboarding2} alt="Onboarding 2"     label="Wear it First" />
+            <PhoneFrame src={IMG.onboarding3} alt="Onboarding 3"     label="Your Way" />
+            <PhoneFrame src={IMG.welcome}     alt="Welcome Screen"   label="Welcome" />
+            <PhoneFrame src={IMG.signup}      alt="Sign Up"          label="Sign Up" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── HI-FI: SHOPPING FLOW ─────────────────────────────────────────────── */}
+      <section className="py-16">
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Shopping Flow</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+            From the home feed to product detail, cart, checkout with Mada Card payment, and a clear payment success confirmation — the full purchase journey in five screens.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <PhoneFrame src={IMG.home}           alt="Home Screen"        label="Home" />
+            <PhoneFrame src={IMG.productDetail}  alt="Product Detail"     label="Product Detail" />
+            <PhoneFrame src={IMG.cart}           alt="My Cart"            label="My Cart" />
+            <PhoneFrame src={IMG.checkout}       alt="Checkout"           label="Checkout" />
+            <PhoneFrame src={IMG.paymentSuccess} alt="Payment Successful" label="Payment Successful" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── USER FLOW ────────────────────────────────────────────────────────── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>USER FLOW</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Shopping Experience Flow</h2>
+          <div className="flex flex-wrap items-center gap-2">
+            {["Splash", "Onboarding", "Welcome", "Sign Up", "Home", "Product Detail", "Cart", "Checkout", "Payment Success"].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-2">
+                <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
+                {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── OUTCOME ──────────────────────────────────────────────────────────── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.018 75)" }}>
         <div className="container">
-          <Section>
-            <div className="rounded-2xl p-10 lg:p-16 text-center">
-              <h2 className="text-3xl lg:text-4xl mb-6" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
-                "VOKO makes fashion discovery and purchasing effortless."
-              </h2>
-              <p className="text-base leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                The design improves product discovery and simplifies the purchasing process, allowing users to browse fashion collections and complete their orders through a clear and efficient shopping flow.
-              </p>
-              <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.42 0.12 75)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  <ExternalLink size={14} /> View Full Prototype
-                </button>
-              </a>
-            </div>
-          </Section>
+          <div className="rounded-2xl p-10 lg:p-16 text-center">
+            <h2 className="text-3xl lg:text-4xl mb-6" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
+              "VOKO makes fashion discovery and purchasing effortless."
+            </h2>
+            <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+              The design improves product discovery and simplifies the purchasing process, allowing users to browse fashion collections and complete their orders through a clear and efficient shopping flow — from first launch to payment confirmation.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* NAVIGATION */}
+      {/* ── NAVIGATION ───────────────────────────────────────────────────────── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
         <div className="container flex justify-between items-center">
-          <Link href="/traveltales"><button className="inline-flex items-center gap-2 text-sm transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}><ArrowLeft size={14} /> Previous: Travel Tales</button></Link>
-          <Link href="/webdesign"><button className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.35 0.09 230)", fontFamily: "'DM Sans', sans-serif" }}>Next: Web Design <ArrowRight size={14} /></button></Link>
+          <Link href="/traveltales">
+            <button className="inline-flex items-center gap-2 text-sm transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+              <ArrowLeft size={14} /> Previous: Travel Tales
+            </button>
+          </Link>
+          <Link href="/webdesign">
+            <button className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.35 0.09 230)", fontFamily: "'DM Sans', sans-serif" }}>
+              Next: Web Design <ArrowRight size={14} />
+            </button>
+          </Link>
         </div>
       </section>
+
     </Layout>
   );
 }
