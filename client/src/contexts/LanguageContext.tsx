@@ -570,7 +570,7 @@ export const translations: Record<string, Record<Lang, string>> = {
   "vd.hero.title": { en: "Brand, Campaign & Environmental Design", ar: "تصميم العلامة التجارية والحملات والتصميم البيئي" },
   "vd.hero.p": {
     en: "A curated collection of visual design work spanning brand identity, social media campaigns, presentation design, environmental graphics, and packaging — crafted for clients across Saudi Arabia and the MENA region.",
-    ar: "مجموعة منتقاة من أعمال التصميم البصري تشمل الهوية البصرية وحملات التواصل الاجتماعي وتصميم العروض التقديمية والجرافيك البيئي والتغليف — مصمّمة لعملاء في المملكة العربية السعودية ومنطقة الشرق الأوسط وشمال أفريقيا.",
+    ar: "مجموعة مختارة من إبداعات التصميم البصري، من هويات الشركات وإعلانات السوشيال ميديا إلى عروض الشرائح، والرسومات المكانية، وتصميم العبوات، مقدمة خصيصاً لعملائنا في السعودية ومنطقة الشرق الأوسط وشمال أفريقيا.",
   },
 
   // ── WEB DESIGN PAGE ──
