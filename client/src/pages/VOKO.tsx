@@ -24,6 +24,7 @@ const IMG = {
   cart:           "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/ETSmbZhtCIsPwhzr.webp",
   checkout:       "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/NbIhMPnjgUFYRCsh.webp",
   paymentSuccess: "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/VMajscanxVRWszys.webp",
+  login:          "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/AFvDUukaAzFwqbld.png",
   // Wireframes
   wfHome:         "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/fyQOcztNGVtAabKB.png",
   wfProduct:      "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/JUrCoIDWGwkrLTDl.png",
@@ -265,6 +266,22 @@ export default function VOKO() {
             <PhoneFrame src={IMG.onboarding3} alt="Onboarding 3"     label="Your Way" />
             <PhoneFrame src={IMG.welcome}     alt="Welcome Screen"   label="Welcome" />
             <PhoneFrame src={IMG.signup}      alt="Sign Up"          label="Sign Up" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── ACCOUNT SETUP ────────────────────────────────────────────────────── */}
+      <section className="py-16">
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>ACCOUNT SETUP</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Account Setup</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+            After onboarding, users are presented with a Welcome screen to either log in to an existing account or create a new one. The Login screen supports email/password sign-in with Google and Facebook social login options, while the Sign Up screen collects name, email, phone, and password to create a new account.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <PhoneFrame src={IMG.welcome} alt="Welcome Screen" label="Welcome" />
+            <PhoneFrame src={IMG.login}   alt="Login Screen"   label="Login" />
+            <PhoneFrame src={IMG.signup}  alt="Sign Up Screen" label="Sign Up" />
           </div>
         </div>
       </section>
