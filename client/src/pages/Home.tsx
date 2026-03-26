@@ -376,7 +376,7 @@ export default function Home() {
                 className="text-base leading-relaxed mb-4"
                 style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                Currently at <strong style={{ color: "oklch(0.35 0.09 230)" }}>Dar Al Riyadh</strong>, I lead user-centered design for wayfinding and environmental systems — mapping user journeys through physical space, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.
+                Currently leading user-centered design for wayfinding and environmental systems — mapping user journeys through physical space, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.
               </p>
               <p
                 className="text-base leading-relaxed"
@@ -452,7 +452,7 @@ export default function Home() {
               {[
                 {
                   role: "Experience Designer — Wayfinding & Environmental Design",
-                  company: "Dar Al Riyadh",
+                  company: "Current Role",
                   period: "Sep 2025 – Present",
                   highlights: ["User journey mapping & spatial flow design for a 24-floor mixed-use development", "Translating complex spatial challenges into clear bilingual (AR/EN) visual systems", "Cross-functional stakeholder collaboration in a consulting environment", "Storytelling through visual artifacts: signage hierarchy, iconography, color systems"],
                   accent: "oklch(0.35 0.09 230)",
@@ -621,7 +621,7 @@ export default function Home() {
                 className="hidden md:block text-sm max-w-xs text-right"
                 style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                Delivered at Dar Al Riyadh — a live, production-grade wayfinding system for a major mixed-use development in Amman, Jordan.
+                A live, production-grade wayfinding system for a major mixed-use development.
               </p>
             </div>
 
@@ -689,7 +689,7 @@ export default function Home() {
                         fontFamily: "'DM Sans', sans-serif",
                       }}
                     >
-                      Environmental Design · Dar Al Riyadh
+                      Environmental Design · Live Project
                     </span>
                   </div>
 
@@ -703,17 +703,17 @@ export default function Home() {
                     className="text-base font-medium mb-4"
                     style={{ color: "oklch(0.32 0.1 155)", fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    Mixed-Use Tower — 24-Floor Development, Amman
+                    Mixed-Use Tower — 24-Floor Development
                   </p>
                   <p
                     className="text-sm leading-relaxed mb-6"
                     style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    A comprehensive wayfinding signage system for one of Jordan's first contemporary high-rises. Designed a complete visual navigation language — color-coding, ISO 7001 pictograms, bilingual (Arabic/English) typography, and modular layout templates — serving residents, hotel guests, medical staff, shoppers, and office workers across parking, commercial, and residential zones.
+                    A comprehensive wayfinding signage system for a contemporary mixed-use high-rise. Designed a complete visual navigation language — color-coding, ISO 7001 pictograms, bilingual (Arabic/English) typography, and modular layout templates — serving residents, hotel guests, medical staff, shoppers, and office workers across parking, commercial, and residential zones.
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-8">
-                    {["Environmental Design", "Spatial UX", "Bilingual AR/EN", "ISO 7001 Standards", "Color Systems", "Stakeholder Collaboration", "Dar Al Riyadh"].map((tag) => (
+                    {["Environmental Design", "Spatial UX", "Bilingual AR/EN", "ISO 7001 Standards", "Color Systems", "Stakeholder Collaboration", "Live Project"].map((tag) => (
                       <span
                         key={tag}
                         className="text-xs px-3 py-1 rounded-full"

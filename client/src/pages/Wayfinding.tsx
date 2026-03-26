@@ -36,7 +36,7 @@ export default function Wayfinding() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="section-num" style={{ letterSpacing: "0.2em" }}>REAL-WORLD PROJECT</span>
                 <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: ACCENT + "18", color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>
-                  Dar Al Riyadh · 2025
+                  Live Project · 2025
                 </span>
               </div>
               <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
@@ -45,15 +45,15 @@ export default function Wayfinding() {
                 <em style={{ color: ACCENT }}>Signage Design</em>
               </h1>
               <p className="text-xl mb-6 font-medium" style={{ color: ACCENT, fontFamily: "'DM Sans', sans-serif" }}>
-                Mixed-Use Tower — Multi-Zone Wayfinding System, Amman
+                Mixed-Use Tower — Multi-Zone Wayfinding System
               </p>
               <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                A comprehensive wayfinding signage system for a 24-floor contemporary mixed-use high-rise in Amman, Jordan. The project involved designing a complete visual navigation language across parking, commercial, and residential zones, serving diverse user groups including residents, hotel guests, medical staff, and international visitors.
+                A comprehensive wayfinding signage system for a 24-floor contemporary mixed-use high-rise. The project involved designing a complete visual navigation language across parking, commercial, and residential zones, serving diverse user groups including residents, hotel guests, medical staff, and international visitors.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
-                  { label: "Client", value: "Dar Al Riyadh" },
-                  { label: "Location", value: "Amman, Jordan" },
+                  { label: "Year", value: "2025" },
+                  { label: "Sector", value: "Mixed-Use Development" },
                   { label: "Role", value: "UX/UI Designer" },
                   { label: "Type", value: "Environmental Design" },
                 ].map((item) => (
@@ -96,7 +96,7 @@ export default function Wayfinding() {
             <div className="grid lg:grid-cols-2 gap-10">
               <div>
                 <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  This project is one of the first contemporary high-rise towers in Jordan, rising 24 floors in central Amman. The development integrates residential apartments, commercial retail, a hospital, hotels, and underground parking — creating a complex multi-use environment with diverse navigation needs.
+                  This project is a 24-floor contemporary mixed-use high-rise development. It integrates residential apartments, commercial retail, a hospital, hotels, and underground parking — creating a complex multi-use environment with diverse navigation needs.
                 </p>
                 <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
                   My role was to design and build a comprehensive wayfinding signage system — establishing guidelines and rules that encompass color, typeface, materials, pictograms, arrows, and layouts — ensuring every user group can navigate confidently and efficiently.
