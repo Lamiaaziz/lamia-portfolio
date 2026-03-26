@@ -12,8 +12,7 @@ const IMG = {
   splash: "/traveltales/splash.webp",
   onboarding1: "/traveltales/onboarding-1.webp",
   onboarding2: "/traveltales/onboarding-2.webp",
-  login: "/traveltales/login.webp",
-  registerFavorite: "/traveltales/register-favorite.webp",
+  login: "/traveltales/hifi-login.webp",
   homepage: "/traveltales/hifi-homepage.webp",
   placeDetail: "/traveltales/hifi-place-detail.webp",
   booking1: "/traveltales/booking-1.webp",
@@ -179,7 +178,6 @@ export default function TravelTales() {
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             <PhoneFrame src={IMG.wireframeOnboarding} alt="Onboarding wireframe" label="Onboarding" />
-            <PhoneFrame src={IMG.wireframeLogin} alt="Login wireframe" label="Login" />
             <PhoneFrame src={IMG.wireframeRegisterPlaces} alt="Register favourite places wireframe" label="Favourite Places" />
             <PhoneFrame src={IMG.wireframeHomepage} alt="Homepage wireframe" label="Homepage" />
             <PhoneFrame src={IMG.wireframePlaceDetail} alt="Place detail wireframe" label="Place Detail" />
@@ -229,7 +227,6 @@ export default function TravelTales() {
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             <PhoneFrame src={IMG.login} alt="Login Screen" label="Login" />
-            <PhoneFrame src={IMG.registerFavorite} alt="Register & Favourite Place" label="Register & Favourites" />
           </div>
         </div>
       </section>
