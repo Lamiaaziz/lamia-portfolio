@@ -504,7 +504,7 @@ export default function Home() {
                 <ArrowRight size={14} />
               </a>
               <a
-                href="https://linkedin.com/in/lamia-alrowaished"
+                href="https://www.linkedin.com/in/lamia-a-09179917a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-medium border transition-all duration-300 hover:scale-105"

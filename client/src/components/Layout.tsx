@@ -208,8 +208,8 @@ export default function Layout({ children }: LayoutProps) {
               <a href="tel:+966580343817" className="text-sm hover:underline" style={{ color: "oklch(0.45 0.06 230)", fontFamily }}>
                 +966 58 034 3817
               </a>
-              <a href="https://linkedin.com/lamia" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: "oklch(0.45 0.06 230)", fontFamily }}>
-                linkedin.com/lamia
+              <a href="https://www.linkedin.com/in/lamia-a-09179917a/" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: "oklch(0.45 0.06 230)", fontFamily }}>
+                linkedin.com/in/lamia-a
               </a>
               <a
                 href="/LamiaAlrowaished-CV.pdf"
