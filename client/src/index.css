@@ -234,3 +234,11 @@
   font-family: 'Tajawal', sans-serif !important;
   line-height: 1.5;
 }
+
+/* ── Arabic section-num: remove letter-spacing, boost weight & color ── */
+[dir="rtl"] .section-num {
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  color: oklch(0.42 0.06 230 / 0.85) !important;
+  font-size: 0.8rem !important;
+}
