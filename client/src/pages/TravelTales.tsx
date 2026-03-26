@@ -1,17 +1,48 @@
 /*
- * TRAVEL TALES CASE STUDY PAGE — Lamia Portfolio "Soft Blueprint"
- * Full case study: Project Summary, Design Process, Moodboard, Persona, Wireframes, Hi-Fi, Prototype
+ * TRAVEL TALES CASE STUDY PAGE — Lamia Portfolio
+ * Real screens: Splash → Wireframes → Onboarding (2) → Login → Register →
+ *               Homepage → Place Detail → Booking Flow (3) → Booking Success
  */
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
-// High-res 1434×1920px WebP — replaces the broken 132px-wide PNG
-const TRAVEL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/traveltales-preview-gYMjHtcyp9MKuCHUXoZzr3.webp";
 
-function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
+const IMG = {
+  hifiShowcase: "/traveltales/hifi-showcase.webp",
+  splash: "/traveltales/splash.webp",
+  onboarding1: "/traveltales/onboarding-1.webp",
+  onboarding2: "/traveltales/onboarding-2.webp",
+  login: "/traveltales/login.webp",
+  registerFavorite: "/traveltales/register-favorite.webp",
+  homepage: "/traveltales/homepage.webp",
+  placeDetail: "/traveltales/place-detail.webp",
+  booking1: "/traveltales/booking-1.webp",
+  booking2: "/traveltales/booking-2.webp",
+  booking3: "/traveltales/booking-3.webp",
+  bookingSuccess: "/traveltales/booking-success.webp",
+  moodboard: "/traveltales/moodboard.webp",
+  wireframeOnboarding: "/traveltales/wireframe-onboarding.webp",
+  wireframePlaceDetail: "/traveltales/wireframe-place-detail.webp",
+};
+
+function PhoneFrame({ src, alt, label }: { src: string; alt: string; label?: string }) {
   return (
-    <div className={className} style={style}>
-      {children}
+    <div className="flex flex-col items-center gap-3">
+      <div
+        className="rounded-3xl overflow-hidden shadow-xl"
+        style={{
+          width: "180px",
+          border: "2px solid oklch(0.88 0.015 200 / 0.4)",
+          background: "oklch(0.12 0.01 200)",
+        }}
+      >
+        <img src={src} alt={alt} loading="lazy" decoding="async" className="w-full h-auto block" />
+      </div>
+      {label && (
+        <p className="text-xs text-center font-medium" style={{ color: "oklch(0.52 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+          {label}
+        </p>
+      )}
     </div>
   );
 }
@@ -19,12 +50,14 @@ function Section({ children, className = "", style = {} }: { children: React.Rea
 export default function TravelTales() {
   return (
     <Layout>
-      {/* HERO */}
-      <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "oklch(0.94 0.018 195)" }}>
+
+      {/* ── HERO ── */}
+      <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: "oklch(0.93 0.015 200)" }}>
         <div className="circle-decor" style={{ width: 500, height: 500, top: -150, right: -100, opacity: 0.3 }} />
+        <div className="circle-decor" style={{ width: 280, height: 280, bottom: -80, left: "30%", opacity: 0.2 }} />
         <div className="container relative z-10">
           <Link href="/">
-            <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
+            <button className="inline-flex items-center gap-2 text-sm mb-10 transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
               <ArrowLeft size={14} /> Back to Portfolio
             </button>
           </Link>
@@ -32,298 +65,287 @@ export default function TravelTales() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <span className="section-num" style={{ letterSpacing: "0.2em" }}>PROJECT 02</span>
-                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.38 0.1 195 / 0.12)", color: "oklch(0.28 0.1 195)", fontFamily: "'DM Sans', sans-serif" }}>UX Product Concept</span>
+                <span className="text-xs px-3 py-1 rounded-full font-medium" style={{ background: "oklch(0.45 0.10 200 / 0.12)", color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif" }}>
+                  UX Product Concept · Bootcamp
+                </span>
               </div>
-              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Travel Tales</h1>
-              <p className="text-xl mb-6" style={{ color: "oklch(0.28 0.1 195)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>Travel Planning Experience</p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                Travel Tales is a mobile experience designed to help users discover destinations and organize their travel plans in a simple and inspiring way — turning a complex planning process into a clear, visual journey.
+              <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>
+                Travel Tales
+              </h1>
+              <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
+                Smart Travel Planning App for Saudi Explorers
+              </p>
+              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+                Travel Tales is a travel planning app designed to help users discover destinations, plan itineraries, and book experiences — combining smart recommendations with a seamless booking flow tailored for the Saudi market.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Type", value: "UX Concept" }, { label: "Role", value: "UX / Product Designer" }, { label: "Focus", value: "Mobile App" }].map((item) => (
+                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Product Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
-                    <p className="text-sm font-medium" style={{ color: "oklch(0.28 0.1 195)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>
+                    <p className="text-sm font-medium" style={{ color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>
                   </div>
                 ))}
               </div>
               <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.28 0.1 195)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>
+                <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.35 0.10 200)", color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>
                   <ExternalLink size={14} /> View Prototype
                 </button>
               </a>
             </div>
-            {/* Hero image — portrait phone mockup, contained properly */}
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "320px", width: "100%" }}>
-                <img
-                  src={TRAVEL_IMG}
-                  alt="Travel Tales Case Study"
-                  width={320}
-                  height={428}
-                  loading="eager"
-                  decoding="async"
-                  className="w-full h-auto block"
-                  style={{ objectFit: "cover", objectPosition: "top" }}
-                />
+              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ maxWidth: "420px", width: "100%" }}>
+                <img src={IMG.hifiShowcase} alt="Travel Tales Hi-Fi Screens" width={420} loading="eager" decoding="async" className="w-full h-auto block" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* RESPONSIBILITIES */}
+      {/* ── RESPONSIBILITIES ── */}
       <section className="py-16">
         <div className="container">
-          <Section>
-            <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-              <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>RESPONSIBILITIES</p>
-              <div className="grid md:grid-cols-4 gap-6">
-                {["UX Research Synthesis", "Behavioral Framework Design", "Product Flow Architecture", "UI Interface Design"].map((r) => (
-                  <div key={r} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.28 0.1 195)" }} />
-                    <p className="text-sm" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{r}</p>
+          <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.96 0.008 200)", border: "1px solid oklch(0.88 0.015 200 / 0.5)" }}>
+            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>RESPONSIBILITIES</p>
+            <div className="grid md:grid-cols-4 gap-6">
+              {["UX Research & Discovery", "Information Architecture", "Booking Flow Design", "UI Interface Design"].map((r) => (
+                <div key={r} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.45 0.10 200)" }} />
+                  <p className="text-sm" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>{r}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CHALLENGE & SOLUTION ── */}
+      <section className="py-16">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="rounded-2xl p-8" style={{ background: "oklch(0.93 0.015 200)", border: "1px solid oklch(0.88 0.015 200 / 0.5)" }}>
+              <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>CHALLENGE</p>
+              <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>The Challenge</h2>
+              <ul className="space-y-3">
+                {["Fragmented travel planning across multiple apps", "Lack of personalised destination discovery", "Complex and friction-heavy booking experiences"].map((p) => (
+                  <li key={p} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.45 0.10 200)" }} />
+                    <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>{p}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl p-8" style={{ background: "oklch(0.35 0.10 200)", color: "oklch(0.98 0.005 200)" }}>
+              <p className="section-num mb-3" style={{ letterSpacing: "0.2em", color: "oklch(0.98 0.005 200 / 0.5)" }}>SOLUTION</p>
+              <h2 className="text-3xl mb-4" style={{ fontFamily: "'DM Serif Display', serif" }}>The Solution</h2>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: "oklch(0.98 0.005 200 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>
+                A unified travel app that combines smart destination discovery, personalised recommendations, and a streamlined booking flow — making travel planning effortless from inspiration to confirmation.
+              </p>
+              <div className="grid grid-cols-3 gap-3 mt-4">
+                {[{ label: "Research", val: "User Research" }, { label: "Design", val: "UI Design" }, { label: "Type", val: "App" }].map((s) => (
+                  <div key={s.label} className="rounded-xl p-3 text-center" style={{ background: "oklch(0.98 0.005 200 / 0.1)" }}>
+                    <p className="text-xs mb-1" style={{ color: "oklch(0.98 0.005 200 / 0.5)", fontFamily: "'DM Sans', sans-serif" }}>{s.label}</p>
+                    <p className="text-sm font-medium" style={{ color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>{s.val}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </Section>
+          </div>
         </div>
       </section>
 
-      {/* PROJECT SUMMARY */}
+      {/* ── MOODBOARD ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>MOODBOARD</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Moodboard</h2>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img src={IMG.moodboard} alt="Travel Tales Moodboard — color palette and visual references" loading="lazy" decoding="async" className="w-full h-auto block" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── WIREFRAMES ── */}
       <section className="py-16">
         <div className="container">
-          <Section>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="rounded-2xl p-8" style={{ background: "oklch(0.94 0.018 195)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-                <p className="section-num mb-3" style={{ letterSpacing: "0.2em" }}>CHALLENGE</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>The Challenge</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Travel planning apps often present too many options and complex booking flows, making it difficult for users to quickly discover destinations and complete their travel booking. Users need a simpler way to explore places, choose activities, and complete bookings in a clear flow.
-                </p>
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>WIREFRAMES</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Wireframes</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+            Low-fidelity wireframes mapped the complete user journey — from onboarding and account setup through destination discovery, place detail, and the full booking flow.
+          </p>
+          <div className="flex flex-wrap gap-8 justify-center">
+            <PhoneFrame src={IMG.wireframeOnboarding} alt="Onboarding wireframe" label="Onboarding Flow" />
+            <PhoneFrame src={IMG.wireframePlaceDetail} alt="Place detail wireframe" label="Place Detail" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── DESIGN PROCESS ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>DESIGN PROCESS</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Design Process</h2>
+          <div className="flex flex-wrap items-center gap-2 mb-10">
+            {["Problem Definition", "Research", "Moodboard", "Wireframes", "Hi-Fi Design", "Prototype"].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-2">
+                <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.35 0.10 200)", color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
+                {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 200)" }} />}
               </div>
-              <div className="rounded-2xl p-8" style={{ background: "oklch(0.28 0.1 195)", color: "oklch(0.98 0.005 230)" }}>
-                <p className="section-num mb-3" style={{ letterSpacing: "0.2em", color: "oklch(0.98 0.005 230 / 0.5)" }}>SOLUTION</p>
-                <h2 className="text-3xl mb-4" style={{ fontFamily: "'DM Serif Display', serif" }}>The Solution</h2>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Design a travel experience that allows users to discover destinations easily, explore activities visually, and complete bookings with a simple step-by-step flow.
-                </p>
-                <div className="grid grid-cols-3 gap-3">
-                  {[{ label: "Research", val: "Secondary" }, { label: "Design", val: "UI Design" }, { label: "Type", val: "App" }].map((s) => (
-                    <div key={s.label} className="rounded-xl p-3 text-center" style={{ background: "oklch(0.98 0.005 230 / 0.1)" }}>
-                      <p className="text-xs mb-1" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif" }}>{s.label}</p>
-                      <p className="text-sm font-medium" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{s.val}</p>
-                    </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HI-FI: SPLASH + ONBOARDING ── */}
+      <section className="py-16">
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Splash & Onboarding</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+            The app opens with a bold splash screen, followed by two onboarding screens that introduce Travel Tales' core value proposition — inspiring users to explore and plan their next adventure.
+          </p>
+          <div className="flex flex-wrap gap-6 justify-center">
+            <PhoneFrame src={IMG.splash} alt="Travel Tales Splash Screen" label="Splash Screen" />
+            <PhoneFrame src={IMG.onboarding1} alt="Onboarding 1" label="Onboarding 1" />
+            <PhoneFrame src={IMG.onboarding2} alt="Onboarding 2" label="Onboarding 2" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── HI-FI: ACCOUNT SETUP ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
+        <div className="container">
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Account Setup</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+            Users sign in or create an account, then personalise their experience by selecting their favourite travel destinations — setting the foundation for smart recommendations throughout the app.
+          </p>
+          <div className="flex flex-wrap gap-6 justify-center">
+            <PhoneFrame src={IMG.login} alt="Login Screen" label="Login" />
+            <PhoneFrame src={IMG.registerFavorite} alt="Register & Favourite Place" label="Register & Favourites" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── HI-FI: DISCOVERY ── */}
+      <section className="py-16">
+        <div className="container">
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Destination Discovery</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+            The homepage surfaces personalised destination cards, trending places, and curated experiences. Tapping a destination opens a rich place detail view with photos, reviews, and booking options.
+          </p>
+          <div className="flex flex-wrap gap-6 justify-center">
+            <PhoneFrame src={IMG.homepage} alt="Travel Tales Homepage" label="Homepage" />
+            <PhoneFrame src={IMG.placeDetail} alt="Place Detail Screen" label="Place Detail" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── HI-FI: BOOKING FLOW ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
+        <div className="container">
+          <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>Booking Flow</h2>
+          <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+            The booking flow is designed to minimise friction — users select dates on a calendar, choose guest count and room type, review their booking summary, and receive a confirmation screen. Four clear steps from intent to confirmation.
+          </p>
+          <div className="flex flex-wrap gap-6 justify-center">
+            <PhoneFrame src={IMG.booking1} alt="Booking Step 1 — Calendar" label="Step 1 — Dates" />
+            <PhoneFrame src={IMG.booking2} alt="Booking Step 2 — Guests" label="Step 2 — Guests" />
+            <PhoneFrame src={IMG.booking3} alt="Booking Step 3 — Summary" label="Step 3 — Summary" />
+            <PhoneFrame src={IMG.bookingSuccess} alt="Booking Success" label="Booking Confirmed" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── PERSONA ── */}
+      <section className="py-16">
+        <div className="container">
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>PERSONA</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>User Persona</h2>
+          <div className="rounded-2xl p-8" style={{ background: "oklch(0.35 0.10 200)" }}>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="w-16 h-16 rounded-full mb-4 flex items-center justify-center text-2xl font-bold" style={{ background: "oklch(0.98 0.005 200 / 0.15)", color: "oklch(0.98 0.005 200)" }}>N</div>
+                <h3 className="text-xl font-semibold mb-1" style={{ color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>Nora, 26</h3>
+                <p className="text-sm" style={{ color: "oklch(0.98 0.005 200 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>Content Creator, Jeddah</p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 200 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>GOALS</p>
+                <ul className="space-y-2">
+                  {["Discover unique travel destinations", "Plan and book trips in one place", "Share travel experiences with followers"].map((g) => (
+                    <li key={g} className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 200 / 0.5)" }} />
+                      <p className="text-sm" style={{ color: "oklch(0.98 0.005 200 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{g}</p>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* DESIGN PROCESS */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>DESIGN PROCESS</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Design Process</h2>
-            <div className="flex flex-wrap items-center gap-2">
-              {["Problem Definition", "Research", "Moodboard", "Wireframes", "Prototype", "Focus"].map((step, i, arr) => (
-                <div key={step} className="flex items-center gap-2">
-                  <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.28 0.1 195)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
-                  {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* MOODBOARD */}
-      <section className="py-16">
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>MOODBOARD</p>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
               <div>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Moodboard</h2>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  The visual direction for Travel Tales uses a White + Blue palette — evoking clarity, openness, and the feeling of sky and sea. The clean typography reinforces a modern, accessible travel experience.
-                </p>
-                <div className="flex gap-3 mb-4">
-                  {[{ name: "White", color: "oklch(0.98 0.005 230)", border: true }, { name: "Blue", color: "oklch(0.28 0.1 195)" }, { name: "Teal", color: "oklch(0.55 0.12 195)" }].map((c) => (
-                    <div key={c.name} className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full" style={{ background: c.color, border: c.border ? "1px solid oklch(0.88 0.015 230)" : "none" }} />
-                      <p className="text-xs" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>{c.name}</p>
-                    </div>
+                <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 200 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>PAIN POINTS</p>
+                <ul className="space-y-2">
+                  {["Switching between multiple apps to plan", "Lack of personalised recommendations", "Complicated booking processes"].map((p) => (
+                    <li key={p} className="flex items-start gap-2">
+                      <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 200 / 0.5)" }} />
+                      <p className="text-sm" style={{ color: "oklch(0.98 0.005 200 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{p}</p>
+                    </li>
                   ))}
-                </div>
-                <div className="p-4 rounded-xl" style={{ background: "oklch(0.96 0.008 230)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
-                  <p className="text-xs mb-1" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>TYPOGRAPHY</p>
-                  <p className="text-2xl" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Aa — Clean Sans</p>
-                </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.94 0.018 195)" }}>
-                <img
-                  src={TRAVEL_IMG}
-                  alt="Travel Tales Moodboard"
-                  loading="lazy"
-                  decoding="async"
-                  width={400}
-                  height={533}
-                  className="block"
-                  style={{ maxHeight: "400px", width: "auto", objectFit: "contain" }}
-                />
+                </ul>
               </div>
             </div>
-          </Section>
+          </div>
         </div>
       </section>
 
-      {/* PERSONA */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
+      {/* ── USER FLOW ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
         <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>PERSONA</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>User Persona</h2>
-            <div className="rounded-2xl p-8" style={{ background: "oklch(0.28 0.1 195)" }}>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <div className="w-16 h-16 rounded-full mb-4 flex items-center justify-center text-2xl font-bold" style={{ background: "oklch(0.98 0.005 230 / 0.15)", color: "oklch(0.98 0.005 230)" }}>C</div>
-                  <h3 className="text-xl font-semibold mb-1" style={{ color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>Clara, 30</h3>
-                  <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily: "'DM Sans', sans-serif" }}>Travel Enthusiast, Dubai</p>
-                  <p className="text-xs mt-2" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif" }}>Pain Points: Lots of tabs</p>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>GOALS</p>
-                  <ul className="space-y-2">
-                    {["Discover new destinations quickly", "Plan trips without switching apps", "Get clear booking confirmation"].map((g) => (
-                      <li key={g} className="flex items-start gap-2">
-                        <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
-                        <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{g}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.1em" }}>PAIN POINTS</p>
-                  <ul className="space-y-2">
-                    {["Too many tabs and apps to manage", "Confusing booking flows", "Hard to compare destinations visually"].map((p) => (
-                      <li key={p} className="flex items-start gap-2">
-                        <div className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.98 0.005 230 / 0.5)" }} />
-                        <p className="text-sm" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily: "'DM Sans', sans-serif" }}>{p}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+          <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>USER FLOW</p>
+          <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>User Flow</h2>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {["Splash", "Onboarding", "Login / Register", "Select Favourites", "Homepage", "Place Detail", "Booking", "Confirmation"].map((step, i, arr) => (
+              <div key={step} className="flex items-center gap-3">
+                <div className="px-4 py-2 rounded-full text-sm font-medium text-center" style={{ background: "oklch(0.35 0.10 200)", color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
+                {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 200)" }} />}
               </div>
-            </div>
-          </Section>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* WIREFRAMES + HI-FI */}
-      <section className="py-16">
+      {/* ── OUTCOME ── */}
+      <section className="py-16" style={{ background: "oklch(0.93 0.015 200)" }}>
         <div className="container">
-          <Section>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div>
-                <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>WIREFRAMES</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Wireframes</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Low-fidelity wireframes mapped the core user flow — from destination discovery through activity selection to booking confirmation.
-                </p>
-              </div>
-              <div>
-                <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
-                <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>The Design</h2>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  High-fidelity screens refined the visual system — clean white backgrounds with teal accents, rich destination photography, and a clear step-by-step booking flow.
-                </p>
-              </div>
-            </div>
-            {/* Full case study image — displayed as a contained portrait strip */}
-            <div className="rounded-2xl overflow-hidden flex justify-center" style={{ border: "1px solid oklch(0.88 0.015 230 / 0.3)", background: "oklch(0.94 0.018 195)" }}>
-              <img
-                src={TRAVEL_IMG}
-                alt="Travel Tales Full Case Study"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={800}
-                className="block w-full"
-                style={{ maxHeight: "700px", objectFit: "contain", objectPosition: "top" }}
-              />
-            </div>
-          </Section>
+          <div className="rounded-2xl p-10 lg:p-16 text-center relative overflow-hidden">
+            <div className="circle-decor" style={{ width: 350, height: 350, top: -100, right: -80, opacity: 0.3 }} />
+            <h2 className="text-3xl lg:text-4xl mb-6 relative z-10" style={{ color: "oklch(0.2 0.04 200)", fontFamily: "'DM Serif Display', serif" }}>
+              "Travel Tales turns fragmented planning into one seamless journey."
+            </h2>
+            <p className="text-base leading-relaxed max-w-2xl mx-auto mb-8 relative z-10" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+              By unifying discovery, personalisation, and booking into a single cohesive experience, Travel Tales removes the friction from travel planning — letting users focus on the excitement of the journey ahead.
+            </p>
+            <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" className="relative z-10">
+              <button className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.35 0.10 200)", color: "oklch(0.98 0.005 200)", fontFamily: "'DM Sans', sans-serif" }}>
+                <ExternalLink size={14} /> View Full Prototype
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* KEY SCREENS */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>KEY SCREENS</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Key Screens</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-              {["Onboarding", "Sign In", "Home Page", "Product Detail", "Checkout"].map((screen, i) => (
-                <div key={screen} className="rounded-xl p-4 text-center" style={{ background: i % 2 === 0 ? "oklch(0.28 0.1 195)" : "oklch(1 0 0)", border: "1px solid oklch(0.88 0.015 230 / 0.3)" }}>
-                  <p className="text-sm font-medium" style={{ color: i % 2 === 0 ? "oklch(0.98 0.005 230)" : "oklch(0.28 0.1 195)", fontFamily: "'DM Sans', sans-serif" }}>{screen}</p>
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* USER FLOW */}
-      <section className="py-16">
-        <div className="container">
-          <Section>
-            <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>USER FLOW</p>
-            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Shopping Experience Flow</h2>
-            <div className="flex flex-wrap items-center gap-2">
-              {["Explore", "Discover", "Select Destination", "Book", "Payment", "Confirmation"].map((step, i, arr) => (
-                <div key={step} className="flex items-center gap-2">
-                  <div className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: "oklch(0.28 0.1 195)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>{step}</div>
-                  {i < arr.length - 1 && <ArrowRight size={14} style={{ color: "oklch(0.52 0.04 230)" }} />}
-                </div>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* OUTCOME */}
-      <section className="py-16" style={{ background: "oklch(0.94 0.018 195)" }}>
-        <div className="container">
-          <Section>
-            <div className="rounded-2xl p-10 lg:p-16 text-center">
-              <h2 className="text-3xl lg:text-4xl mb-6" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>
-                "Travel Tales simplifies the planning process into a clear, visual journey."
-              </h2>
-              <p className="text-base leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                The design reduces friction at every step — from discovery to confirmation — making travel planning feel inspiring rather than overwhelming.
-              </p>
-              <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-medium transition-all duration-200 hover:opacity-80" style={{ background: "oklch(0.28 0.1 195)", color: "oklch(0.98 0.005 230)", fontFamily: "'DM Sans', sans-serif" }}>
-                  <ExternalLink size={14} /> View Full Prototype
-                </button>
-              </a>
-            </div>
-          </Section>
-        </div>
-      </section>
-
-      {/* NAVIGATION */}
-      <section className="py-16" style={{ background: "oklch(0.96 0.008 230)" }}>
+      {/* ── NAVIGATION ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 200)" }}>
         <div className="container flex justify-between items-center">
-          <Link href="/aurafit"><button className="inline-flex items-center gap-2 text-sm transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}><ArrowLeft size={14} /> Previous: AuraFit</button></Link>
-          <Link href="/voko"><button className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.35 0.09 230)", fontFamily: "'DM Sans', sans-serif" }}>Next: VOKO <ArrowRight size={14} /></button></Link>
+          <Link href="/aurafit">
+            <button className="inline-flex items-center gap-2 text-sm transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.52 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
+              <ArrowLeft size={14} /> Previous: AuraFit
+            </button>
+          </Link>
+          <Link href="/voko">
+            <button className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200 hover:gap-3" style={{ color: "oklch(0.35 0.09 200)", fontFamily: "'DM Sans', sans-serif" }}>
+              Next: VOKO <ArrowRight size={14} />
+            </button>
+          </Link>
         </div>
       </section>
+
     </Layout>
   );
 }
