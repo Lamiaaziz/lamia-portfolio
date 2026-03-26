@@ -257,15 +257,13 @@ export default function VOKO() {
           <p className="section-num mb-4" style={{ letterSpacing: "0.2em" }}>HI-FI SCREENS</p>
           <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: "'DM Serif Display', serif" }}>Onboarding Flow</h2>
           <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}>
-            The app opens with a bold splash screen, followed by three onboarding slides that introduce the VOKO brand proposition, then a welcome screen offering Login or Sign Up.
+            The app opens with a bold splash screen, followed by three onboarding slides that introduce the VOKO brand proposition — guiding new users into the fashion experience.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <PhoneFrame src={IMG.splash}      alt="Splash Screen"    label="Splash" />
-            <PhoneFrame src={IMG.onboarding1} alt="Onboarding 1"     label="Find Your Style" />
-            <PhoneFrame src={IMG.onboarding2} alt="Onboarding 2"     label="Wear it First" />
-            <PhoneFrame src={IMG.onboarding3} alt="Onboarding 3"     label="Your Way" />
-            <PhoneFrame src={IMG.welcome}     alt="Welcome Screen"   label="Welcome" />
-            <PhoneFrame src={IMG.signup}      alt="Sign Up"          label="Sign Up" />
+            <PhoneFrame src={IMG.splash}      alt="Splash Screen" label="Splash" />
+            <PhoneFrame src={IMG.onboarding1} alt="Onboarding 1"  label="Find Your Style" />
+            <PhoneFrame src={IMG.onboarding2} alt="Onboarding 2"  label="Wear it First" />
+            <PhoneFrame src={IMG.onboarding3} alt="Onboarding 3"  label="Your Way" />
           </div>
         </div>
       </section>
