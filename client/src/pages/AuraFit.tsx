@@ -6,52 +6,12 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-
-function useInView(threshold = 0.05) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const checkAndSet = () => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
-          setInView(true);
-          return true;
-        }
-      }
-      return false;
-    };
-    if (checkAndSet()) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold, rootMargin: "100px 0px 100px 0px" }
-    );
-    if (ref.current) obs.observe(ref.current);
-    const onScroll = () => { if (checkAndSet()) { window.removeEventListener("scroll", onScroll); obs.disconnect(); } };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => { obs.disconnect(); window.removeEventListener("scroll", onScroll); };
-  }, [threshold]);
-  return { ref, inView };
-}
-
 // High-res 1434×1920px WebP — replaces the broken 122px-wide PNG
 const AURAFIT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/aurafit-preview-aDDXmmY7Bhcn7ar7cAPefs.webp";
 
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
-  const { ref, inView } = useInView();
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(20px)",
-        transition: "opacity 0.6s ease, transform 0.6s ease",
-        willChange: "opacity, transform",
-        ...style,
-      }}
-    >
+    <div className={className} style={style}>
       {children}
     </div>
   );

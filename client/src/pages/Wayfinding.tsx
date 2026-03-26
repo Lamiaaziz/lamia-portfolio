@@ -6,39 +6,9 @@
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-
-function useInView(threshold = 0.05) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [inView, setInView] = useState(false);
-  useEffect(() => {
-    const checkAndSet = () => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
-          setInView(true);
-          return true;
-        }
-      }
-      return false;
-    };
-    if (checkAndSet()) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold, rootMargin: "200px 0px 200px 0px" }
-    );
-    if (ref.current) obs.observe(ref.current);
-    const onScroll = () => { if (checkAndSet()) { window.removeEventListener('scroll', onScroll); obs.disconnect(); } };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => { obs.disconnect(); window.removeEventListener('scroll', onScroll); };
-  }, [threshold]);
-  return { ref, inView };
-}
-
 function Section({ children, className = "", style = {} }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
-  const { ref, inView } = useInView();
   return (
-    <div ref={ref} className={className} style={{ opacity: inView ? 1 : 0, transform: inView ? "translateY(0)" : "translateY(28px)", transition: "opacity 0.7s ease, transform 0.7s ease", ...style }}>
+    <div className={className} style={style}>
       {children}
     </div>
   );
