@@ -21,8 +21,13 @@ const IMG = {
   booking3: "/traveltales/booking-3.webp",
   bookingSuccess: "/traveltales/booking-success.webp",
   moodboard: "/traveltales/moodboard.webp",
+  // Wireframes — all 6 screens
   wireframeOnboarding: "/traveltales/wireframe-onboarding.webp",
+  wireframeHomepage: "/traveltales/wireframe-homepage.webp",
+  wireframeRegisterPlaces: "/traveltales/wireframe-register-places.webp",
+  wireframeLogin: "/traveltales/wireframe-login.webp",
   wireframePlaceDetail: "/traveltales/wireframe-place-detail.webp",
+  wireframeBooking: "/traveltales/wireframe-booking.webp",
 };
 
 function PhoneFrame({ src, alt, label }: { src: string; alt: string; label?: string }) {
@@ -172,9 +177,13 @@ export default function TravelTales() {
           <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 200)", fontFamily: "'DM Sans', sans-serif" }}>
             Low-fidelity wireframes mapped the complete user journey — from onboarding and account setup through destination discovery, place detail, and the full booking flow.
           </p>
-          <div className="flex flex-wrap gap-8 justify-center">
-            <PhoneFrame src={IMG.wireframeOnboarding} alt="Onboarding wireframe" label="Onboarding Flow" />
+          <div className="flex flex-wrap gap-6 justify-center">
+            <PhoneFrame src={IMG.wireframeOnboarding} alt="Onboarding wireframe" label="Onboarding" />
+            <PhoneFrame src={IMG.wireframeLogin} alt="Login wireframe" label="Login" />
+            <PhoneFrame src={IMG.wireframeRegisterPlaces} alt="Register favourite places wireframe" label="Favourite Places" />
+            <PhoneFrame src={IMG.wireframeHomepage} alt="Homepage wireframe" label="Homepage" />
             <PhoneFrame src={IMG.wireframePlaceDetail} alt="Place detail wireframe" label="Place Detail" />
+            <PhoneFrame src={IMG.wireframeBooking} alt="Booking wireframe" label="Booking" />
           </div>
         </div>
       </section>
