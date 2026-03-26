@@ -40,6 +40,7 @@ const AURAFIT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/iv
 const TRAVEL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/traveltales-preview-gYMjHtcyp9MKuCHUXoZzr3.webp";
 const VOKO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/voko-preview-EAzR7gjACG8AqB7YhWBEeZ.webp";
 const WEBDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Desktop-1_d79b0fb8.png";
+const VISUALDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Asset10@4x-8_a3a7e5a8.webp";
 
 const projects = [
   {
@@ -89,6 +90,18 @@ const projects = [
     img: WEBDESIGN_IMG,
     accent: "oklch(0.28 0.1 155)",
     bg: "oklch(0.94 0.015 155)",
+  },
+  {
+    num: "05",
+    title: "Visual Design",
+    subtitle: "Brand Identity, Campaigns & Environmental Design",
+    type: "Visual Design · Client & Personal Work",
+    description: "A collection of client and personal visual design work spanning brand identity guidelines, bilingual social media campaigns (AR/EN), presentation templates, environmental signage, and packaging design — demonstrating strong visual communication and storytelling across diverse industries.",
+    tags: ["Brand Identity", "Bilingual AR/EN", "Campaign Design", "Visual Storytelling", "Packaging", "Adobe Suite"],
+    href: "/visualdesign",
+    img: VISUALDESIGN_IMG,
+    accent: "oklch(0.52 0.12 45)",
+    bg: "oklch(0.96 0.015 45)",
   },
 ];
 
@@ -283,7 +296,7 @@ export default function Home() {
                 fontFamily: "'DM Sans', sans-serif",
               }}
             >
-              I translate complex challenges into clear, human-centered experiences — from spatial wayfinding systems to digital product design. I bring a rare combination of business acumen, design thinking, and real-world implementation across Saudi Arabia's leading organizations.
+              I translate complex challenges into clear, human-centered experiences — from spatial wayfinding systems to digital products. I design fluently in Arabic and English, facilitate co-creation workshops, and bring a rare combination of design thinking, visual storytelling, and consulting acumen to every project.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 fade-up fade-up-delay-3">
@@ -369,7 +382,13 @@ export default function Home() {
                 className="text-base leading-relaxed"
                 style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
               >
-                My earlier experience in <strong style={{ color: "oklch(0.35 0.09 230)" }}>account development and client management</strong> at Winclex — where I applied UX principles to internal dashboards and drove measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for <strong style={{ color: "oklch(0.35 0.09 230)" }}>impact</strong>.
+                My earlier experience in <strong style={{ color: "oklch(0.35 0.09 230)" }}>client-facing consulting and account management</strong> at Winclex — where I applied UX principles to internal dashboards and drove measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for <strong style={{ color: "oklch(0.35 0.09 230)" }}>impact</strong>.
+              </p>
+              <p
+                className="text-base leading-relaxed mt-4"
+                style={{ color: "oklch(0.42 0.04 230)", fontFamily: "'DM Sans', sans-serif" }}
+              >
+                I also bring experience in <strong style={{ color: "oklch(0.35 0.09 230)" }}>facilitating co-creation sessions and design workshops</strong> — structuring narratives, translating ambiguous challenges into clear visual artifacts, and guiding teams from insight to action. I design fluently in both <strong style={{ color: "oklch(0.35 0.09 230)" }}>Arabic and English</strong>, with a deep understanding of the Saudi and MENA context.
               </p>
             </div>
 
@@ -379,7 +398,7 @@ export default function Home() {
                 { num: "4+", label: "Years of Experience" },
                 { num: "3", label: "Industries Worked In" },
                 { num: "McKinsey", label: "Forward Program" },
-                { num: "AR / EN", label: "Bilingual Designer" },
+                { num: "AR / EN", label: "Bilingual Design — Mandatory" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -432,17 +451,17 @@ export default function Home() {
             <div className="flex flex-col gap-5">
               {[
                 {
-                  role: "UX/UI Designer — Wayfinding & Environmental Design",
+                  role: "Experience Designer — Wayfinding & Environmental Design",
                   company: "Dar Al Riyadh",
                   period: "Sep 2025 – Present",
-                  highlights: ["User journey mapping & spatial flow design", "Cross-functional team collaboration", "Visual systems: signage hierarchy, typography, iconography"],
+                  highlights: ["User journey mapping & spatial flow design for a 24-floor mixed-use development", "Translating complex spatial challenges into clear bilingual (AR/EN) visual systems", "Cross-functional stakeholder collaboration in a consulting environment", "Storytelling through visual artifacts: signage hierarchy, iconography, color systems"],
                   accent: "oklch(0.35 0.09 230)",
                 },
                 {
-                  role: "Account Development Officer",
+                  role: "Client-Facing Design & Account Development",
                   company: "Winclex",
                   period: "Dec 2022 – Sep 2025",
-                  highlights: ["Applied UX to internal dashboards — 20% usability improvement", "Client relationship management & business development", "15% growth in account renewals through data-driven processes"],
+                  highlights: ["Applied UX to internal dashboards — 20% usability improvement", "Led co-creation sessions and facilitated client workshops for design alignment", "Produced bilingual (AR/EN) campaign visuals and brand materials", "15% growth in account renewals through data-driven, human-centered processes"],
                   accent: "oklch(0.45 0.1 220)",
                 },
                 {

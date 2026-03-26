@@ -82,7 +82,7 @@ export default function TravelTales() {
                 Travel Tales is a travel planning app designed to help users discover destinations, plan itineraries, and book experiences — combining smart recommendations with a seamless booking flow tailored for the Saudi market.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Product Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
+                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.35 0.10 200)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>

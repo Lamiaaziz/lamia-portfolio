@@ -76,7 +76,7 @@ export default function AuraFit() {
                 AuraFit is a behavioral fitness app designed to help users maintain workout consistency despite irregular schedules — reframing fitness as an adaptive behavioral system rather than a motivation challenge.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Product Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
+                {[{ label: "Timeline", value: "6 Weeks" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Market", value: "Saudi Arabia" }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.35 0.12 270)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>

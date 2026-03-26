@@ -162,7 +162,7 @@ export default function Layout({ children }: LayoutProps) {
                 className="text-xs mb-1"
                 style={{ color: "oklch(0.6 0.04 230 / 0.7)", letterSpacing: "0.15em" }}
               >
-                PRODUCT DESIGNER · SAUDI ARABIA
+                EXPERIENCE DESIGNER · SAUDI ARABIA
               </p>
               <h3
                 className="text-xl"

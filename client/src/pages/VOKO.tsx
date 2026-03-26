@@ -72,7 +72,7 @@ export default function VOKO() {
                 VOKO is a fashion shopping mobile experience designed to help users discover clothing collections, explore products, and complete purchases through a smooth and intuitive shopping journey.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[{ label: "Type", value: "UX Concept" }, { label: "Role", value: "UX / Product Designer" }, { label: "Focus", value: "E-commerce" }].map((item) => (
+                {[{ label: "Type", value: "UX Concept" }, { label: "Role", value: "UX / Experience Designer" }, { label: "Focus", value: "E-commerce" }].map((item) => (
                   <div key={item.label}>
                     <p className="section-num mb-1" style={{ letterSpacing: "0.1em" }}>{item.label}</p>
                     <p className="text-sm font-medium" style={{ color: "oklch(0.42 0.12 75)", fontFamily: "'DM Sans', sans-serif" }}>{item.value}</p>
