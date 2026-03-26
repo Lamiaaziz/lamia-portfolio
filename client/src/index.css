@@ -212,3 +212,9 @@
   .fade-up-delay-3 { animation-delay: 0.3s; }
   .fade-up-delay-4 { animation-delay: 0.4s; }
 }
+
+/* ── Arabic / RTL line-height ── */
+[dir="rtl"],
+[dir="rtl"] * {
+  line-height: 1.5;
+}
