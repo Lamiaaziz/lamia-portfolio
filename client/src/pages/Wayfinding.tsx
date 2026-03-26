@@ -1,7 +1,7 @@
 /*
  * WAYFINDING CASE STUDY PAGE — Lamia Portfolio
  * Real-world project: Mixed-Use Tower Wayfinding Signage System (Confidential Client)
- * Dar Al Riyadh | Sep 2025 – Present
+ * Live Project | Sep 2025 – Present
  */
 import Layout from "@/components/Layout";
 import { Link } from "wouter";
