@@ -291,7 +291,7 @@ export const translations: Record<string, Record<Lang, string>> = {
   },
   "af.welcome.note": {
     en: "I introduced AI-driven insights to provide users with personalized feedback based on their activity, helping them make better decisions and feel more guided throughout their fitness journey.",
-    ar: "أدمجت رؤى مدعومة بالذكاء الاصطناعي لتزويد المستخدمين بتغذية راجعة مخصصة بناءً على نشاطهم، مما يساعدهم على اتخاذ قرارات أفضل والشعور بأنهم موجّهون طوال رحلتهم نحو اللياقة."
+    ar: "دمجتُ بين الذكاء الاصطناعي لتزويد المستخدمين بتغذية راجعة مخصصة بناءً على نشاطهم، مما يساعدهم على اتخاذ قرارات أفضل والشعور بأنهم في الاتجاه الصحيح طوال رحلتهم نحو اللياقة."
   },
   "af.hifi.dashboard.label": { en: "Dashboard", ar: "لوحة التحكم" },
   "af.hifi.progress.label": { en: "Weekly Progress", ar: "التقدم الأسبوعي" },
