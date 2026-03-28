@@ -285,6 +285,10 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "The main dashboard adapts to the user's assigned mode (e.g. Busy Week Mode), showing consistency scores, training rhythm, and recovery insights. The progress screen provides detailed weekly analytics with behavioural metrics and AI-powered recommendations.",
     ar: "تتكيّف لوحة التحكم الرئيسية مع الوضع المخصص للمستخدم (مثل وضع الأسبوع المزدحم)، وتعرض درجات الانتظام وإيقاع التدريب ورؤى التعافي. توفر شاشة التقدم تحليلات أسبوعية تفصيلية مع مقاييس سلوكية وتوصيات مدعومة بالذكاء الاصطناعي.",
   },
+  "af.onboarding.note": {
+    en: "I designed the onboarding experience to capture user goals and preferences early, enabling a more personalized journey and making the experience feel tailored from the start.",
+    ar: "صممت تجربة الإعداد لالتقاط أهداف المستخدم وتفضيلاته مبكراً، مما يتيح رحلة أكثر تخصيصاً ويجعل التجربة تبدو مفصّلة منذ البداية."
+  },
   "af.hifi.dashboard.label": { en: "Dashboard", ar: "لوحة التحكم" },
   "af.hifi.progress.label": { en: "Weekly Progress", ar: "التقدم الأسبوعي" },
   "af.tracking.title": { en: "Progress Tracking / Dashboard", ar: "تتبع التقدم / لوحة التحكم" },

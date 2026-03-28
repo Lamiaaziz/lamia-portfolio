@@ -263,11 +263,16 @@ export default function AuraFit() {
             <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
               {t("af.hifi.splash.p")}
             </p>
-            <div className="flex flex-wrap gap-6 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center mb-10">
               <PhoneFrame src={IMG.splash} alt="AuraFit Splash Screen" label={t("af.hifi.splash.label")} fontFamily={fontFamily} />
               <PhoneFrame src={IMG.onboarding1} alt="Onboarding 1" label={t("af.hifi.ob1.label")} fontFamily={fontFamily} />
               <PhoneFrame src={IMG.onboarding2} alt="Onboarding 2" label={t("af.hifi.ob2.label")} fontFamily={fontFamily} />
               <PhoneFrame src={IMG.onboarding3} alt="Onboarding 3" label={t("af.hifi.ob3.label")} fontFamily={fontFamily} />
+            </div>
+            <div className="rounded-xl p-6" style={{ background: "oklch(0.96 0.008 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
+                {t("af.onboarding.note")}
+              </p>
             </div>
           </Section>
         </div>
