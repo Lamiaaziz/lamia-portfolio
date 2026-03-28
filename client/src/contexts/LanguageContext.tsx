@@ -289,6 +289,10 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "I designed the onboarding experience to capture user goals and preferences early, enabling a more personalized journey and making the experience feel tailored from the start.",
     ar: "صممت تجربة الإعداد لالتقاط أهداف المستخدم وتفضيلاته مبكراً، مما يتيح رحلة أكثر تخصيصاً ويجعل التجربة تبدو مفصّلة منذ البداية."
   },
+  "af.welcome.note": {
+    en: "I introduced AI-driven insights to provide users with personalized feedback based on their activity, helping them make better decisions and feel more guided throughout their fitness journey.",
+    ar: "أدمجت رؤى مدعومة بالذكاء الاصطناعي لتزويد المستخدمين بتغذية راجعة مخصصة بناءً على نشاطهم، مما يساعدهم على اتخاذ قرارات أفضل والشعور بأنهم موجّهون طوال رحلتهم نحو اللياقة."
+  },
   "af.hifi.dashboard.label": { en: "Dashboard", ar: "لوحة التحكم" },
   "af.hifi.progress.label": { en: "Weekly Progress", ar: "التقدم الأسبوعي" },
   "af.tracking.title": { en: "Progress Tracking / Dashboard", ar: "تتبع التقدم / لوحة التحكم" },
