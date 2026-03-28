@@ -133,6 +133,21 @@ export default function AuraFit() {
         </div>
       </section>
 
+      {/* ── PROBLEM ── */}
+      <section className="py-16">
+        <div className="container">
+          <Section>
+            <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.93 0.015 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+              <p className="section-num mb-4">{t("af.problem.label")}</p>
+              <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.problem.h2")}</h2>
+              <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
+                {t("af.problem.p")}
+              </p>
+            </div>
+          </Section>
+        </div>
+      </section>
+
       {/* ── CHALLENGE & SOLUTION ── */}
       <section className="py-16">
         <div className="container">

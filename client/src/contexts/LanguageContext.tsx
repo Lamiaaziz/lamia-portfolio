@@ -223,6 +223,12 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.resp.2": { en: "Behavioral Framework Design", ar: "تصميم الإطار السلوكي" },
   "af.resp.3": { en: "Product Flow Architecture", ar: "هندسة تدفق المنتج" },
   "af.resp.4": { en: "UI Interface Design", ar: "تصميم واجهة المستخدم" },
+  "af.problem.label": { en: "PROBLEM", ar: "المشكلة" },
+  "af.problem.h2": { en: "The Problem", ar: "المشكلة" },
+  "af.problem.p": {
+    en: "Many individuals struggle to stay consistent with their fitness routines due to a lack of clear progress tracking and personalized guidance. Without meaningful insights into their performance, users often lose motivation and find it difficult to maintain long-term engagement.",
+    ar: "يعاني كثير من الأفراد من صعوبة الالتزام بروتين اللياقة البدنية بسبب غياب تتبع التقدم الواضح والتوجيه الشخصي. فبدون رؤى ذات معنى حول أدائهم، يفقد المستخدمون الدافعية ويجدون صعوبة في الحفاظ على الانخراط على المدى الطويل."
+  },
   "af.challenge.label": { en: "CHALLENGE", ar: "التحدي" },
   "af.challenge.h2": { en: "The Challenge", ar: "التحدي" },
   "af.challenge.1": { en: "Users struggle with inconsistent schedules", ar: "يعاني المستخدمون من الجداول غير المنتظمة" },
