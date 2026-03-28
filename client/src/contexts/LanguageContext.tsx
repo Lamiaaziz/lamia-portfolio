@@ -224,7 +224,7 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.resp.3": { en: "Product Flow Architecture", ar: "هندسة تدفق المنتج" },
   "af.resp.4": { en: "UI Interface Design", ar: "تصميم واجهة المستخدم" },
   "af.problem.label": { en: "PROBLEM", ar: "المشكلة" },
-  "af.problem.h2": { en: "The Problem", ar: "المشكلة" },
+  "af.problem.h2": { en: "The Problem", ar: "تعريف المشكلة" },
   "af.problem.p": {
     en: "Many individuals struggle to stay consistent with their fitness routines due to a lack of clear progress tracking and personalized guidance. Without meaningful insights into their performance, users often lose motivation and find it difficult to maintain long-term engagement.",
     ar: "يعاني كثير من الأفراد من صعوبة الالتزام بروتين اللياقة البدنية بسبب غياب تتبع التقدم الواضح والتوجيه الشخصي. فبدون رؤى ذات معنى حول أدائهم، يفقد المستخدمون الدافعية ويجدون صعوبة في الحفاظ على الانخراط على المدى الطويل."
@@ -235,20 +235,20 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "يكون المستخدمون أكثر تحفيزاً عندما يستطيعون رؤية تقدمهم بوضوح وفهم كيف تؤثر أفعالهم على أدائهم. يبحثون عن توجيه بسيط وشخصي يساعدهم على الاستمرار دون الشعور بالإرهاق."
   },
   "af.challenge.label": { en: "CHALLENGE", ar: "التحدي" },
-  "af.challenge.h2": { en: "The Challenge", ar: "التحدي" },
+  "af.challenge.h2": { en: "The Challenge", ar: "تحديات التصميم" },
   "af.challenge.1": { en: "Users struggle with inconsistent schedules", ar: "يعاني المستخدمون من الجداول غير المنتظمة" },
   "af.challenge.2": { en: "Motivation-based systems fail long-term", ar: "الأنظمة القائمة على التحفيز تفشل على المدى البعيد" },
   "af.challenge.3": { en: "Users need adaptive structure, not rigid plans", ar: "المستخدمون بحاجة إلى هيكل تكيّفي لا خطط صارمة" },
   "af.solution.label": { en: "SOLUTION", ar: "الحل" },
-  "af.solution.h2": { en: "The Solution", ar: "الحل" },
+  "af.solution.h2": { en: "The Solution", ar: "الحل المقترح" },
   "af.solution.p": {
     en: "Design an adaptive fitness system that adjusts to real-life schedules and supports sustainable consistency. AuraFit reframes fitness as an adaptive behavioral system — not a motivation challenge.",
     ar: "تصميم نظام لياقة تكيّفي يتكيف مع الجداول الواقعية ويدعم الانتظام المستدام. يُعيد AuraFit تأطير اللياقة كنظام سلوكي تكيّفي — لا تحدٍّ للتحفيز.",
   },
   "af.moodboard.label": { en: "MOODBOARD", ar: "لوحة المزاج" },
-  "af.moodboard.h2": { en: "Moodboard", ar: "لوحة المزاج" },
+  "af.moodboard.h2": { en: "Moodboard", ar: "لوحة الإلهام البصري" },
   "af.wireframes.label": { en: "WIREFRAMES", ar: "الإطارات السلكية" },
-  "af.wireframes.h2": { en: "Wireframes", ar: "الإطارات السلكية" },
+  "af.wireframes.h2": { en: "Wireframes", ar: "المخططات الأولية" },
   "af.wireframes.p": {
     en: "Low-fidelity wireframes mapped the complete user flow — from onboarding and behavioral profiling through to the adaptive dashboard, workout scheduling, cart, checkout, and progress tracking.",
     ar: "رسمت الإطارات السلكية منخفضة الدقة تدفق المستخدم الكامل — من الإعداد والتوصيف السلوكي وصولًا إلى لوحة التحكم التكيّفية وجدولة التمارين والسلة والدفع وتتبع التقدم.",
@@ -318,7 +318,7 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.persona.pain2": { en: "Motivation drops after missed sessions", ar: "تراجع الدافعية بعد الجلسات الفائتة" },
   "af.persona.pain3": { en: "Apps don't adapt to lifestyle changes", ar: "التطبيقات لا تتكيف مع تغيرات أسلوب الحياة" },
   "af.framework.label": { en: "BEHAVIORAL FRAMEWORK", ar: "الإطار السلوكي" },
-  "af.framework.h2": { en: "Behavioral Framework", ar: "الإطار السلوكي" },
+  "af.framework.h2": { en: "Behavioral Framework", ar: "الإطار السلوكي للتصميم" },
   "af.framework.1.title": { en: "Goal Structuring", ar: "هيكلة الأهداف" },
   "af.framework.1.desc": { en: "Define realistic goals based on lifestyle patterns", ar: "تحديد أهداف واقعية بناءً على أنماط أسلوب الحياة" },
   "af.framework.2.title": { en: "Cognitive Load Reduction", ar: "تقليل العبء المعرفي" },
