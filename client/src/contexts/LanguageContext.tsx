@@ -289,8 +289,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.hifi.progress.label": { en: "Weekly Progress", ar: "التقدم الأسبوعي" },
   "af.tracking.title": { en: "Progress Tracking / Dashboard", ar: "تتبع التقدم / لوحة التحكم" },
   "af.tracking.p": {
-    en: "I designed the tracking dashboard to give users a clear and simple overview of their performance over time. This helps reduce uncertainty and allows users to stay motivated by seeing visible progress.",
-    ar: "صممت لوحة تتبع التقدم لتمنح المستخدمين نظرة عامة واضحة وبسيطة على أدائهم عبر الزمن. يساعد ذلك على تقليل حالة عدم اليقين ويتيح للمستخدمين البقاء محفزين من خلال رؤية تقدمهم بشكل ملموس."
+    en: "I designed the tracking dashboard to provide users with a clear and simplified view of their performance over time. By making progress more visible, the experience helps reduce uncertainty and supports sustained motivation.",
+    ar: "صممت لوحة تتبع التقدم لتمنح المستخدمين عرضاً واضحاً ومبسّطاً لأدائهم عبر الزمن. من خلال جعل التقدم أكثر ظهوراً، تساعد التجربة على تقليل حالة عدم اليقين وتدعم التحفيز المستدام."
   },
   "af.ai.title": { en: "AI Insights / Recommendations", ar: "رؤى الذكاء الاصطناعي / التوصيات" },
   "af.ai.p": {
