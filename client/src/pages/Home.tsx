@@ -41,7 +41,7 @@ const AURAFIT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/iv
 const TRAVEL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/traveltales-preview-gYMjHtcyp9MKuCHUXoZzr3.webp";
 const VOKO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/voko-preview-EAzR7gjACG8AqB7YhWBEeZ.webp";
 const WEBDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Desktop-1_d79b0fb8.png";
-const VISUALDESIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028447065/ivUzMW4MyeVPMSAbsRH3EF/Asset10@4x-8_a3a7e5a8.webp";
+const VISUALDESIGN_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028614438/nSLZVsApcbtjHUUb.png";
 
 export default function Home() {
   const { t, isRTL } = useLanguage();
