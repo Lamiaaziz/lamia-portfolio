@@ -292,6 +292,11 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "I designed the tracking dashboard to give users a clear and simple overview of their performance over time. This helps reduce uncertainty and allows users to stay motivated by seeing visible progress.",
     ar: "صممت لوحة تتبع التقدم لتمنح المستخدمين نظرة عامة واضحة وبسيطة على أدائهم عبر الزمن. يساعد ذلك على تقليل حالة عدم اليقين ويتيح للمستخدمين البقاء محفزين من خلال رؤية تقدمهم بشكل ملموس."
   },
+  "af.ai.title": { en: "AI Insights / Recommendations", ar: "رؤى الذكاء الاصطناعي / التوصيات" },
+  "af.ai.p": {
+    en: "I introduced AI-driven insights to provide users with personalized feedback based on their activity. This supports better decision-making and helps users feel guided rather than overwhelmed.",
+    ar: "أدمجت رؤى مدعومة بالذكاء الاصطناعي لتزويد المستخدمين بتغذية راجعة مخصصة بناءً على نشاطهم. يدعم ذلك اتخاذ قرارات أفضل ويساعد المستخدمين على الشعور بأنهم موجّهون لا مثقلون."
+  },
   "af.persona.label": { en: "PERSONA", ar: "الشخصية النموذجية" },
   "af.persona.h2": { en: "User Persona", ar: "الشخصية النموذجية للمستخدم" },
   "af.persona.name": { en: "Salma, 28", ar: "سلمى، 28" },

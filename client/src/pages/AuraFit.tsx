@@ -311,6 +311,15 @@ export default function AuraFit() {
               <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw, paddingLeft: isRTL ? 0 : "1.75rem", paddingRight: isRTL ? "1.75rem" : 0 }}>
                 {t("af.tracking.p")}
               </p>
+              <div className="mt-5 pt-5" style={{ borderTop: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-lg font-bold shrink-0" style={{ color: "oklch(0.45 0.12 270)", fontFamily }}>2.</span>
+                  <h3 className="text-base font-semibold" style={{ color: "oklch(0.2 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.ai.title")}</h3>
+                </div>
+                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw, paddingLeft: isRTL ? 0 : "1.75rem", paddingRight: isRTL ? "1.75rem" : 0 }}>
+                  {t("af.ai.p")}
+                </p>
+              </div>
             </div>
           </Section>
         </div>
