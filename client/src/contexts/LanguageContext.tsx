@@ -67,6 +67,22 @@ export const translations: Record<string, Record<Lang, string>> = {
   "about.stat.mckinsey": { en: "Forward Program", ar: "برنامج فورورد" },
   "about.stat.bilingual": { en: "Bilingual Design — Mandatory", ar: "تصميم ثنائي اللغة — إلزامي" },
 
+  // ── DESIGN PHILOSOPHY ──
+  "philosophy.intro": { en: "A PERSPECTIVE THAT GUIDES MY WORK", ar: "منظور يوجّه عملي" },
+  "philosophy.h2": { en: "Design Philosophy", ar: "فلسفة التصميم" },
+  "philosophy.p1": {
+    en: "In a fast-moving design landscape shaped by AI and rapid production, I believe design should remain intentional and human at its core.",
+    ar: "في مشهد تصميمي متسارع تشكّله الذكاء الاصطناعي والإنتاج السريع، أؤمن بأن التصميم يجب أن يظل مقصوداً وإنسانياً في جوهره.",
+  },
+  "philosophy.p2": {
+    en: "While many experiences are created and replaced quickly, I focus on what happens after a product is launched — how it evolves, influences behavior, and continues to create meaning over time.",
+    ar: "بينما تُصنع كثير من التجارب وتُستبدل بسرعة، أركّز على ما يحدث بعد إطلاق المنتج — كيف يتطور، ويؤثر على السلوك، ويستمر في خلق المعنى مع مرور الوقت.",
+  },
+  "philosophy.p3": {
+    en: "I see AI not as a replacement, but as a tool that supports deeper thinking — helping designers craft more thoughtful, adaptive, and lasting experiences.",
+    ar: "أرى الذكاء الاصطناعي ليس بديلاً، بل أداةً تدعم التفكير العميق — تساعد المصممين على صياغة تجارب أكثر تأملاً وتكيفاً وديمومة.",
+  },
+
   // ── EXPERIENCE ──
   "exp.label": { en: "EXPERIENCE", ar: "الخبرة المهنية" },
   "exp.h3": { en: "Professional Journey", ar: "المسيرة المهنية" },

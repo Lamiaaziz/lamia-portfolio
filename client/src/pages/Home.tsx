@@ -239,6 +239,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* DESIGN PHILOSOPHY SECTION */}
+      <section className="py-20" style={{ background: "oklch(0.97 0.006 230)" }}>
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <p className="section-num mb-3 text-center" style={{ letterSpacing: "0.2em", fontFamily }}>
+              {t("philosophy.intro")}
+            </p>
+            <h2 className="text-3xl lg:text-4xl mb-8 text-center" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>
+              {t("philosophy.h2")}
+            </h2>
+            <div className="rounded-2xl p-8 lg:p-10" style={{ background: "oklch(1 0 0)", border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}>
+              <p className="text-base leading-relaxed mb-5" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("philosophy.p1")}
+              </p>
+              <p className="text-base leading-relaxed mb-5" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("philosophy.p2")}
+              </p>
+              <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("philosophy.p3")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* EXPERIENCE TIMELINE SECTION */}
       <section className="py-20" style={{ background: "oklch(0.96 0.008 230)" }}>
         <div className="container">
