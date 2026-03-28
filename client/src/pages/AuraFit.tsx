@@ -400,6 +400,32 @@ export default function AuraFit() {
         </div>
       </section>
 
+      {/* ── IMPACT ── */}
+      <section className="py-16">
+        <div className="container">
+          <Section>
+            <p className="section-num mb-4">{t("af.impact.label")}</p>
+            <h2 className="text-3xl mb-8" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.impact.h2")}</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                t("af.impact.1"),
+                t("af.impact.2"),
+                t("af.impact.3"),
+                t("af.impact.4"),
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 rounded-xl p-5" style={{ background: "oklch(0.96 0.008 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+                  <div className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ background: "oklch(0.45 0.12 270)" }} />
+                  <p className="text-sm leading-relaxed" style={{ color: "oklch(0.35 0.06 230)", fontFamily, fontWeight: fw }}>{item}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
+              {t("af.impact.closing")}
+            </p>
+          </Section>
+        </div>
+      </section>
+
       {/* ── OUTCOME + PROTOTYPE ── */}
       <section className="py-16" style={{ background: "oklch(0.93 0.015 270)" }}>
         <div className="container">

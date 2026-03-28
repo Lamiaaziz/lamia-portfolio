@@ -327,6 +327,16 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.framework.3.desc": { en: "Workouts adjust to schedule changes and energy levels", ar: "تتكيف التمارين مع تغييرات الجدول ومستويات الطاقة" },
   "af.framework.4.title": { en: "Consistency Reinforcement", ar: "تعزيز الانتظام" },
   "af.framework.4.desc": { en: "Missed sessions trigger adjustments instead of penalties", ar: "الجلسات الفائتة تُطلق تعديلات بدلًا من عقوبات" },
+  "af.impact.label": { en: "IMPACT", ar: "الأثر" },
+  "af.impact.h2": { en: "Impact", ar: "أثر التصميم" },
+  "af.impact.1": { en: "Improves user motivation by making progress clearly visible", ar: "تعزيز دافعية المستخدم من خلال جعل التقدم مرئياً بوضوح" },
+  "af.impact.2": { en: "Enhances user confidence through personalized insights", ar: "تعزيز ثقة المستخدم من خلال رؤى مخصصة" },
+  "af.impact.3": { en: "Encourages consistency and long-term engagement", ar: "تشجيع الانتظام والانخراط طويل الأمد" },
+  "af.impact.4": { en: "Supports better decision-making through guided feedback", ar: "دعم اتخاذ قرارات أفضل من خلال تغذية راجعة موجّهة" },
+  "af.impact.closing": {
+    en: "AuraFit demonstrates how combining clear progress tracking with personalized insights can create a more engaging and motivating fitness experience.",
+    ar: "AuraFit يبرهن على كيف يمكن لدمج تتبع التقدم الواضح مع الرؤى الشخصية أن يخلقا تجربة لياقة بدنية أكثر جاذبية وتحفيزاً."
+  },
   "af.outcome.quote": {
     en: "\"AuraFit shifts fitness from motivation-driven routines to a behaviour-guided system.\"",
     ar: "\"يُحوّل AuraFit اللياقة من روتين مدفوع بالتحفيز إلى نظام موجَّه بالسلوك.\"",
