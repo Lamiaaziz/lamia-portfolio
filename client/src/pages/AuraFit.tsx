@@ -299,9 +299,18 @@ export default function AuraFit() {
             <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
               {t("af.hifi.dashboard.p")}
             </p>
-            <div className="flex flex-wrap gap-8 justify-center">
+            <div className="flex flex-wrap gap-8 justify-center mb-10">
               <PhoneFrame src={IMG.dashboard} alt="AuraFit Dashboard" label={t("af.hifi.dashboard.label")} fontFamily={fontFamily} />
               <PhoneFrame src={IMG.progress} alt="Weekly Progress" label={t("af.hifi.progress.label")} fontFamily={fontFamily} />
+            </div>
+            <div className="rounded-xl p-6" style={{ background: "oklch(0.96 0.008 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+              <div className="flex items-start gap-3 mb-3">
+                <span className="text-lg font-bold shrink-0" style={{ color: "oklch(0.45 0.12 270)", fontFamily }}>1.</span>
+                <h3 className="text-base font-semibold" style={{ color: "oklch(0.2 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.tracking.title")}</h3>
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw, paddingLeft: isRTL ? 0 : "1.75rem", paddingRight: isRTL ? "1.75rem" : 0 }}>
+                {t("af.tracking.p")}
+              </p>
             </div>
           </Section>
         </div>
