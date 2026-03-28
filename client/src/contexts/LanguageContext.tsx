@@ -72,15 +72,15 @@ export const translations: Record<string, Record<Lang, string>> = {
   "philosophy.h2": { en: "Design Philosophy", ar: "فلسفة التصميم" },
   "philosophy.p1": {
     en: "In a fast-moving design landscape shaped by AI and rapid production, I believe design should remain intentional and human at its core.",
-    ar: "في مشهد تصميمي متسارع تشكّله الذكاء الاصطناعي والإنتاج السريع، أؤمن بأن التصميم يجب أن يظل مقصوداً وإنسانياً في جوهره.",
+    ar: "في ظل مشهد تصميم سريع التطور، يشكله الذكاء الاصطناعي والإنتاج السريع، أؤمن بأن التصميم يجب أن يبقى هادفاً وإنسانياً في جوهره.",
   },
   "philosophy.p2": {
     en: "While many experiences are created and replaced quickly, I focus on what happens after a product is launched — how it evolves, influences behavior, and continues to create meaning over time.",
-    ar: "بينما تُصنع كثير من التجارب وتُستبدل بسرعة، أركّز على ما يحدث بعد إطلاق المنتج — كيف يتطور، ويؤثر على السلوك، ويستمر في خلق المعنى مع مرور الوقت.",
+    ar: "بينما تُصمم العديد من التجارب وتُستبدل بسرعة، أركز على ما يحدث بعد إطلاق المنتج - كيف يتطور، ويؤثر في السلوك، ويستمر في خلق معنى مع مرور الوقت.",
   },
   "philosophy.p3": {
     en: "I see AI not as a replacement, but as a tool that supports deeper thinking — helping designers craft more thoughtful, adaptive, and lasting experiences.",
-    ar: "أرى الذكاء الاصطناعي ليس بديلاً، بل أداةً تدعم التفكير العميق — تساعد المصممين على صياغة تجارب أكثر تأملاً وتكيفاً وديمومة.",
+    ar: "أرى الذكاء الاصطناعي ليس بديلاً، بل أداة تدعم التفكير العميق، وتساعد المصممين على ابتكار تجارب أكثر عمقاً، ومرونة، واستدامة.",
   },
 
   // ── EXPERIENCE ──
