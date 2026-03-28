@@ -229,6 +229,11 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "Many individuals struggle to stay consistent with their fitness routines due to a lack of clear progress tracking and personalized guidance. Without meaningful insights into their performance, users often lose motivation and find it difficult to maintain long-term engagement.",
     ar: "يعاني كثير من الأفراد من صعوبة الالتزام بروتين اللياقة البدنية بسبب غياب تتبع التقدم الواضح والتوجيه الشخصي. فبدون رؤى ذات معنى حول أدائهم، يفقد المستخدمون الدافعية ويجدون صعوبة في الحفاظ على الانخراط على المدى الطويل."
   },
+  "af.insight.label": { en: "USER INSIGHT", ar: "رؤية المستخدم" },
+  "af.insight.p": {
+    en: "Users are more motivated when they can clearly see their progress and understand how their actions impact their performance. They seek simple, personalized guidance that helps them stay consistent without feeling overwhelmed.",
+    ar: "يكون المستخدمون أكثر تحفيزاً عندما يستطيعون رؤية تقدمهم بوضوح وفهم كيف تؤثر أفعالهم على أدائهم. يبحثون عن توجيه بسيط وشخصي يساعدهم على الاستمرار دون الشعور بالإرهاق."
+  },
   "af.challenge.label": { en: "CHALLENGE", ar: "التحدي" },
   "af.challenge.h2": { en: "The Challenge", ar: "التحدي" },
   "af.challenge.1": { en: "Users struggle with inconsistent schedules", ar: "يعاني المستخدمون من الجداول غير المنتظمة" },
