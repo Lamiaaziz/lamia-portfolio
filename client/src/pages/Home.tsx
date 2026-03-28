@@ -336,6 +336,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SELECTED WORK SECTION */}
+      <section className="py-24 lg:py-32">
+        <div className="container">
+          <div
+            ref={workSection.ref}
+            style={{ opacity: workSection.inView ? 1 : 0, transform: workSection.inView ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}
+          >
+            <div className="flex items-end justify-between mb-14">
+              <div>
+                <p className="section-num mb-3" style={{ letterSpacing: "0.2em", fontFamily }}>{t("work.label")}</p>
+                <h2 className="text-4xl lg:text-5xl" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>
+                  {t("work.h2.line1")}
+                  <br />
+                  <em>{t("work.h2.line2")}</em>
+                </h2>
+              </div>
+              <p className="hidden md:block text-sm max-w-xs text-right" style={{ color: "oklch(0.52 0.04 230)", fontFamily }}>
+                {t("work.subtitle")}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-8">
+            {projects.map((project, i) => {
+              const isEven = i % 2 === 0;
+              return (
+                <div
+                  key={project.num}
+                  className="project-card rounded-2xl overflow-hidden"
+                  style={{ background: project.bg, border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}
+                >
+                  <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[420px]`}>
+                    <div className="lg:w-2/5 relative overflow-hidden" style={{ minHeight: "280px" }}>
+                      <img src={project.img} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" style={{ minHeight: "280px" }} />
+                      <div className="absolute inset-0" style={{ background: isEven ? "linear-gradient(to right, transparent 60%, " + project.bg + ")" : "linear-gradient(to left, transparent 60%, " + project.bg + ")" }} />
+                    </div>
+                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="section-num" style={{ color: project.accent, opacity: 0.7 }}>{project.num}</span>
+                        <span className="text-xs font-medium px-3 py-1 rounded-full" style={{ background: project.accent + "18", color: project.accent, fontFamily }}>{project.type}</span>
+                      </div>
+                      <h3 className="text-3xl lg:text-4xl mb-2" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>{project.title}</h3>
+                      <p className="text-base font-medium mb-4" style={{ color: project.accent, fontFamily }}>{project.subtitle}</p>
+                      <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-8">
+                        {project.tags.map((tag) => (
+                          <span key={tag} className="text-xs px-3 py-1 rounded-full" style={{ background: "oklch(0.88 0.015 230 / 0.5)", color: "oklch(0.42 0.06 230)", fontFamily }}>{tag}</span>
+                        ))}
+                      </div>
+                      <Link href={project.href}>
+                        <button
+                          className="inline-flex items-center gap-2 text-sm font-medium group self-start px-6 py-3 rounded-full transition-all duration-300 hover:gap-3"
+                          style={{ background: "oklch(0.35 0.09 230)", color: "oklch(0.98 0.005 230)", fontFamily }}
+                        >
+                          {t("work.cta")}
+                          <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED REAL-WORLD PROJECT */}
       <section className="py-24 lg:py-32" style={{ background: "oklch(0.97 0.006 230)" }}>
         <div className="container">
@@ -409,73 +476,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SELECTED WORK SECTION */}
-      <section className="py-24 lg:py-32">
-        <div className="container">
-          <div
-            ref={workSection.ref}
-            style={{ opacity: workSection.inView ? 1 : 0, transform: workSection.inView ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}
-          >
-            <div className="flex items-end justify-between mb-14">
-              <div>
-                <p className="section-num mb-3" style={{ letterSpacing: "0.2em", fontFamily }}>{t("work.label")}</p>
-                <h2 className="text-4xl lg:text-5xl" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>
-                  {t("work.h2.line1")}
-                  <br />
-                  <em>{t("work.h2.line2")}</em>
-                </h2>
-              </div>
-              <p className="hidden md:block text-sm max-w-xs text-right" style={{ color: "oklch(0.52 0.04 230)", fontFamily }}>
-                {t("work.subtitle")}
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-8">
-            {projects.map((project, i) => {
-              const isEven = i % 2 === 0;
-              return (
-                <div
-                  key={project.num}
-                  className="project-card rounded-2xl overflow-hidden"
-                  style={{ background: project.bg, border: "1px solid oklch(0.88 0.015 230 / 0.5)" }}
-                >
-                  <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[420px]`}>
-                    <div className="lg:w-2/5 relative overflow-hidden" style={{ minHeight: "280px" }}>
-                      <img src={project.img} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" style={{ minHeight: "280px" }} />
-                      <div className="absolute inset-0" style={{ background: isEven ? "linear-gradient(to right, transparent 60%, " + project.bg + ")" : "linear-gradient(to left, transparent 60%, " + project.bg + ")" }} />
-                    </div>
-                    <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-center">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="section-num" style={{ color: project.accent, opacity: 0.7 }}>{project.num}</span>
-                        <span className="text-xs font-medium px-3 py-1 rounded-full" style={{ background: project.accent + "18", color: project.accent, fontFamily }}>{project.type}</span>
-                      </div>
-                      <h3 className="text-3xl lg:text-4xl mb-2" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>{project.title}</h3>
-                      <p className="text-base font-medium mb-4" style={{ color: project.accent, fontFamily }}>{project.subtitle}</p>
-                      <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-8">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="text-xs px-3 py-1 rounded-full" style={{ background: "oklch(0.88 0.015 230 / 0.5)", color: "oklch(0.42 0.06 230)", fontFamily }}>{tag}</span>
-                        ))}
-                      </div>
-                      <Link href={project.href}>
-                        <button
-                          className="inline-flex items-center gap-2 text-sm font-medium group self-start px-6 py-3 rounded-full transition-all duration-300 hover:gap-3"
-                          style={{ background: "oklch(0.35 0.09 230)", color: "oklch(0.98 0.005 230)", fontFamily }}
-                        >
-                          {t("work.cta")}
-                          <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
