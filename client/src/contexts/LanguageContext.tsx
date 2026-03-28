@@ -47,16 +47,16 @@ export const translations: Record<string, Record<Lang, string>> = {
   "about.h2.line1": { en: "Where business", ar: "حيث تلتقي الأعمال" },
   "about.h2.line2": { en: "meets design.", ar: "بالتصميم." },
   "about.p1": {
-    en: "I am a User Experience Designer based in Riyadh, with extensive experience in marketing design, business development, and UX — giving me a unique ability to connect user needs with business outcomes.",
-    ar: "أنا مصممة تجارب مستخدم في الرياض، ولدي خبرة واسعة في التصميم التسويقي، وتطوير الأعمال، وتجربة المستخدم، مما يمنحني قدرة فريدة على ربط احتياجات المستخدمين بنتائج الأعمال.",
+    en: "I'm an Experience Designer with a background in graphic design and client-facing roles, bringing a balance between visual creativity and business understanding.",
+    ar: "أنا مصممة تجارب بخلفية في التصميم الجرافيكي والأدوار المباشرة مع العملاء، أجمع بين الإبداع البصري والفهم التجاري.",
   },
   "about.p2": {
-    en: "I currently lead user-centered design for wayfinding and environmental systems — mapping user journeys through physical spaces, collaborating with cross-functional teams, and translating complex spatial data into clear visual communication.",
-    ar: "أقود حاليًا تصميمًا يركز على المستخدم لأنظمة التوجيه والأنظمة البيئية، حيث أرسم مسارات المستخدمين في المساحات المادية، وأتعاون مع فرق متعددة التخصصات، وأحوّل البيانات المكانية المعقدة إلى تواصل بصري واضح.",
+    en: "Over the past 4 years, I've worked across different industries, translating ideas into structured, user-centered digital experiences.",
+    ar: "على مدى السنوات الأربع الماضية، عملت في صناعات متعددة، أُحوّل الأفكار إلى تجارب رقمية منظمة تتمحور حول المستخدم.",
   },
   "about.p3": {
-    en: "My earlier experience in client-facing consulting and account management at Winclex — where I applied UX principles to internal dashboards and delivered measurable business results — gives me a consulting mindset that goes beyond aesthetics. I design for impact.",
-    ar: "خبرتي السابقة في الاستشارات المباشرة مع العملاء وإدارة الحسابات في شركة Winclex، حيث طبقت مبادئ تجربة المستخدم على لوحات المعلومات الداخلية وحققت نتائج أعمال ملموسة، تمنحني عقلية استشارية تتجاوز الجماليات. أصمم لإحداث تأثير.",
+    en: "I see design as storytelling — crafting experiences that go beyond visuals to shape how people feel, behave, and connect with a product over time. I'm especially driven by what happens after a product is launched, and how it continues to evolve, adapt, and create lasting value.",
+    ar: "أرى التصميم سرداً للقصص — صياغة تجارب تتجاوز المرئيات لتُشكّل كيف يشعر الناس ويتصرفون ويتواصلون مع منتج ما بمرور الوقت. أنا مدفوعة بشكل خاص بما يحدث بعد إطلاق المنتج، وكيف يستمر في التطور والتكيف وخلق قيمة دائمة.",
   },
   "about.p4": {
     en: "I also bring experience in facilitating co-creation innovation sessions and design workshops — structuring narratives, translating ambiguous challenges into clear visual artifacts, and guiding teams from idea to execution. I design fluently in both Arabic and English, with a deep understanding of the Saudi and MENA context.",
