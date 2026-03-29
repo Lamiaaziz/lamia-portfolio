@@ -256,8 +256,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.title": { en: "AuraFit", ar: "AuraFit" },
   "af.subtitle": { en: "Behavioral Fitness System for Saudi Professionals", ar: "نظام لياقة سلوكي للمهنيين السعوديين" },
   "af.intro": {
-    en: "AuraFit is a behavioral fitness app designed to help users maintain workout consistency despite irregular schedules — reframing fitness as an adaptive behavioral system rather than a motivation challenge.",
-    ar: "AuraFit تطبيق لياقة بدنية سلوكي مصمم لمساعدة المستخدمين على الحفاظ على انتظام تمارينهم رغم الجداول غير المنتظمة — بإعادة تأطير اللياقة كنظام سلوكي تكيّفي لا تحدٍّ للتحفيز.",
+    en: "AuraFit is a behavioral fitness app designed to address a common challenge among Saudi professionals: maintaining workout consistency despite irregular schedules and demanding lifestyles.\n\nInstead of relying on motivation alone, AuraFit reframes fitness as an adaptive behavioral system — helping users build sustainable habits through personalized insights and flexible routines.",
+    ar: "AuraFit تطبيق لياقة بدنية سلوكي مصمّم لمعالجة تحدٍّ شائع بين المهنيين السعوديين: الحفاظ على انتظام التمارين رغم الجداول غير المنتظمة وأساليب الحياة المتطلبة.\n\nبدلاً من الاعتماد على التحفيز وحده، يُعيد AuraFit تأطير اللياقة بوصفها نظامًا سلوكيًا تكيّفيًا — يساعد المستخدمين على بناء عادات مستدامة من خلال رؤى مخصصة وروتينات مرنة.",
   },
   "af.meta.timeline": { en: "Timeline", ar: "المدة" },
   "af.meta.timeline.val": { en: "6 Weeks", ar: "6 أسابيع" },

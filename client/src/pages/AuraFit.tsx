@@ -78,9 +78,11 @@ export default function AuraFit() {
               </div>
               <h1 className="text-5xl lg:text-6xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.title")}</h1>
               <p className="text-xl mb-6" style={{ color: "oklch(0.35 0.12 270)", fontFamily, fontWeight: fw ?? 500 }}>{t("af.subtitle")}</p>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
-                {t("af.intro")}
-              </p>
+              {t("af.intro").split("\n\n").map((para, i) => (
+                <p key={i} className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
+                  {para}
+                </p>
+              ))}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
                   { label: t("af.meta.timeline"), value: t("af.meta.timeline.val") },
