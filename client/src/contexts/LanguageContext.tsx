@@ -30,9 +30,9 @@ export const translations: Record<string, Record<Lang, string>> = {
   // ── HERO ──
   "hero.label": { en: "EXPERIENCE DESIGNER · RIYADH, KSA", ar: "مصممة تجارب · الرياض، المملكة العربية السعودية" },
   "hero.name": { en: "Lamia Alrowaished", ar: "لميا الرويشد" },
-  "hero.h1.line1": { en: "Designing", ar: "أصمّم" },
-  "hero.h1.line2": { en: "experiences", ar: "تجارب" },
-  "hero.h1.line3": { en: "that navigate.", ar: "تقود وتُلهم." },
+  "hero.h1.line1": { en: "Designing products", ar: "أصمّم منتجات" },
+  "hero.h1.line2": { en: "that go beyond", ar: "تتجاوز" },
+  "hero.h1.line3": { en: "launch.", ar: "مرحلة الإطلاق." },
   "hero.subtitle": {
     en: "Product & Experience Designer blending visual clarity, user-centered thinking, and business insight to create meaningful digital experiences.",
     ar: "مصممة منتجات وتجارب تجمع بين الوضوح البصري، والتفكير المتمحور حول المستخدم، والفهم التجاري لصياغة تجارب رقمية ذات معنى.",
