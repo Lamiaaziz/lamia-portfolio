@@ -58,6 +58,7 @@ export default function Home() {
     {
       num: "01",
       title: "AuraFit",
+      tagline: t("project.aurafit.tagline"),
       subtitle: t("project.aurafit.subtitle"),
       type: t("project.aurafit.type"),
       description: t("project.aurafit.desc"),
@@ -72,6 +73,7 @@ export default function Home() {
     {
       num: "02",
       title: "Travel Tales",
+      tagline: t("project.traveltales.tagline"),
       subtitle: t("project.traveltales.subtitle"),
       type: t("project.traveltales.type"),
       description: t("project.traveltales.desc"),
@@ -86,6 +88,7 @@ export default function Home() {
     {
       num: "03",
       title: "VOKO",
+      tagline: t("project.voko.tagline"),
       subtitle: t("project.voko.subtitle"),
       type: t("project.voko.type"),
       description: t("project.voko.desc"),
@@ -100,6 +103,7 @@ export default function Home() {
     {
       num: "04",
       title: isRTL ? "تصميم المواقع" : "Web Design",
+      tagline: t("project.webdesign.tagline"),
       subtitle: t("project.webdesign.subtitle"),
       type: t("project.webdesign.type"),
       description: t("project.webdesign.desc"),
@@ -114,6 +118,7 @@ export default function Home() {
     {
       num: "05",
       title: isRTL ? "التصميم البصري" : "Visual Design",
+      tagline: t("project.visualdesign.tagline"),
       subtitle: t("project.visualdesign.subtitle"),
       type: t("project.visualdesign.type"),
       description: t("project.visualdesign.desc"),
@@ -417,8 +422,9 @@ export default function Home() {
                         <span className="section-num" style={{ color: project.accent, opacity: 0.7 }}>{project.num}</span>
                         <span className="text-xs font-medium px-3 py-1 rounded-full" style={{ background: project.accent + "18", color: project.accent, fontFamily }}>{project.type}</span>
                       </div>
-                      <h3 className="text-3xl lg:text-4xl mb-2" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>{project.title}</h3>
-                      <p className="text-base font-medium mb-4" style={{ color: project.accent, fontFamily }}>{project.subtitle}</p>
+                      <h3 className="text-3xl lg:text-4xl mb-1" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily }}>{project.title}</h3>
+                       <p className="text-sm leading-snug mb-3" style={{ color: "oklch(0.52 0.04 230)", fontFamily }}>{project.tagline}</p>
+                       <p className="text-xs font-medium uppercase tracking-wider mb-4" style={{ color: project.accent, fontFamily }}>{project.subtitle}</p>
                       <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-8">
                         {project.tags.map((tag) => (

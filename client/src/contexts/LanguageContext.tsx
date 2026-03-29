@@ -143,6 +143,26 @@ export const translations: Record<string, Record<Lang, string>> = {
   "work.cta": { en: "View Case Study", ar: "عرض دراسة الحالة" },
 
   // ── PROJECT CARDS ──
+  "project.aurafit.tagline": {
+    en: "Helping users build consistent fitness habits through AI-driven behavioral insights",
+    ar: "مساعدة المستخدمين على بناء عادات لياقة منتظمة من خلال رؤى سلوكية مدعومة بالذكاء الاصطناعي",
+  },
+  "project.traveltales.tagline": {
+    en: "Simplifying trip planning from destination discovery to booking confirmation",
+    ar: "تبسيط تخطيط الرحلات من اكتشاف الوجهة إلى تأكيد الحجز",
+  },
+  "project.voko.tagline": {
+    en: "Turning complex fashion shopping journeys into smooth, intuitive mobile flows",
+    ar: "تحويل رحلات تسوق الأزياء المعقدة إلى تدفقات جوال سلسة وبديهية",
+  },
+  "project.webdesign.tagline": {
+    en: "End-to-end website design and Webflow development for two live platforms",
+    ar: "تصميم مواقع شامل وتطوير Webflow لمنصتين منشورتين",
+  },
+  "project.visualdesign.tagline": {
+    en: "Brand identity, bilingual campaigns, and environmental design across diverse industries",
+    ar: "هوية بصرية وحملات ثنائية اللغة وتصميم بيئي عبر قطاعات متنوعة",
+  },
   "project.aurafit.type": { en: "Conceptual UX Research · Bootcamp Project", ar: "بحث UX مفاهيمي · مشروع بوتكامب" },
   "project.aurafit.subtitle": { en: "Behavioral Fitness System", ar: "نظام لياقة سلوكي" },
   "project.aurafit.desc": {
