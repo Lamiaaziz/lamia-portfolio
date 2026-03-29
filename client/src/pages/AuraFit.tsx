@@ -187,23 +187,27 @@ export default function AuraFit() {
               <div className="rounded-2xl p-8" style={{ background: "oklch(0.45 0.12 270)", color: "oklch(0.98 0.005 230)" }}>
                 <p className="section-num mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)" }}>{t("af.solution.label")}</p>
                 <h2 className="text-3xl mb-4" style={{ fontFamily: serifFamily, fontWeight: fw }}>{t("af.solution.h2")}</h2>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily, fontWeight: fw }}>
-                  {t("af.solution.p")}
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "oklch(0.98 0.005 230 / 0.9)", fontFamily, fontWeight: fw }}>
+                  {t("af.solution.intro")}
                 </p>
                 <p className="text-xs font-semibold mb-4" style={{ color: "oklch(0.98 0.005 230 / 0.5)", fontFamily, letterSpacing: "0.1em" }}>{t("af.solution.feat.label")}</p>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-5 mb-6">
                   {[
-                    { titleKey: "af.solution.feat.1.title", whyKey: "af.solution.feat.1.why" },
-                    { titleKey: "af.solution.feat.2.title", whyKey: "af.solution.feat.2.why" },
-                    { titleKey: "af.solution.feat.3.title", whyKey: "af.solution.feat.3.why" },
-                    { titleKey: "af.solution.feat.4.title", whyKey: "af.solution.feat.4.why" },
+                    { titleKey: "af.solution.feat.1.title", whyKey: "af.solution.feat.1.why", rationaleKey: "af.solution.feat.1.rationale" },
+                    { titleKey: "af.solution.feat.2.title", whyKey: "af.solution.feat.2.why", rationaleKey: "af.solution.feat.2.rationale" },
+                    { titleKey: "af.solution.feat.3.title", whyKey: "af.solution.feat.3.why", rationaleKey: "af.solution.feat.3.rationale" },
+                    { titleKey: "af.solution.feat.4.title", whyKey: "af.solution.feat.4.why", rationaleKey: "af.solution.feat.4.rationale" },
                   ].map((feat) => (
                     <div key={feat.titleKey}>
                       <p className="text-sm font-semibold mb-1" style={{ color: "oklch(0.98 0.005 230)", fontFamily, fontWeight: fw }}>{t(feat.titleKey)}</p>
-                      <p className="text-xs leading-relaxed" style={{ color: "oklch(0.98 0.005 230 / 0.75)", fontFamily, fontWeight: fw }}>{t(feat.whyKey)}</p>
+                      <p className="text-xs leading-relaxed mb-1" style={{ color: "oklch(0.98 0.005 230 / 0.8)", fontFamily, fontWeight: fw }}>{t(feat.whyKey)}</p>
+                      <p className="text-xs leading-relaxed" style={{ color: "oklch(0.98 0.005 230 / 0.6)", fontFamily, fontWeight: fw }}>{t(feat.rationaleKey)}</p>
                     </div>
                   ))}
                 </div>
+                <p className="text-xs leading-relaxed mb-6 pt-4" style={{ color: "oklch(0.98 0.005 230 / 0.7)", fontFamily, fontWeight: fw, borderTop: "1px solid oklch(0.98 0.005 230 / 0.15)" }}>
+                  {t("af.solution.closing")}
+                </p>
                 <div className="grid grid-cols-3 gap-3 mt-4">
                   {[
                     { label: t("af.solution.research"), val: t("af.solution.research.val") },

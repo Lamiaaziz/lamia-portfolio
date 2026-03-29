@@ -299,6 +299,10 @@ export const translations: Record<string, Record<Lang, string>> = {
   },
   "af.solution.label": { en: "SOLUTION", ar: "الحل" },
   "af.solution.h2": { en: "The Solution", ar: "الحل المقترح" },
+  "af.solution.intro": {
+    en: "Based on the insight that consistency is a system design problem, AuraFit was designed as an adaptive behavioral system — supporting users through flexible structures rather than fixed routines.",
+    ar: "بناءً على الرؤية بأن الانتظام مشكلة تصميم نظام، صُمّم AuraFit كنظام سلوكي تكيّفي — يدعم المستخدمين من خلال هياكل مرنة بدلاً من روتينات ثابتة.",
+  },
   "af.solution.p": {
     en: "Design an adaptive fitness system that adjusts to real-life schedules and supports sustainable consistency. AuraFit reframes fitness as an adaptive behavioral system — not a motivation challenge.\n\nThis approach was chosen to reduce dependency on rigid schedules and instead support flexible behavior patterns.",
     ar: "تصميم نظام لياقة تكيّفي يتكيف مع الجداول الواقعية ويدعم الانتظام المستدام. يُعيد AuraFit تأطير اللياقة كنظام سلوكي تكيّفي — لا تحدٍّ للتحفيز.\n\nجاء هذا النهج لتقليل الاعتماد على الجداول الصارمة ودعم أنماط السلوك المرنة بدلاً من ذلك.",
@@ -306,23 +310,43 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.solution.feat.label": { en: "KEY FEATURES", ar: "الميزات الرئيسية" },
   "af.solution.feat.1.title": { en: "Adaptive Workout Planning", ar: "تخطيط تمارين تكيّفي" },
   "af.solution.feat.1.why": {
-    en: "Instead of fixed schedules, the system adjusts based on user availability — reducing friction and increasing consistency.",
-    ar: "بدلاً من الجداول الثابتة، يتكيّف النظام بناءً على توفر المستخدم — مما يقلل الاحتكاك ويعزز الانتظام.",
+    en: "Personalized workouts based on user availability and routine.",
+    ar: "تمارين مخصصة بناءً على توفر المستخدم وروتينه.",
+  },
+  "af.solution.feat.1.rationale": {
+    en: "This approach was designed to reduce dependency on rigid schedules and support users with unpredictable routines — increasing the likelihood of consistent engagement.",
+    ar: "صُمّم هذا النهج لتقليل الاعتماد على الجداول الصارمة ودعم المستخدمين ذوي الروتينات غير المتوقعة — مما يزيد احتمالية التفاعل المستمر.",
   },
   "af.solution.feat.2.title": { en: "Behavioral Mode Assignment", ar: "تخصيص الوضع السلوكي" },
   "af.solution.feat.2.why": {
-    en: "Users are assigned a mode (e.g. Busy Week) based on their lifestyle — so the app responds to reality, not an ideal routine.",
-    ar: "يُخصّص لكل مستخدم وضع (e.g. أسبوع مزدحم) بناءً على أسلوب حياته — ليستجيب التطبيق للواقع، لا لروتين مثالي.",
+    en: "Assigns a behavioral mode based on the user's current lifestyle context.",
+    ar: "يخصّص وضعًا سلوكيًا بناءً على سياق أسلوب حياة المستخدم الحالي.",
   },
-  "af.solution.feat.3.title": { en: "Progress Tracking & AI Insights", ar: "تتبع التقدم ورؤى الذكاء الاصطناعي" },
+  "af.solution.feat.2.rationale": {
+    en: "Rather than expecting users to fit into a fixed structure, the system adapts to them — reducing the gap between intention and action.",
+    ar: "بدلاً من توقع المستخدمين للتكيّف مع هيكل ثابت، يتكيّف النظام معهم — مما يقلّص الفجوة بين النية والفعل.",
+  },
+  "af.solution.feat.3.title": { en: "AI Recommendations", ar: "توصيات الذكاء الاصطناعي" },
   "af.solution.feat.3.why": {
-    en: "Making progress visible reduces uncertainty and builds momentum — AI recommendations help users course-correct without guilt.",
-    ar: "جعل التقدم مرئيًا يقلل عدم اليقين ويبني الزخم — تساعد توصيات الذكاء الاصطناعي المستخدمين على تصحيح المسار دون شعور بالذنب.",
+    en: "Provides personalized fitness suggestions based on user behavior.",
+    ar: "تقدّم اقتراحات لياقة مخصصة بناءً على سلوك المستخدم.",
+  },
+  "af.solution.feat.3.rationale": {
+    en: "This feature helps users make better decisions without overthinking, reducing friction and supporting continuous progress over time.",
+    ar: "تساعد هذه الميزة المستخدمين على اتخاذ قرارات أفضل دون إفراط في التفكير، مما يقلّل الاحتكاك ويدعم التقدم المستمر عبر الزمن.",
   },
   "af.solution.feat.4.title": { en: "Missed Session Recovery", ar: "استعادة الجلسات الفائتة" },
   "af.solution.feat.4.why": {
-    en: "Missed sessions trigger adjustments instead of penalties — keeping users in the system rather than pushing them to quit.",
-    ar: "الجلسات الفائتة تُطلق تعديلات بدلاً من عقوبات — مما يبقي المستخدمين ضمن النظام بدلاً من دفعهم للترك.",
+    en: "Automatically adjusts the plan when a session is missed, without penalizing the user.",
+    ar: "يضبط الخطة تلقائيًا عند تفويت جلسة، دون معاقبة المستخدم.",
+  },
+  "af.solution.feat.4.rationale": {
+    en: "Removing the penalty for missed sessions reduces guilt and keeps users engaged with the system long-term, rather than abandoning it after a setback.",
+    ar: "إزالة عقوبة الجلسات الفائتة يقلّل الشعور بالذنب ويبقي المستخدمين منخرطين في النظام على المدى البعيد، بدلاً من التخلي عنه بعد النكسة.",
+  },
+  "af.solution.closing": {
+    en: "The solution focuses on reducing friction, supporting flexibility, and encouraging long-term behavioral consistency rather than short-term motivation.",
+    ar: "يركّز الحل على تقليل الاحتكاك، ودعم المرونة، وتشجيع الاتساق السلوكي طويل الأمد بدلاً من التحفيز قصير الأمد.",
   },
   "af.moodboard.label": { en: "MOODBOARD", ar: "لوحة المزاج" },
   "af.moodboard.h2": { en: "Moodboard", ar: "لوحة الإلهام البصري" },
