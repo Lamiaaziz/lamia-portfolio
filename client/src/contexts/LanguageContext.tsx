@@ -34,8 +34,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   "hero.h1.line2": { en: "that go beyond", ar: "تتجاوز" },
   "hero.h1.line3": { en: "launch.", ar: "مرحلة الإطلاق." },
   "hero.subtitle": {
-    en: "Product & Experience Designer blending visual clarity, user-centered thinking, and business insight to create meaningful digital experiences.",
-    ar: "مصممة منتجات وتجارب تجمع بين الوضوح البصري، والتفكير المتمحور حول المستخدم، والفهم التجاري لصياغة تجارب رقمية ذات معنى.",
+    en: "I create human-centered experiences focused on long-term impact, user behavior, and how products evolve over time.",
+    ar: "أصمّم تجارب متمحورة حول الإنسان، تركّز على التأثير طويل الأمد، وسلوك المستخدم، وكيفية تطور المنتجات عبر الزمن.",
   },
   "hero.cta.work": { en: "View My Work", ar: "استعرض أعمالي" },
   "hero.cta.contact": { en: "Get in Touch", ar: "تواصل معي" },
