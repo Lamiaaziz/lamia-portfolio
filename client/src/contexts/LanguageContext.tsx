@@ -69,18 +69,22 @@ export const translations: Record<string, Record<Lang, string>> = {
 
   // ── DESIGN PHILOSOPHY ──
   "philosophy.intro": { en: "A PERSPECTIVE THAT GUIDES MY WORK", ar: "منظور يوجّه عملي" },
-  "philosophy.h2": { en: "Design Philosophy", ar: "فلسفة التصميم" },
+  "philosophy.h2": { en: "Designing beyond the launch", ar: "التصميم ما بعد الإطلاق" },
   "philosophy.p1": {
-    en: "In a fast-moving design landscape shaped by AI and rapid production, I believe design should remain intentional and human at its core.",
-    ar: "في ظل مشهد تصميم سريع التطور، يشكله الذكاء الاصطناعي والإنتاج السريع، أؤمن بأن التصميم يجب أن يبقى هادفاً وإنسانياً في جوهره.",
+    en: "I believe design doesn't end at delivery — it begins there.",
+    ar: "أؤمن بأن التصميم لا ينتهي عند التسليم — بل يبدأ من هناك.",
   },
   "philosophy.p2": {
-    en: "While many experiences are created and replaced quickly, I focus on what happens after a product is launched — how it evolves, influences behavior, and continues to create meaning over time.",
-    ar: "بينما تُصمم العديد من التجارب وتُستبدل بسرعة، أركز على ما يحدث بعد إطلاق المنتج - كيف يتطور، ويؤثر في السلوك، ويستمر في خلق معنى مع مرور الوقت.",
+    en: "Every product creates an \"after story\": how users interact with it, how it evolves, and how it continues to deliver value over time.",
+    ar: "كل منتج يخلق \"قصة ما بعد الإطلاق\": كيف يتفاعل معه المستخدمون، وكيف يتطور، وكيف يستمر في تقديم القيمة عبر الزمن.",
   },
   "philosophy.p3": {
-    en: "I see AI not as a replacement, but as a tool that supports deeper thinking — helping designers craft more thoughtful, adaptive, and lasting experiences.",
-    ar: "أرى الذكاء الاصطناعي ليس بديلاً، بل أداة تدعم التفكير العميق، وتساعد المصممين على ابتكار تجارب أكثر عمقاً، ومرونة، واستدامة.",
+    en: "My approach focuses on understanding user behavior, aligning with business goals, and designing experiences that are not only usable, but meaningful and lasting.",
+    ar: "يرتكز نهجي على فهم سلوك المستخدم، والتوافق مع أهداف العمل، وتصميم تجارب ليست فقط سهلة الاستخدام، بل ذات معنى وأثر دائم.",
+  },
+  "philosophy.p4": {
+    en: "As AI accelerates how we build, I believe the role of design is not just to move faster, but to think deeper — ensuring products remain human, intentional, and responsible.",
+    ar: "مع تسارع الذكاء الاصطناعي في طريقة بنائنا، أؤمن بأن دور التصميم ليس فقط التحرك بسرعة أكبر، بل التفكير بعمق أكبر — لضمان بقاء المنتجات إنسانية، هادفة، ومسؤولة.",
   },
 
   // ── EXPERIENCE ──

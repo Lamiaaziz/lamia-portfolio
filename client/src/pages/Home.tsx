@@ -256,8 +256,11 @@ export default function Home() {
               <p className="text-base leading-relaxed mb-5" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
                 {t("philosophy.p2")}
               </p>
-              <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+              <p className="text-base leading-relaxed mb-5" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
                 {t("philosophy.p3")}
+              </p>
+              <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                {t("philosophy.p4")}
               </p>
             </div>
           </div>
