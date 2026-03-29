@@ -163,7 +163,7 @@ export default function Home() {
               {t("hero.h1.line3")}
             </h1>
 
-            <p className="text-base leading-relaxed mb-10 max-w-lg fade-up fade-up-delay-2" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+            <p className="text-base leading-relaxed mb-10 max-w-lg fade-up fade-up-delay-2 whitespace-pre-line" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
               {t("hero.subtitle")}
             </p>
 
