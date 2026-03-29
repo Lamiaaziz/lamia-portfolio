@@ -274,8 +274,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   "af.problem.label": { en: "PROBLEM", ar: "المشكلة" },
   "af.problem.h2": { en: "The Problem", ar: "تعريف المشكلة" },
   "af.problem.p": {
-    en: "Saudi professionals with irregular schedules struggle to maintain consistent workout routines, as most fitness apps rely on fixed plans and motivation-based engagement.\n\nThis results in low retention and inconsistent usage over time.",
-    ar: "يعاني المهنيون السعوديون ذوو الجداول غير المنتظمة من صعوبة الحفاظ على انتظام روتينات التمارين، إذ تعتمد معظم تطبيقات اللياقة على خطط ثابتة وأساليب مبنية على التحفيز.\n\nينتج عن ذلك ضعف في الاحتفاظ بالمستخدمين وعدم انتظام الاستخدام عبر الزمن."
+    en: "Many fitness apps rely on fixed routines and motivation-based engagement, which do not align with the unpredictable schedules of Saudi professionals.\n\nThis results in inconsistent usage and difficulty maintaining long-term fitness habits.",
+    ar: "تعتمد كثير من تطبيقات اللياقة على روتينات ثابتة وأساليب مبنية على التحفيز، وهي لا تتوافق مع الجداول غير المتوقعة للمهنيين السعوديين.\n\nينتج عن ذلك عدم انتظام الاستخدام وصعوبة الحفاظ على عادات اللياقة على المدى البعيد."
   },
   "af.key.insight.label": { en: "KEY INSIGHT", ar: "الرؤية الأساسية" },
   "af.key.insight.p": {
