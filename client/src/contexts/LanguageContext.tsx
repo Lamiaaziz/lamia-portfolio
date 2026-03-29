@@ -430,6 +430,28 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "Future iterations would focus on enhancing personalization through behavioral data, improving AI-driven recommendations, and refining the system based on real user patterns.",
     ar: "ستركّز التكرارات المستقبلية على تعزيز التخصيص من خلال بيانات السلوك، وتحسين توصيات الذكاء الاصطناعي، وتطوير النظام بناءً على أنماط المستخدمين الفعلية.",
   },
+  "af.beyond.label": { en: "BEYOND LAUNCH", ar: "ما بعد الإطلاق" },
+  "af.beyond.h2": { en: "Beyond Launch", ar: "ما وراء الإطلاق" },
+  "af.beyond.p1": {
+    en: "Designing AuraFit wasn't only about delivering a solution, but about understanding how it would perform and evolve after launch.",
+    ar: "لم يكن تصميم AuraFit يتعلق فقط بتقديم حلّ، بل بفهم كيف سيؤدي ويتطوّر بعد الإطلاق.",
+  },
+  "af.beyond.p2": {
+    en: "The success of AuraFit would be measured through user retention, workout consistency, and engagement with adaptive features. These metrics would help evaluate whether the system effectively supports long-term behavioral change.",
+    ar: "سيُقاس نجاح AuraFit من خلال احتفاظ المستخدمين، وانتظام التمارين، والتفاعل مع الميزات التكيّفية. ستساعد هذه المقاييس في تقييم ما إذا كان النظام يدعم فعلياً التغيير السلوكي على المدى البعيد.",
+  },
+  "af.beyond.p3": {
+    en: "Over time, the product would evolve by leveraging user behavior data to refine personalization, improve AI-driven recommendations, and adapt the experience to better fit individual lifestyles.",
+    ar: "مع مرور الوقت، سيتطوّر المنتج بالاستفادة من بيانات سلوك المستخدم لتحسين التخصيص، وتطوير توصيات الذكاء الاصطناعي، وتكييف التجربة لتناسب أساليب حياة الأفراد بشكل أفضل.",
+  },
+  "af.beyond.p4": {
+    en: "The goal is not only to help users start their fitness journey, but to sustain it through a system that continuously learns and adapts.",
+    ar: "الهدف ليس فقط مساعدة المستخدمين على بدء رحلتهم نحو اللياقة، بل استدامتها من خلال نظام يتعلّم ويتكيّف باستمرار.",
+  },
+  "af.beyond.ksi.label": { en: "Key success indicators:", ar: "مؤشرات النجاح الرئيسية:" },
+  "af.beyond.ksi.1": { en: "User retention over time", ar: "احتفاظ المستخدمين عبر الزمن" },
+  "af.beyond.ksi.2": { en: "Workout consistency rate", ar: "معدل انتظام التمارين" },
+  "af.beyond.ksi.3": { en: "Engagement with adaptive recommendations", ar: "التفاعل مع التوصيات التكيّفية" },
   "af.reflection.label": { en: "REFLECTION", ar: "تأملات" },
   "af.reflection.h2": { en: "Reflection", ar: "تأملات ختامية" },
   "af.reflection.p1": {

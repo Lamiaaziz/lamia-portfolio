@@ -488,6 +488,31 @@ export default function AuraFit() {
         </div>
       </section>
 
+      {/* ── BEYOND LAUNCH ── */}
+      <section className="py-16">
+        <div className="container">
+          <Section>
+            <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.93 0.015 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
+              <p className="section-num mb-4">{t("af.beyond.label")}</p>
+              <h2 className="text-3xl mb-6" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.beyond.h2")}</h2>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.beyond.p1")}</p>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.beyond.p2")}</p>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.beyond.p3")}</p>
+              <p className="text-base leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.beyond.p4")}</p>
+              <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.45 0.12 270)", fontFamily, letterSpacing: "0.08em" }}>{t("af.beyond.ksi.label")}</p>
+              <ul className="space-y-2">
+                {[t("af.beyond.ksi.1"), t("af.beyond.ksi.2"), t("af.beyond.ksi.3")].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.45 0.12 270)" }} />
+                    <p className="text-sm leading-relaxed" style={{ color: "oklch(0.35 0.06 230)", fontFamily, fontWeight: fw }}>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Section>
+        </div>
+      </section>
+
       {/* ── REFLECTION ── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.008 270)" }}>
         <div className="container">
