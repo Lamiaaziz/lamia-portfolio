@@ -43,24 +43,24 @@ export const translations: Record<string, Record<Lang, string>> = {
   "nav.cv": { en: "Download CV", ar: "تحميل السيرة الذاتية" },
 
   // ── ABOUT ──
-  "about.label": { en: "ABOUT ME", ar: "عن لميا" },
-  "about.h2.line1": { en: "Where business", ar: "حيث تلتقي الأعمال" },
-  "about.h2.line2": { en: "meets design.", ar: "بالتصميم." },
-  "about.p1": {
-    en: "I'm an Experience Designer with a background in graphic design and client-facing roles, bringing a balance between visual creativity and business understanding.",
-    ar: "أنا مصممة تجارب بخلفية في التصميم الجرافيكي والأدوار المباشرة مع العملاء، أجمع بين الإبداع البصري والفهم التجاري.",
+  "about.label": { en: "HOW I APPROACH DESIGN", ar: "كيف أتعامل مع التصميم" },
+  "about.h2.line1": { en: "How I approach", ar: "كيف أتعامل" },
+  "about.h2.line2": { en: "design", ar: "مع التصميم" },
+  "about.item1": {
+    en: "Understand real user behavior, not assumptions",
+    ar: "فهم سلوك المستخدم الحقيقي، ليس الافتراضات",
   },
-  "about.p2": {
-    en: "Over the past 4 years, I've worked across different industries, translating ideas into structured, user-centered digital experiences.",
-    ar: "على مدى السنوات الأربع الماضية، عملت في صناعات متعددة، أُحوّل الأفكار إلى تجارب رقمية منظمة تتمحور حول المستخدم.",
+  "about.item2": {
+    en: "Align design decisions with business goals",
+    ar: "مواءمة قرارات التصميم مع أهداف العمل",
   },
-  "about.p3": {
-    en: "I see design as storytelling — crafting experiences that go beyond visuals to shape how people feel, behave, and connect with a product over time. I'm especially driven by what happens after a product is launched, and how it continues to evolve, adapt, and create lasting value.",
-    ar: "أرى التصميم سرداً للقصص — صياغة تجارب تتجاوز المرئيات لتُشكّل كيف يشعر الناس ويتصرفون ويتواصلون مع منتج ما بمرور الوقت. أنا مدفوعة بشكل خاص بما يحدث بعد إطلاق المنتج، وكيف يستمر في التطور والتكيف وخلق قيمة دائمة.",
+  "about.item3": {
+    en: "Focus on clarity, usability, and long-term value",
+    ar: "التركيز على الوضوح، سهولة الاستخدام، والقيمة طويلة الأمد",
   },
-  "about.p4": {
-    en: "I also bring experience in facilitating co-creation innovation sessions and design workshops — structuring narratives, translating ambiguous challenges into clear visual artifacts, and guiding teams from idea to execution. I design fluently in both Arabic and English, with a deep understanding of the Saudi and MENA context.",
-    ar: "لديّ أيضًا خبرة في تيسير جلسات الابتكار المشترك وورش عمل التصميم، حيث أقوم بهيكلة السرد، وتحويل التحديات الغامضة إلى عناصر بصرية واضحة، وتوجيه الفرق من الفكرة إلى التنفيذ. أتقن التصميم باللغتين العربية والإنجليزية بطلاقة، مع إلمام وثيق بالسياق السعودي ومنطقة الشرق الأوسط وشمال إفريقيا.",
+  "about.item4": {
+    en: "Continuously improve based on real usage and feedback",
+    ar: "التحسين المستمر بناءً على الاستخدام الفعلي والتغذية الراجعة",
   },
   "about.stat.years": { en: "Years of Experience", ar: "سنوات خبرة" },
   "about.stat.industries": { en: "Industries Worked In", ar: "قطاعات عملت فيها" },

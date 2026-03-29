@@ -216,10 +216,14 @@ export default function Home() {
                 <br />
                 <em>{t("about.h2.line2")}</em>
               </h2>
-              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{t("about.p1")}</p>
-              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{t("about.p2")}</p>
-              <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{t("about.p3")}</p>
-              <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{t("about.p4")}</p>
+              <ul className="space-y-4 mt-2">
+                {["about.item1", "about.item2", "about.item3", "about.item4"].map((key) => (
+                  <li key={key} className="flex items-start gap-3" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                    <span className="mt-1 flex-shrink-0 w-2 h-2 rounded-full" style={{ background: "oklch(0.52 0.15 230)", marginTop: "0.45em" }} />
+                    <span className="text-base leading-relaxed">{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
