@@ -165,7 +165,10 @@ export default function AuraFit() {
           <Section>
             <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.35 0.09 230 / 0.06)", border: "1px solid oklch(0.35 0.09 230 / 0.15)" }}>
               <p className="section-num mb-4" style={{ color: "oklch(0.35 0.09 230)" }}>{t("af.key.insight.label")}</p>
-              <p className="text-xl leading-relaxed" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.key.insight.p")}</p>
+              {t("af.key.insight.p").split("\n").map((line, i) => (
+                <p key={i} className="text-xl leading-relaxed mb-1" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{line}</p>
+              ))}
+              <p className="text-sm mt-5" style={{ color: "oklch(0.52 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.key.insight.closing")}</p>
             </div>
           </Section>
         </div>

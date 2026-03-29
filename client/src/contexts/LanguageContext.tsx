@@ -279,8 +279,12 @@ export const translations: Record<string, Record<Lang, string>> = {
   },
   "af.key.insight.label": { en: "KEY INSIGHT", ar: "الرؤية الأساسية" },
   "af.key.insight.p": {
-    en: "Consistency in fitness is not a motivation problem, but a system design problem. Users need adaptive support that fits their lifestyle rather than rigid routines.",
-    ar: "الانتظام في اللياقة ليس مشكلة تحفيز، بل مشكلة تصميم نظام. يحتاج المستخدمون إلى دعم تكيّفي يناسب أسلوب حياتهم بدلاً من روتينات صارمة.",
+    en: "Consistency in fitness is not a motivation problem — it’s a system design problem.\nUsers need adaptive support that fits their lifestyle, rather than rigid routines they eventually abandon.",
+    ar: "الانتظام في اللياقة ليس مشكلة تحفيز — بل مشكلة تصميم نظام.\nيحتاج المستخدمون إلى دعم تكيّفي يناسب أسلوب حياتهم، لا روتينات صارمة يتخلون عنها في النهاية.",
+  },
+  "af.key.insight.closing": {
+    en: "This insight shaped the direction of AuraFit as an adaptive behavioral system.",
+    ar: "شكّلت هذه الرؤية توجّه AuraFit بوصفه نظامًا سلوكيًا تكيّفيًا.",
   },
   "af.insight.label": { en: "USER INSIGHT", ar: "رؤية المستخدم" },
   "af.insight.p": {
