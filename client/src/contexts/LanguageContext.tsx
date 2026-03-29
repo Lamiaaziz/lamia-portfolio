@@ -298,6 +298,27 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "Design an adaptive fitness system that adjusts to real-life schedules and supports sustainable consistency. AuraFit reframes fitness as an adaptive behavioral system — not a motivation challenge.",
     ar: "تصميم نظام لياقة تكيّفي يتكيف مع الجداول الواقعية ويدعم الانتظام المستدام. يُعيد AuraFit تأطير اللياقة كنظام سلوكي تكيّفي — لا تحدٍّ للتحفيز.",
   },
+  "af.solution.feat.label": { en: "KEY FEATURES", ar: "الميزات الرئيسية" },
+  "af.solution.feat.1.title": { en: "Adaptive Workout Planning", ar: "تخطيط تمارين تكيّفي" },
+  "af.solution.feat.1.why": {
+    en: "Instead of fixed schedules, the system adjusts based on user availability — reducing friction and increasing consistency.",
+    ar: "بدلاً من الجداول الثابتة، يتكيّف النظام بناءً على توفر المستخدم — مما يقلل الاحتكاك ويعزز الانتظام.",
+  },
+  "af.solution.feat.2.title": { en: "Behavioral Mode Assignment", ar: "تخصيص الوضع السلوكي" },
+  "af.solution.feat.2.why": {
+    en: "Users are assigned a mode (e.g. Busy Week) based on their lifestyle — so the app responds to reality, not an ideal routine.",
+    ar: "يُخصّص لكل مستخدم وضع (e.g. أسبوع مزدحم) بناءً على أسلوب حياته — ليستجيب التطبيق للواقع، لا لروتين مثالي.",
+  },
+  "af.solution.feat.3.title": { en: "Progress Tracking & AI Insights", ar: "تتبع التقدم ورؤى الذكاء الاصطناعي" },
+  "af.solution.feat.3.why": {
+    en: "Making progress visible reduces uncertainty and builds momentum — AI recommendations help users course-correct without guilt.",
+    ar: "جعل التقدم مرئيًا يقلل عدم اليقين ويبني الزخم — تساعد توصيات الذكاء الاصطناعي المستخدمين على تصحيح المسار دون شعور بالذنب.",
+  },
+  "af.solution.feat.4.title": { en: "Missed Session Recovery", ar: "استعادة الجلسات الفائتة" },
+  "af.solution.feat.4.why": {
+    en: "Missed sessions trigger adjustments instead of penalties — keeping users in the system rather than pushing them to quit.",
+    ar: "الجلسات الفائتة تُطلق تعديلات بدلاً من عقوبات — مما يبقي المستخدمين ضمن النظام بدلاً من دفعهم للترك.",
+  },
   "af.moodboard.label": { en: "MOODBOARD", ar: "لوحة المزاج" },
   "af.moodboard.h2": { en: "Moodboard", ar: "لوحة الإلهام البصري" },
   "af.wireframes.label": { en: "WIREFRAMES", ar: "الإطارات السلكية" },
