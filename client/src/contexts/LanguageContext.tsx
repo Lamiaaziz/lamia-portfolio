@@ -46,6 +46,10 @@ export const translations: Record<string, Record<Lang, string>> = {
   "about.label": { en: "HOW I APPROACH DESIGN", ar: "كيف أتعامل مع التصميم" },
   "about.h2.line1": { en: "How I approach", ar: "كيف أتعامل" },
   "about.h2.line2": { en: "design", ar: "مع التصميم" },
+  "about.intro": {
+    en: "I'm a product and experience designer focused on creating digital products that remain meaningful beyond launch.",
+    ar: "أنا مصممة منتجات وتجارب متخصصة في بناء منتجات رقمية تظل ذات معنى وأثر بعد مرحلة الإطلاق.",
+  },
   "about.item1.title": { en: "Understand users", ar: "فهم المستخدمين" },
   "about.item1.body": {
     en: "Understand real user behavior, not assumptions",

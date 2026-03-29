@@ -221,7 +221,8 @@ export default function Home() {
                 <br />
                 <em>{t("about.h2.line2")}</em>
               </h2>
-              <ol className="space-y-5 mt-2">
+              <p className="text-base leading-relaxed mb-6" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>{t("about.intro")}</p>
+              <ol className="space-y-5">
                 {[
                   { num: "01", titleKey: "about.item1.title", bodyKey: "about.item1.body" },
                   { num: "02", titleKey: "about.item2.title", bodyKey: "about.item2.body" },
