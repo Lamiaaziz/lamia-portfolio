@@ -430,6 +430,16 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "Future iterations would focus on improving personalization through user behavior data, refining AI-driven insights, and expanding features that support long-term habit formation.",
     ar: "ستركّز التكرارات المستقبلية على تحسين التخصيص من خلال بيانات سلوك المستخدم، وتحسين رؤى الذكاء الاصطناعي، وتوسيع الميزات الداعمة لتكوين العادات على المدى البعيد.",
   },
+  "af.reflection.label": { en: "REFLECTION", ar: "تأملات" },
+  "af.reflection.h2": { en: "Reflection", ar: "تأملات ختامية" },
+  "af.reflection.p1": {
+    en: "This project helped me shift my thinking from designing features to designing systems that support behavior over time.",
+    ar: "ساعدني هذا المشروع على تحويل تفكيري من تصميم ميزات إلى تصميم أنظمة تدعم السلوك عبر الزمن.",
+  },
+  "af.reflection.p2": {
+    en: "Given more time, I would validate assumptions through real user testing and refine the experience based on actual usage patterns.",
+    ar: "لو توفّر لي وقت أكثر، كنت سأتحقّق من الافتراضات من خلال اختبارات حقيقية مع المستخدمين، وأصقل التجربة بناءً على أنماط الاستخدام الفعلية.",
+  },
   "af.nav.all": { en: "All Projects", ar: "جميع المشاريع" },
   "af.nav.next": { en: "Next: Travel Tales", ar: "التالي: Travel Tales" },
   "af.solution.research": { en: "Research", ar: "البحث" },

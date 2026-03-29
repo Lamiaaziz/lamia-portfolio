@@ -488,6 +488,18 @@ export default function AuraFit() {
         </div>
       </section>
 
+      {/* ── REFLECTION ── */}
+      <section className="py-16" style={{ background: "oklch(0.96 0.008 270)" }}>
+        <div className="container">
+          <Section>
+            <p className="section-num mb-4">{t("af.reflection.label")}</p>
+            <h2 className="text-3xl mb-6" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.reflection.h2")}</h2>
+            <p className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.reflection.p1")}</p>
+            <p className="text-base leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{t("af.reflection.p2")}</p>
+          </Section>
+        </div>
+      </section>
+
       {/* ── NAVIGATION ── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.008 270)" }}>
         <div className="container flex justify-between items-center">
