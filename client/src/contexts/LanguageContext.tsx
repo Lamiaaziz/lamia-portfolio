@@ -420,6 +420,16 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "يُعيد AuraFit تأطير اللياقة كنظام سلوكي تكيّفي. بدلًا من الاعتماد على التحفيز، يُهيكل المنتج إشارات سلوكية صغيرة تساعد المستخدمين على الحفاظ على الانتظام على المدى البعيد رغم تقلبات أسلوب الحياة.",
   },
   "af.outcome.cta": { en: "View Full Prototype", ar: "عرض النموذج الأولي الكامل" },
+  "af.afterlaunch.label": { en: "AFTER LAUNCH", ar: "ما بعد الإطلاق" },
+  "af.afterlaunch.h2": { en: "Product Evolution", ar: "تطور المنتج" },
+  "af.afterlaunch.p1": {
+    en: "If launched, the success of AuraFit would be measured through user retention, workout consistency, and engagement with adaptive features.",
+    ar: "إذا تم إطلاقه، سيُقاس نجاح AuraFit من خلال احتفاظ المستخدمين، وانتظام التمارين، والتفاعل مع الميزات التكيّفية.",
+  },
+  "af.afterlaunch.p2": {
+    en: "Future iterations would focus on improving personalization through user behavior data, refining AI-driven insights, and expanding features that support long-term habit formation.",
+    ar: "ستركّز التكرارات المستقبلية على تحسين التخصيص من خلال بيانات سلوك المستخدم، وتحسين رؤى الذكاء الاصطناعي، وتوسيع الميزات الداعمة لتكوين العادات على المدى البعيد.",
+  },
   "af.nav.all": { en: "All Projects", ar: "جميع المشاريع" },
   "af.nav.next": { en: "Next: Travel Tales", ar: "التالي: Travel Tales" },
   "af.solution.research": { en: "Research", ar: "البحث" },
