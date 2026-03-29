@@ -277,6 +277,11 @@ export const translations: Record<string, Record<Lang, string>> = {
     en: "Saudi professionals with irregular schedules struggle to maintain consistent workout routines, as most fitness apps rely on fixed plans and motivation-based engagement.\n\nThis results in low retention and inconsistent usage over time.",
     ar: "يعاني المهنيون السعوديون ذوو الجداول غير المنتظمة من صعوبة الحفاظ على انتظام روتينات التمارين، إذ تعتمد معظم تطبيقات اللياقة على خطط ثابتة وأساليب مبنية على التحفيز.\n\nينتج عن ذلك ضعف في الاحتفاظ بالمستخدمين وعدم انتظام الاستخدام عبر الزمن."
   },
+  "af.key.insight.label": { en: "KEY INSIGHT", ar: "الرؤية الأساسية" },
+  "af.key.insight.p": {
+    en: "Consistency in fitness is not a motivation problem — it is a system design problem.\n\nUsers need adaptive support that fits their lifestyle, rather than rigid plans they eventually abandon.",
+    ar: "الانتظام في اللياقة ليس مشكلة تحفيز — بل هو مشكلة تصميم نظام.\n\nيحتاج المستخدمون إلى دعم تكيّفي يناسب أسلوب حياتهم، لا خطط صارمة يتخلون عنها في النهاية.",
+  },
   "af.insight.label": { en: "USER INSIGHT", ar: "رؤية المستخدم" },
   "af.insight.p": {
     en: "Users are more motivated when they can clearly see their progress and understand how their actions impact their performance. They seek simple, personalized guidance that helps them stay consistent without feeling overwhelmed.",

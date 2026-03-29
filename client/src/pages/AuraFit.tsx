@@ -147,6 +147,14 @@ export default function AuraFit() {
                   {para}
                 </p>
               ))}
+              <div className="rounded-xl p-6 mb-4" style={{ background: "oklch(0.35 0.09 230 / 0.07)", borderLeft: "3px solid oklch(0.35 0.09 230)" }}>
+                <p className="text-xs font-semibold mb-3" style={{ color: "oklch(0.35 0.09 230)", fontFamily, letterSpacing: "0.1em" }}>{t("af.key.insight.label")}</p>
+                {t("af.key.insight.p").split("\n\n").map((para, i) => (
+                  <p key={i} className="text-sm leading-relaxed mb-2" style={{ color: "oklch(0.28 0.06 230)", fontFamily, fontWeight: fw }}>
+                    {para}
+                  </p>
+                ))}
+              </div>
               <div className="rounded-xl p-6" style={{ background: "oklch(0.45 0.12 270 / 0.08)", borderLeft: "3px solid oklch(0.45 0.12 270)" }}>
                 <p className="text-xs font-semibold mb-2" style={{ color: "oklch(0.45 0.12 270)", fontFamily, letterSpacing: "0.1em" }}>{t("af.insight.label")}</p>
                 <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
