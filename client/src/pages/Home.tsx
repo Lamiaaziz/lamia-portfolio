@@ -221,22 +221,14 @@ export default function Home() {
                 <br />
                 <em>{t("about.h2.line2")}</em>
               </h2>
-              <ol className="space-y-5 mt-2">
-                {[
-                  { num: "01", titleKey: "about.item1.title", bodyKey: "about.item1.body" },
-                  { num: "02", titleKey: "about.item2.title", bodyKey: "about.item2.body" },
-                  { num: "03", titleKey: "about.item3.title", bodyKey: "about.item3.body" },
-                  { num: "04", titleKey: "about.item4.title", bodyKey: "about.item4.body" },
-                ].map((item) => (
-                  <li key={item.num} className="flex items-start gap-4" style={{ fontFamily }}>
-                    <span className="text-xs font-medium flex-shrink-0" style={{ color: "oklch(0.52 0.15 230)", letterSpacing: "0.05em", marginTop: "0.3em" }}>{item.num}</span>
-                    <div>
-                      <p className="text-sm font-semibold mb-0.5" style={{ color: "oklch(0.28 0.06 230)" }}>{t(item.titleKey)}</p>
-                      <p className="text-sm leading-relaxed" style={{ color: "oklch(0.52 0.04 230)" }}>{t(item.bodyKey)}</p>
-                    </div>
+              <ul className="space-y-3 mt-2">
+                {["about.item1", "about.item2", "about.item3", "about.item4"].map((key) => (
+                  <li key={key} className="flex items-start gap-3" style={{ color: "oklch(0.42 0.04 230)", fontFamily }}>
+                    <span className="flex-shrink-0" style={{ color: "oklch(0.52 0.15 230)", marginTop: "0.45em", fontSize: "0.5rem" }}>●</span>
+                    <span className="text-base leading-relaxed">{t(key)}</span>
                   </li>
                 ))}
-              </ol>
+              </ul>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
