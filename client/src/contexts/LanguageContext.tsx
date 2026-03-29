@@ -91,8 +91,8 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "يرتكز نهجي على فهم سلوك المستخدم، والتوافق مع أهداف العمل، وتصميم تجارب ليست فقط سهلة الاستخدام، بل ذات معنى وأثر دائم.",
   },
   "philosophy.p4": {
-    en: "As AI accelerates how we build, I believe the role of design is not just to move faster, but to think deeper — ensuring products remain human, intentional, and responsible.",
-    ar: "مع تسارع الذكاء الاصطناعي في طريقة بنائنا، أؤمن بأن دور التصميم ليس فقط التحرك بسرعة أكبر، بل التفكير بعمق أكبر — لضمان بقاء المنتجات إنسانية، هادفة، ومسؤولة.",
+    en: "As AI accelerates how we build, I believe the role of design is not just to move faster, but to think deeper — ensuring products remain human, intentional, and meaningful.",
+    ar: "مع تسارع الذكاء الاصطناعي في طريقة بنائنا، أؤمن بأن دور التصميم ليس فقط التحرك بسرعة أكبر، بل التفكير بعمق أكبر — لضمان بقاء المنتجات إنسانية، هادفة، وذات معنى.",
   },
 
   // ── EXPERIENCE ──
