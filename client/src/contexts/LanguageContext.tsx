@@ -288,10 +288,11 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "يكون المستخدمون أكثر تحفيزاً عندما يستطيعون رؤية تقدمهم بوضوح وفهم كيف تؤثر أفعالهم على أدائهم. يبحثون عن توجيه بسيط وشخصي يساعدهم على الاستمرار دون الشعور بالإرهاق."
   },
   "af.challenge.label": { en: "CHALLENGE", ar: "التحدي" },
-  "af.challenge.h2": { en: "The Challenge", ar: "تحديات التصميم" },
-  "af.challenge.1": { en: "Users struggle with inconsistent schedules", ar: "يعاني المستخدمون من الجداول غير المنتظمة" },
-  "af.challenge.2": { en: "Motivation-based systems fail long-term", ar: "الأنظمة القائمة على التحفيز تفشل على المدى البعيد" },
-  "af.challenge.3": { en: "Users need adaptive structure, not rigid plans", ar: "المستخدمون بحاجة إلى هيكل تكيّفي لا خطط صارمة" },
+  "af.challenge.h2": { en: "The Challenge", ar: "تحدي التصميم" },
+  "af.challenge.hmw": {
+    en: "How might we design a system that supports consistent fitness behavior despite unpredictable schedules?",
+    ar: "كيف يمكننا تصميم نظام يدعم سلوكًا لياقيًا متسقًّا رغم الجداول غير المتوقعة؟",
+  },
   "af.solution.label": { en: "SOLUTION", ar: "الحل" },
   "af.solution.h2": { en: "The Solution", ar: "الحل المقترح" },
   "af.solution.p": {

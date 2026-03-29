@@ -179,14 +179,7 @@ export default function AuraFit() {
               <div className="rounded-2xl p-8" style={{ background: "oklch(0.93 0.015 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
                 <p className="section-num mb-3">{t("af.challenge.label")}</p>
                 <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.challenge.h2")}</h2>
-                <ul className="space-y-3">
-                  {[t("af.challenge.1"), t("af.challenge.2"), t("af.challenge.3")].map((p) => (
-                    <li key={p} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "oklch(0.45 0.12 270)" }} />
-                      <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>{p}</p>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-base leading-relaxed italic" style={{ color: "oklch(0.35 0.09 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.challenge.hmw")}</p>
               </div>
               <div className="rounded-2xl p-8" style={{ background: "oklch(0.45 0.12 270)", color: "oklch(0.98 0.005 230)" }}>
                 <p className="section-num mb-3" style={{ color: "oklch(0.98 0.005 230 / 0.5)" }}>{t("af.solution.label")}</p>
