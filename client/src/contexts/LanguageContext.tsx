@@ -279,8 +279,8 @@ export const translations: Record<string, Record<Lang, string>> = {
   },
   "af.key.insight.label": { en: "KEY INSIGHT", ar: "الرؤية الأساسية" },
   "af.key.insight.p": {
-    en: "Consistency in fitness is not a motivation problem — it is a system design problem.\n\nUsers need adaptive support that fits their lifestyle, rather than rigid plans they eventually abandon.",
-    ar: "الانتظام في اللياقة ليس مشكلة تحفيز — بل هو مشكلة تصميم نظام.\n\nيحتاج المستخدمون إلى دعم تكيّفي يناسب أسلوب حياتهم، لا خطط صارمة يتخلون عنها في النهاية.",
+    en: "Consistency in fitness is not a motivation problem, but a system design problem. Users need adaptive support that fits their lifestyle rather than rigid routines.",
+    ar: "الانتظام في اللياقة ليس مشكلة تحفيز، بل مشكلة تصميم نظام. يحتاج المستخدمون إلى دعم تكيّفي يناسب أسلوب حياتهم بدلاً من روتينات صارمة.",
   },
   "af.insight.label": { en: "USER INSIGHT", ar: "رؤية المستخدم" },
   "af.insight.p": {
