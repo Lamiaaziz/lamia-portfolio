@@ -46,21 +46,25 @@ export const translations: Record<string, Record<Lang, string>> = {
   "about.label": { en: "HOW I APPROACH DESIGN", ar: "كيف أتعامل مع التصميم" },
   "about.h2.line1": { en: "How I approach", ar: "كيف أتعامل" },
   "about.h2.line2": { en: "design", ar: "مع التصميم" },
-  "about.item1": {
+  "about.item1.title": { en: "Understand users", ar: "فهم المستخدمين" },
+  "about.item1.body": {
     en: "Understand real user behavior, not assumptions",
     ar: "فهم سلوك المستخدم الحقيقي، ليس الافتراضات",
   },
-  "about.item2": {
+  "about.item2.title": { en: "Align with business", ar: "التوافق مع الأعمال" },
+  "about.item2.body": {
     en: "Align design decisions with business goals",
     ar: "مواءمة قرارات التصميم مع أهداف العمل",
   },
-  "about.item3": {
-    en: "Focus on clarity, usability, and long-term value",
-    ar: "التركيز على الوضوح، سهولة الاستخدام، والقيمة طويلة الأمد",
+  "about.item3.title": { en: "Design for clarity", ar: "التصميم للوضوح" },
+  "about.item3.body": {
+    en: "Focus on usability and long-term value",
+    ar: "التركيز على سهولة الاستخدام والقيمة طويلة الأمد",
   },
-  "about.item4": {
-    en: "Continuously improve based on real usage and feedback",
-    ar: "التحسين المستمر بناءً على الاستخدام الفعلي والتغذية الراجعة",
+  "about.item4.title": { en: "Improve continuously", ar: "التحسين المستمر" },
+  "about.item4.body": {
+    en: "Evolve based on real usage and feedback",
+    ar: "التطور بناءً على الاستخدام الفعلي والتغذية الراجعة",
   },
   "about.stat.years": { en: "Years of Experience", ar: "سنوات خبرة" },
   "about.stat.industries": { en: "Industries Worked In", ar: "قطاعات عملت فيها" },
