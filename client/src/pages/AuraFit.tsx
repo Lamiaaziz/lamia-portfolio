@@ -142,9 +142,11 @@ export default function AuraFit() {
             <div className="rounded-2xl p-8 lg:p-12" style={{ background: "oklch(0.93 0.015 270)", border: "1px solid oklch(0.88 0.015 270 / 0.5)" }}>
               <p className="section-num mb-4">{t("af.problem.label")}</p>
               <h2 className="text-3xl mb-4" style={{ color: "oklch(0.2 0.04 230)", fontFamily: serifFamily, fontWeight: fw }}>{t("af.problem.h2")}</h2>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
-                {t("af.problem.p")}
-              </p>
+              {t("af.problem.p").split("\n\n").map((para, i) => (
+                <p key={i} className="text-base leading-relaxed mb-4" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
+                  {para}
+                </p>
+              ))}
               <div className="rounded-xl p-6" style={{ background: "oklch(0.45 0.12 270 / 0.08)", borderLeft: "3px solid oklch(0.45 0.12 270)" }}>
                 <p className="text-xs font-semibold mb-2" style={{ color: "oklch(0.45 0.12 270)", fontFamily, letterSpacing: "0.1em" }}>{t("af.insight.label")}</p>
                 <p className="text-sm leading-relaxed" style={{ color: "oklch(0.42 0.04 230)", fontFamily, fontWeight: fw }}>
