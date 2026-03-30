@@ -341,12 +341,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "يضبط الخطة تلقائيًا عند تفويت جلسة، دون معاقبة المستخدم.",
   },
   "af.solution.feat.4.rationale": {
-    en: "Removing the penalty for missed sessions reduces guilt and keeps users engaged with the system long-term, rather than abandoning it after a setback.",
-    ar: "إزالة عقوبة الجلسات الفائتة يقلّل الشعور بالذنب ويبقي المستخدمين منخرطين في النظام على المدى البعيد، بدلاً من التخلي عنه بعد النكسة.",
+    en: "Removes penalties to reduce drop-off and maintain long-term engagement.",
+    ar: "يُزيل العقوبات لتقليل التسرب والحفاظ على التفاعل طويل الأمد.",
   },
   "af.solution.closing": {
-    en: "The solution focuses on reducing friction, supporting flexibility, and encouraging long-term behavioral consistency rather than short-term motivation.",
-    ar: "يركّز الحل على تقليل الاحتكاك، ودعم المرونة، وتشجيع الاتساق السلوكي طويل الأمد بدلاً من التحفيز قصير الأمد.",
+    en: "Focuses on reducing friction and enabling long-term behavioral consistency.",
+    ar: "يركّز على تقليل الاحتكاك وتمكين الاتساق السلوكي طويل الأمد.",
   },
   "af.moodboard.label": { en: "MOODBOARD", ar: "لوحة المزاج" },
   "af.moodboard.h2": { en: "Moodboard", ar: "لوحة الإلهام البصري" },
