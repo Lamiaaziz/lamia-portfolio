@@ -314,8 +314,8 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "تمارين مخصصة بناءً على توفر المستخدم وروتينه.",
   },
   "af.solution.feat.1.rationale": {
-    en: "This approach was designed to reduce dependency on rigid schedules and support users with unpredictable routines — increasing the likelihood of consistent engagement.",
-    ar: "صُمّم هذا النهج لتقليل الاعتماد على الجداول الصارمة ودعم المستخدمين ذوي الروتينات غير المتوقعة — مما يزيد احتمالية التفاعل المستمر.",
+    en: "Designed to replace rigid schedules with adaptive planning, supporting consistent engagement.",
+    ar: "صُمّم لاستبدال الجداول الصارمة بتخطيط تكيّفي، يدعم التفاعل المستمر.",
   },
   "af.solution.feat.2.title": { en: "Behavioral Mode Assignment", ar: "تخصيص الوضع السلوكي" },
   "af.solution.feat.2.why": {
@@ -332,8 +332,8 @@ export const translations: Record<string, Record<Lang, string>> = {
     ar: "تقدّم اقتراحات لياقة مخصصة بناءً على سلوك المستخدم.",
   },
   "af.solution.feat.3.rationale": {
-    en: "This feature helps users make better decisions without overthinking, reducing friction and supporting continuous progress over time.",
-    ar: "تساعد هذه الميزة المستخدمين على اتخاذ قرارات أفضل دون إفراط في التفكير، مما يقلّل الاحتكاك ويدعم التقدم المستمر عبر الزمن.",
+    en: "Helps users make quicker decisions and maintain progress by reducing friction.",
+    ar: "يساعد المستخدمين على اتخاذ قرارات أسرع والحفاظ على التقدم من خلال تقليل الاحتكاك.",
   },
   "af.solution.feat.4.title": { en: "Missed Session Recovery", ar: "استعادة الجلسات الفائتة" },
   "af.solution.feat.4.why": {
