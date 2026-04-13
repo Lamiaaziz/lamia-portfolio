@@ -1,2 +1,2 @@
 name = "lamia-portfolio"
-pages_build_output_dir = "client/dist"
+pages_build_output_dir = "dist/public"
