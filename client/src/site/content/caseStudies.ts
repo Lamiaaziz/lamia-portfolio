@@ -31,19 +31,19 @@ const img = (n: string) => asset(`/work/${n}.webp`);
 const en: CaseStudiesContent = {
   metaTitle: "Case Studies — Lamia Alrowaished",
   metaDescription:
-    "Product design case studies by Lamia Alrowaished: a live bilingual website, a digital health platform and three UX concepts, plus web, visual and wayfinding work.",
+    "Product and digital experience case studies by Lamia Alrowaished: a live bilingual website, a digital health platform and three UX concepts, plus visual and wayfinding work.",
   eyebrow: "Selected work · Product & design",
   title: ["Product work,", "and the foundation", "behind it."],
   panelTitle: "Explore by discipline",
   panelText:
-    "The product work leads. The broader foundation shows how visual systems, space, and communication strengthen my UX/UI practice.",
+    "The product and digital experience work leads. The broader foundation shows how visual systems, space, and communication strengthen my UX/UI practice.",
   disciplines: [
-    { name: "Product Design", note: "5 case studies", href: "#product-design" },
+    { name: "Product & Digital Experiences", note: "5 case studies", href: "#product-design" },
     { name: "Web Design", note: "2 complete websites", href: "#foundation" },
     { name: "Visual Design", note: "Client & personal work", href: "#foundation" },
     { name: "Wayfinding", note: "Real-world project", href: "#foundation" },
   ],
-  productTitle: "Product Design",
+  productTitle: "Product & Digital Experiences",
   productIntro:
     "Five case studies: two client projects — a live bilingual website and a platform approved for development — and three UX concepts.",
   featured: homeContent.en.cards.slice(0, 2),
@@ -75,19 +75,19 @@ const en: CaseStudiesContent = {
 const ar: CaseStudiesContent = {
   metaTitle: "دراسات الحالة — لمياء الرويشد",
   metaDescription:
-    "دراسات حالة في تصميم المنتجات للمياء الرويشد: موقع ثنائي اللغة منشور، ومنصة صحية رقمية، وثلاثة مشاريع مفاهيمية، إلى جانب أعمال المواقع والتصميم البصري والتوجيه المكاني.",
+    "دراسات حالة في المنتجات والتجارب الرقمية للمياء الرويشد: موقع ثنائي اللغة منشور، ومنصة صحية رقمية، وثلاثة مشاريع مفاهيمية، إلى جانب أعمال التصميم البصري والتوجيه المكاني.",
   eyebrow: "أعمال مختارة · المنتجات والتصميم",
   title: ["تصميم المنتجات،", "والأساس الذي", "يقوم عليه."],
   panelTitle: "تصفّح حسب التخصص",
   panelText:
-    "تصميم المنتجات في المقدمة، ويُظهر الأساس الأوسع كيف تعزّز الأنظمة البصرية والمساحات والتواصل ممارستي في تصميم UX/UI.",
+    "تأتي المنتجات والتجارب الرقمية في المقدمة، ويُظهر الأساس الأوسع كيف تعزّز الأنظمة البصرية والمساحات والتواصل ممارستي في تصميم UX/UI.",
   disciplines: [
-    { name: "تصميم المنتجات", note: "5 دراسات حالة", href: "#product-design" },
+    { name: "المنتجات والتجارب الرقمية", note: "5 دراسات حالة", href: "#product-design" },
     { name: "تصميم المواقع", note: "موقعان متكاملان", href: "#foundation" },
     { name: "التصميم البصري", note: "أعمال للعملاء وأعمال شخصية", href: "#foundation" },
     { name: "التوجيه المكاني", note: "مشروع واقعي", href: "#foundation" },
   ],
-  productTitle: "تصميم المنتجات",
+  productTitle: "المنتجات والتجارب الرقمية",
   productIntro:
     "خمس دراسات حالة: مشروعان لعميلين — موقع ثنائي اللغة منشور ومنصة اعتُمدت للتطوير — وثلاثة مشاريع مفاهيمية في تجربة المستخدم.",
   featured: homeContent.ar.cards.slice(0, 2),

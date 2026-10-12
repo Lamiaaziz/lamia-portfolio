@@ -41,7 +41,22 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
       {/* 02 — OVERVIEW */}
       <OverviewCard label={c.overviewLabel} items={c.overview} icons={["person", "people", "screen", "check"]} />
 
-      {/* 03 — CHALLENGE & RESPONSE */}
+      {/* 03 — OWNERSHIP */}
+      <section className="lps-sec lps-ownership" aria-labelledby="sdm-ownership">
+        <div className="lps-sec__inner">
+          <Head id="sdm-ownership" eyebrow={c.ownership.eyebrow} title={c.ownership.title} intro={c.ownership.intro} split />
+          <ul className="lps-ownership__list">
+            {c.ownership.items.map((item, i) => (
+              <li key={item} className="lp-reveal" style={d(i)}>
+                <span className="lps-num">{pad(i)}</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 04 — CHALLENGE & RESPONSE */}
       <section className="lps-sec lps-context" aria-labelledby="sdm-context">
         <div className="lps-sec__inner">
           <Head id="sdm-context" eyebrow={c.context.eyebrow} title={c.context.title} />
@@ -57,7 +72,7 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
         </div>
       </section>
 
-      {/* 04 — DESIGN APPROACH */}
+      {/* 05 — DESIGN APPROACH */}
       <section className="lps-sec lps-approach" aria-labelledby="sdm-approach">
         <div className="lps-sec__inner">
           <Head id="sdm-approach" eyebrow={c.approach.eyebrow} title={c.approach.title} intro={c.approach.intro} split />
@@ -73,7 +88,7 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
         </div>
       </section>
 
-      {/* 05 — CONNECTED JOURNEYS */}
+      {/* 06 — CONNECTED JOURNEYS */}
       <section className="lps-sec lps-sec--dark lps-journeys" aria-labelledby="sdm-journeys">
         <div className="lps-sec__inner">
           <Head id="sdm-journeys" eyebrow={c.journeys.eyebrow} title={c.journeys.title} intro={c.journeys.intro} rule={false} split />
@@ -89,7 +104,7 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
         </div>
       </section>
 
-      {/* 06 — SELECTED SCREENS */}
+      {/* 07 — SELECTED SCREENS */}
       <section className="lps-sec lps-screens" aria-labelledby="sdm-screens">
         <div className="lps-sec__inner">
           <Head id="sdm-screens" eyebrow={c.screens.eyebrow} title={c.screens.title} intro={c.screens.intro} split />
@@ -109,7 +124,7 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
         </div>
       </section>
 
-      {/* 07 — RTL & DESIGN SYSTEM */}
+      {/* 08 — RTL & DESIGN SYSTEM */}
       <section className="lps-sec lps-system" aria-labelledby="sdm-system">
         <div className="lps-sec__inner">
           <Head id="sdm-system" eyebrow={c.system.eyebrow} title={c.system.title} />
@@ -133,7 +148,7 @@ export default function Sdm({ lang }: { lang: SiteLang }) {
         </div>
       </section>
 
-      {/* 08 — OUTCOME */}
+      {/* 09 — OUTCOME */}
       <section className="lps-sec lps-sec--dark lps-outcome" aria-labelledby="sdm-outcome">
         <div className="lps-sec__inner">
           <Head id="sdm-outcome" eyebrow={c.outcome.eyebrow} title={c.outcome.title} rule={false} />

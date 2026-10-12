@@ -46,12 +46,12 @@ export const TOOLS = [
 const en: ExperienceContent = {
   metaTitle: "Experience — Lamia Alrowaished",
   metaDescription:
-    "Career history, capabilities and tools of Lamia Alrowaished, a bilingual UX/UI product designer in Riyadh.",
-  eyebrow: "Career, capabilities & collaboration",
+    "Career history and capabilities of Lamia Alrowaished, a bilingual UX/UI product designer with a strong focus on UX research.",
+  eyebrow: "UX/UI Product Designer · UX Research Focus",
   heroTop: "Researching.",
   heroRest: ["People.", "Context.", "Needs."],
   intro:
-    "Across client development, spatial experience, and digital products, I turn conversations, context, and constraints into clearer decisions.",
+    "I combine UX research and product design to turn conversations, context, and constraints into clearer decisions and practical digital experiences.",
   scrollLabel: "Scroll to career history",
   historyEyebrow: "Career history",
   historyTitle: "Professional experience",
@@ -112,8 +112,8 @@ const en: ExperienceContent = {
       ],
     },
   ],
-  capEyebrow: "Product design capabilities",
-  capTitle: ["Capabilities for end-to-end", "product design"],
+  capEyebrow: "Research & product design capabilities",
+  capTitle: ["Capabilities across research", "and product design"],
   capIntro: "Research, product structure, interface systems, and bilingual design—from discovery through developer handoff.",
   capabilities: [
     { icon: TOOL_ICONS.research, title: "UX Research & Product Clarity", text: "Review products, identify friction, and turn findings into prioritized improvements." },
@@ -135,12 +135,12 @@ const en: ExperienceContent = {
 
 const ar: ExperienceContent = {
   metaTitle: "الخبرات — لمياء الرويشد",
-  metaDescription: "المسيرة المهنية والقدرات والأدوات لدى لمياء الرويشد، مصممة منتجات UX/UI ثنائية اللغة في الرياض.",
-  eyebrow: "المسيرة المهنية · القدرات · التعاون",
+  metaDescription: "المسيرة المهنية والقدرات لدى لمياء الرويشد، مصممة منتجات UX/UI ثنائية اللغة بتركيز قوي على أبحاث تجربة المستخدم.",
+  eyebrow: "مصممة منتجات UX/UI · تركيز على أبحاث تجربة المستخدم",
   heroTop: "أبحثُ في",
   heroRest: ["تجربة المستخدم.", "أدرس السياق.", "أحدّد الاحتياج."],
   intro:
-    "من حلول إدارة علاقات العملاء والتجارب المكانية إلى المنتجات الرقمية، أحوّل الحوارات والسياقات والقيود إلى قرارات تصميمية أكثر وضوحًا.",
+    "أجمع بين أبحاث تجربة المستخدم وتصميم المنتجات لتحويل الحوارات والسياقات والقيود إلى قرارات أوضح وتجارب رقمية عملية.",
   scrollLabel: "انتقل إلى المسيرة المهنية",
   historyEyebrow: "المسيرة المهنية",
   historyTitle: "الخبرات المهنية",
@@ -201,8 +201,8 @@ const ar: ExperienceContent = {
       ],
     },
   ],
-  capEyebrow: "قدرات تصميم المنتجات",
-  capTitle: ["قدرات متكاملة", "في تصميم المنتجات"],
+  capEyebrow: "قدرات البحث وتصميم المنتجات",
+  capTitle: ["قدرات تجمع بين البحث", "وتصميم المنتجات"],
   capIntro: "البحث، وهيكلة المنتج، وأنظمة الواجهات، والتصميم ثنائي اللغة، من الاستكشاف حتى التسليم للمطورين.",
   capabilities: [
     { icon: TOOL_ICONS.research, title: "أبحاث تجربة المستخدم ووضوح المنتج", text: "أراجع المنتجات، وأحدد نقاط الاحتكاك، وأحوّل النتائج إلى تحسينات مرتّبة حسب الأولوية." },
