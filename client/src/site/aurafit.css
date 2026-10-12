@@ -533,6 +533,7 @@
   }
 
   .lpa-hero__lead {
+    margin-top: 14px;
     font-size: 17px;
     line-height: 26px;
   }

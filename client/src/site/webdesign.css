@@ -466,8 +466,11 @@
     line-height: 28px;
   }
 
+  /* Numbers line up across both cards even when their labels wrap differently. */
   .lpd-stats li {
+    justify-content: flex-start;
     min-height: 150px;
+    padding-top: 28px;
   }
 
   .lpd-stats strong {

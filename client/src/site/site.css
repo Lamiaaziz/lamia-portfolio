@@ -1857,6 +1857,9 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
 
   .lp-hero__top,
   .lp--ar .lp-hero__top {
+    /* Narrow enough to stay inside the arch, so the first line wraps onto two lines on phones. */
+    max-width: calc(78vw - 40px);
+    margin-inline: auto;
     font-size: clamp(32px, 10vw, 44px);
     letter-spacing: 0.02em;
   }
@@ -2053,7 +2056,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   }
 
   .lp-cta__title {
-    margin-top: 72px;
+    margin-top: 100px;
     font-size: 32px;
     line-height: 38px;
   }
