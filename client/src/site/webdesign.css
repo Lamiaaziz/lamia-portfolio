@@ -1,0 +1,490 @@
+/* =============================================================================
+   Web Design (lpd-) — builds on the shared case-study styles (lps-, lpv-)
+   ========================================================================== */
+
+.lpd-hero {
+  grid-template-columns: minmax(0, 520px) minmax(0, 550px);
+  padding-top: 38px;
+  padding-bottom: 40px;
+}
+
+.lpd-hero .lpv-hero__eyebrow {
+  margin-top: 35px;
+}
+
+.lpd-hero .lpv-hero__title {
+  margin-top: 10px;
+}
+
+.lpd-hero .lpv-hero__body {
+  max-width: 470px;
+  margin-top: 26px;
+}
+
+.lpd-hero .lpv-chips {
+  margin-top: 38px;
+}
+
+.lpd-hero .lpv-hero__visual {
+  margin-top: 14px;
+}
+
+.lpd-chips li {
+  background: #f9f1db;
+  color: var(--green);
+}
+
+.lpd-label {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--green-2);
+}
+
+.lp--ar .lpd-label {
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Number cards */
+.lpd-cards {
+  display: grid;
+  gap: 24px;
+}
+
+.lpd-cards--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 50px;
+}
+
+.lpd-cards--2 {
+  grid-template-columns: repeat(2, minmax(0, 226px));
+  gap: 10px 18px;
+  margin-top: 22px;
+}
+
+.lpd-cards > li {
+  min-height: 230px;
+  padding: 22px 24px 24px;
+  border: 1px solid rgba(206, 218, 224, 0.6);
+  border-radius: 22px;
+  background: var(--paper);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.lpd-cards > li:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow-2);
+  box-shadow: 0 16px 34px rgba(48, 70, 56, 0.1);
+}
+
+.lpd-cards .lps-num {
+  display: block;
+  color: var(--green-3);
+}
+
+.lpd-cards h3 {
+  margin-top: 12px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.lpd-cards p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.lpd-cards--2 > li:nth-child(-n + 2) {
+  min-height: 250px;
+}
+
+.lpd-cards--dark > li {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: var(--green-2);
+  color: var(--paper);
+}
+
+.lpd-cards--dark > li:hover {
+  border-color: rgba(236, 194, 107, 0.55);
+  background: #4d6650;
+  box-shadow: none;
+}
+
+.lpd-cards--dark .lps-num {
+  color: var(--yellow-2);
+}
+
+.lp--ar .lpd-cards h3 {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.lp--ar .lpd-cards p {
+  line-height: 1.75;
+}
+
+/* 03 Practice */
+.lpd-practice .lps-sec__inner {
+  padding-top: 39px;
+  padding-bottom: 106px;
+}
+
+.lpd-practice__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 520px) minmax(0, 558px);
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.lpd-practice .lps-intro {
+  max-width: 520px;
+  margin-top: 30px;
+}
+
+.lpd-quote {
+  position: relative;
+  margin-top: 57px;
+  padding: 24px 50px 34px;
+  border-radius: 28px;
+  background: var(--green);
+  color: var(--paper);
+}
+
+.lpd-quote__mark {
+  display: block;
+  font-family: "DM Serif Display", serif;
+  font-size: 64px;
+  line-height: 56px;
+  color: var(--yellow-2);
+}
+
+.lpd-quote p {
+  margin-top: 16px;
+  font-family: var(--serif);
+  font-size: 29px;
+  line-height: 38px;
+}
+
+.lpd-quote footer {
+  margin-top: 26px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--yellow-2);
+}
+
+.lp--ar .lpd-quote p {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* 04 Workflow */
+.lpd-workflow .lps-sec__inner {
+  padding-top: 66px;
+  padding-bottom: 96px;
+}
+
+.lpd-workflow .lps-intro {
+  max-width: 846px;
+  margin-top: 20px;
+}
+
+/* 05–06 Projects */
+.lpd-project .lps-sec__inner {
+  padding-top: 43px;
+  padding-bottom: 90px;
+}
+
+.lpd-project__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) minmax(0, 536px);
+  justify-content: space-between;
+  gap: 48px;
+  align-items: start;
+}
+
+.lpd-project .lps-h2 {
+  max-width: 520px;
+}
+
+.lpd-project .lps-intro {
+  max-width: 478px;
+  margin-top: 30px;
+}
+
+.lpd-project .lpd-chips {
+  margin-top: 36px;
+}
+
+.lpd-project__text > .lpd-label {
+  margin-top: 58px;
+}
+
+.lpd-note {
+  margin-top: 42px;
+}
+
+.lpd-note__title {
+  max-width: 480px;
+  margin-top: 16px;
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.lpd-note__text {
+  max-width: 480px;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.lp--ar .lpd-note__title {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.lp--ar .lpd-note__text {
+  line-height: 1.75;
+}
+
+.lpd-page {
+  margin-top: -18px;
+}
+
+.lpd-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lpd-page:hover img {
+  transform: translateY(-6px);
+}
+
+.lpd-page--yellow {
+  max-width: 510px;
+  justify-self: end;
+  width: 100%;
+}
+
+.lpd-page--green {
+  margin-top: -43px;
+}
+
+/* Zigzag: every second project puts its website on the opposite side */
+.lpd-project--flip .lpd-project__grid {
+  grid-template-columns: minmax(0, 536px) minmax(0, 480px);
+}
+
+.lpd-project--flip .lpd-page {
+  order: -1;
+}
+
+.lpd-project--flip .lpd-page--yellow {
+  justify-self: start;
+}
+
+/* 07 Capabilities */
+.lpd-capabilities .lps-sec__inner {
+  padding-top: 37px;
+  padding-bottom: 80px;
+}
+
+.lpd-capabilities .lpd-cards--4 {
+  margin-top: 50px;
+}
+
+.lpd-capabilities .lpd-cards > li {
+  min-height: 250px;
+}
+
+/* 08 Outcome */
+.lpd-outcome .lps-sec__inner {
+  padding-top: 66px;
+  padding-bottom: 120px;
+}
+
+.lpd-outcome .lps-h2 {
+  max-width: 620px;
+}
+
+.lpd-outcome .lpv-outcome__text {
+  max-width: 580px;
+  margin-top: 40px;
+  font-size: 17px;
+}
+
+.lpd-outcome .lpv-outcome__grid {
+  grid-template-columns: minmax(0, 620px) minmax(0, 432px);
+}
+
+.lpd-stats {
+  display: grid;
+  grid-template-columns: 190px 218px;
+  gap: 24px;
+  margin-top: 38px;
+}
+
+.lpd-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 244px;
+  padding: 24px 22px;
+  border-radius: 24px;
+  background: var(--green-2);
+  text-align: center;
+  transition: transform 0.35s ease;
+}
+
+.lpd-stats li:hover {
+  transform: translateY(-4px);
+}
+
+.lpd-stats strong {
+  font-family: "DM Serif Display", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+  color: var(--yellow-2);
+}
+
+.lpd-stats span {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* Web Design: responsive */
+@media (max-width: 1180px) {
+  .lpd-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
+  }
+
+  .lpd-practice__grid,
+  .lpd-project__grid,
+  .lpd-project--flip .lpd-project__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .lpd-outcome .lpv-outcome__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+  }
+
+  .lpd-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .lpd-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .lpd-practice__grid,
+  .lpd-project__grid,
+  .lpd-project--flip .lpd-project__grid,
+  .lpd-outcome .lpv-outcome__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lpd-project--flip .lpd-page {
+    order: 0;
+  }
+
+  .lpd-quote {
+    margin-top: 16px;
+  }
+
+  .lpd-cards--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lpd-cards--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lpd-cards > li,
+  .lpd-cards--2 > li:nth-child(-n + 2),
+  .lpd-capabilities .lpd-cards > li {
+    min-height: 0;
+  }
+
+  .lpd-page,
+  .lpd-page--green {
+    position: static;
+    justify-self: center;
+    width: min(100%, 520px);
+    margin-top: 16px;
+  }
+
+  .lpd-stats {
+    max-width: 460px;
+    margin-top: 16px;
+  }
+
+  .lpd-stats li {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .lpd-label {
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+  }
+
+  .lpd-cards--4,
+  .lpd-cards--2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .lpd-cards > li {
+    padding: 20px;
+  }
+
+  .lpd-quote {
+    padding: 22px 24px 26px;
+  }
+
+  .lpd-quote p {
+    font-size: 23px;
+    line-height: 31px;
+  }
+
+  .lpd-note__title {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  .lpd-stats li {
+    min-height: 150px;
+  }
+
+  .lpd-stats strong {
+    font-size: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lpd-cards > li,
+  .lpd-page img,
+  .lpd-stats li {
+    transition: none;
+  }
+
+  .lpd-cards > li:hover,
+  .lpd-page:hover img,
+  .lpd-stats li:hover {
+    transform: none;
+  }
+}

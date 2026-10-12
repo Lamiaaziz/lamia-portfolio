@@ -1,0 +1,605 @@
+/* =============================================================================
+   AuraFit case study (lpa-) — builds on the shared case-study classes (lps-)
+   ========================================================================== */
+
+/* 01 Hero */
+.lpa-hero {
+  padding-top: 70px;
+}
+
+.lpa-hero .lps-hero__eyebrow {
+  margin-top: 24px;
+}
+
+.lpa-hero .lps-hero__title {
+  margin-top: 24px;
+  line-height: 78px;
+}
+
+.lpa-hero__lead {
+  max-width: 560px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.lpa-hero__body {
+  max-width: 550px;
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.lpa-hero__visual {
+  margin-top: 2px;
+}
+
+.lp--ar .lpa-hero__lead,
+.lp--ar .lpa-hero__body {
+  line-height: 1.75;
+}
+
+/* 02 Overview */
+.lpa-overview .lps-overview__inner {
+  min-height: 180px;
+}
+
+.lpa-overview dd {
+  font-size: 18px;
+}
+
+/* 03 Problem */
+.lpa-problem .lps-sec__inner {
+  padding-top: 55px;
+  padding-bottom: 70px;
+}
+
+.lpa-problem .lps-context__cards {
+  margin-top: 61px;
+}
+
+.lpa-problem .lps-card {
+  min-height: 245px;
+}
+
+.lpa-problem .lps-card h3 {
+  margin-top: 17px;
+  font-size: 29px;
+  line-height: 38px;
+}
+
+.lpa-problem .lps-card p:last-child {
+  margin-top: 18px;
+}
+
+/* 04 Research synthesis */
+.lpa-research .lps-sec__inner {
+  padding-top: 54px;
+  padding-bottom: 98px;
+}
+
+.lpa-research .lps-head__row {
+  grid-template-columns: minmax(0, 656px) minmax(0, 480px);
+  justify-content: space-between;
+}
+
+.lpa-research .lps-head__row .lps-intro,
+.lpa-visual .lps-head__row .lps-intro {
+  margin-top: 4px;
+}
+
+.lpa-insights {
+  grid-template-columns: repeat(2, minmax(0, 552px));
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 48px;
+  padding-top: 0;
+}
+
+.lpa-insights li {
+  grid-template-columns: 48px 196px minmax(0, 1fr);
+  min-height: 118px;
+}
+
+.lpa-insights p {
+  margin-inline-start: 24px;
+}
+
+/* 05 Behavioral framework */
+.lpa-framework .lps-sec__inner {
+  padding-top: 55px;
+  padding-bottom: 64px;
+}
+
+.lpa-framework .lps-head__row {
+  grid-template-columns: minmax(0, 636px) minmax(0, 470px);
+}
+
+.lpa-framework .lps-head__row .lps-h2 {
+  max-width: 604px;
+  line-height: 50px;
+}
+
+.lpa-framework .lps-head__row .lps-intro {
+  padding-top: 16px;
+}
+
+.lpa-framework .lps-rows {
+  margin-top: 18px;
+}
+
+.lpa-framework .lps-rows li {
+  grid-template-columns: 46px 379px minmax(0, 1fr);
+  min-height: 82px;
+  padding-inline-start: 11px;
+}
+
+.lpa-framework .lps-rows h3 {
+  font-size: 22px;
+}
+
+.lpa-framework .lps-rows p {
+  margin-top: 3px;
+}
+
+/* 06 Design process */
+.lpa-process .lps-sec__inner {
+  padding-top: 52px;
+  padding-bottom: 78px;
+}
+
+.lpa-steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.lpa-steps li {
+  min-height: 122px;
+  padding: 28px 16px 16px;
+  border: 1px solid rgba(206, 218, 224, 0.6);
+  border-radius: 16px;
+  background: var(--white);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lpa-steps li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(48, 70, 56, 0.1);
+}
+
+.lpa-steps li.is-on {
+  border-color: var(--yellow-2);
+  background: var(--yellow-2);
+}
+
+.lpa-steps .lps-num {
+  display: block;
+  color: var(--green);
+}
+
+.lpa-steps p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* 07 Selected screens */
+.lpa-screens .lps-sec__inner {
+  padding-top: 46px;
+  padding-bottom: 75px;
+}
+
+.lpa-screens .lps-head__row {
+  grid-template-columns: minmax(0, 644px) minmax(0, 396px);
+}
+
+.lpa-screens .lps-head__row .lps-h2 {
+  max-width: 567px;
+  line-height: 48px;
+}
+
+.lpa-screens .lps-head__row .lps-intro {
+  margin-top: 9px;
+}
+
+.lpa-phones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 352px));
+  gap: 40px 32px;
+  margin-top: 34px;
+}
+
+.lpa-phone {
+  min-height: 650px;
+  border: 1px solid rgba(206, 218, 224, 0.6);
+  border-radius: 16px;
+  background: var(--white);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.lpa-phone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 44px rgba(48, 70, 56, 0.12);
+}
+
+.lpa-phone__frame {
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.lpa-phone__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lpa-phone:hover .lpa-phone__frame img {
+  transform: translateY(-6px) scale(1.015);
+}
+
+.lpa-phone h3 {
+  margin-top: 11px;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.lpa-phone p {
+  margin-top: 6px;
+  padding: 0 20px 22px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.lp--ar .lpa-phone h3 {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 08 Persona */
+.lpa-persona .lps-sec__inner {
+  padding-top: 54px;
+  padding-bottom: 80px;
+}
+
+.lpa-persona__grid {
+  display: grid;
+  grid-template-columns: 300fr 390fr 410fr;
+  gap: 26px;
+  margin-top: 49px;
+}
+
+.lpa-persona__profile,
+.lpa-persona__card {
+  min-height: 230px;
+  border: 1px solid rgba(206, 218, 224, 0.6);
+  border-radius: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lpa-persona__profile:hover,
+.lpa-persona__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(48, 70, 56, 0.1);
+}
+
+.lpa-persona__profile {
+  padding: 24px 24px 20px;
+  border-color: var(--yellow-2);
+  background: var(--yellow-2);
+  text-align: center;
+}
+
+.lpa-persona__initial {
+  display: block;
+  font-family: var(--serif);
+  font-size: 52px;
+  line-height: 52px;
+}
+
+.lpa-persona__profile ul {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.lpa-persona__card {
+  padding: 33px 24px 24px;
+  background: var(--white);
+}
+
+.lpa-persona__card h3 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.lpa-persona__card ul {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.lpa-persona__card li {
+  position: relative;
+  padding-inline-start: 14px;
+}
+
+.lpa-persona__card li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 2px;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.lpa-persona__card.is-dark {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--paper);
+}
+
+.lpa-persona__card.is-dark h3 {
+  color: var(--yellow-2);
+}
+
+.lp--ar .lpa-persona__card h3 {
+  font-weight: 500;
+}
+
+/* 09 Visual direction */
+.lpa-visual .lps-sec__inner {
+  padding-top: 52px;
+  padding-bottom: 64px;
+}
+
+.lpa-visual .lps-head__row {
+  grid-template-columns: minmax(0, 700px) minmax(0, 440px);
+  justify-content: space-between;
+}
+
+.lpa-visual .lps-head__row .lps-h2 {
+  padding-inline-end: 0;
+}
+
+.lpa-moodboard {
+  margin-top: 48px;
+}
+
+.lpa-moodboard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* 10 Impact */
+.lpa-impact .lps-sec__inner {
+  padding-top: 55px;
+  padding-bottom: 95px;
+}
+
+.lpa-impact .lps-h2 {
+  max-width: 850px;
+}
+
+.lpa-impact .lps-outcome__text {
+  max-width: 752px;
+  margin-top: 34px;
+}
+
+.lpa-impact .lps-outcome__cards li {
+  min-height: 145px;
+  padding-top: 22px;
+}
+
+.lpa-impact .lps-outcome__cards h3 {
+  margin-top: 16px;
+}
+
+/* AuraFit: responsive */
+@media (max-width: 1180px) {
+  .lpa-framework .lps-head__row {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  }
+
+  .lpa-insights li {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .lpa-insights p {
+    grid-column: 2;
+    margin-top: 6px;
+    margin-inline-start: 0;
+  }
+
+  .lpa-framework .lps-rows li {
+    grid-template-columns: 46px minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .lpa-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lpa-phones {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .lpa-phone {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .lpa-research .lps-head__row,
+  .lpa-framework .lps-head__row,
+  .lpa-screens .lps-head__row,
+  .lpa-visual .lps-head__row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lpa-framework .lps-head__row .lps-h2,
+  .lpa-screens .lps-head__row .lps-h2 {
+    padding-inline-end: 0;
+  }
+
+  .lpa-research .lps-head__row .lps-intro,
+  .lpa-framework .lps-head__row .lps-intro,
+  .lpa-screens .lps-head__row .lps-intro {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .lpa-insights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .lpa-framework .lps-rows li {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .lpa-phones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lpa-persona__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lpa-persona__profile,
+  .lpa-persona__card {
+    min-height: 0;
+  }
+
+  .lpa-visual .lps-head__row .lps-intro {
+    margin-top: 0;
+  }
+
+  .lpa-visual .lps-head__row .lps-h2 {
+    margin-top: 0;
+  }
+
+  .lpa-moodboard,
+  .lp--ar .lpa-moodboard {
+    margin-top: 32px;
+  }
+
+  .lpa-moodboard {
+    overflow-x: auto;
+    border-radius: 16px;
+  }
+
+  .lpa-moodboard img {
+    width: 820px;
+    max-width: none;
+  }
+
+  .lpa-problem .lps-sec__inner,
+  .lpa-research .lps-sec__inner,
+  .lpa-framework .lps-sec__inner,
+  .lpa-process .lps-sec__inner,
+  .lpa-screens .lps-sec__inner,
+  .lpa-persona .lps-sec__inner,
+  .lpa-visual .lps-sec__inner,
+  .lpa-impact .lps-sec__inner {
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  .lpa-steps,
+  .lpa-phones,
+  .lpa-problem .lps-context__cards,
+  .lpa-persona__grid {
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .lpa-hero .lps-hero__title {
+    line-height: 56px;
+  }
+
+  .lpa-hero__lead {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .lpa-hero__body {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .lpa-problem .lps-card {
+    min-height: 0;
+  }
+
+  .lpa-problem .lps-card h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .lpa-framework .lps-rows li {
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding-inline-start: 0;
+  }
+
+  .lpa-framework .lps-head__row .lps-h2,
+  .lpa-screens .lps-head__row .lps-h2 {
+    line-height: 40px;
+  }
+
+  .lpa-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .lpa-steps li {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+
+  .lpa-steps p {
+    margin-top: 10px;
+  }
+
+  .lpa-phones {
+    grid-template-columns: minmax(0, 340px);
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .lpa-moodboard img {
+    width: 720px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lpa-steps li,
+  .lpa-phone,
+  .lpa-phone__frame img,
+  .lpa-persona__profile,
+  .lpa-persona__card {
+    transition: none;
+  }
+
+  .lpa-steps li:hover,
+  .lpa-phone:hover,
+  .lpa-phone:hover .lpa-phone__frame img,
+  .lpa-persona__profile:hover,
+  .lpa-persona__card:hover {
+    transform: none;
+  }
+}

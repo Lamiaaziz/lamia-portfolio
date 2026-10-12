@@ -214,23 +214,23 @@
 }
 
 /* ── Arabic / RTL — Tajawal font + line-height ── */
-[dir="rtl"] {
+[dir="rtl"]:not(.lp) {
   font-family: 'Tajawal', sans-serif !important;
   line-height: 1.5;
 }
-[dir="rtl"] *,
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3,
-[dir="rtl"] h4,
-[dir="rtl"] p,
-[dir="rtl"] span,
-[dir="rtl"] a,
-[dir="rtl"] button,
-[dir="rtl"] li,
-[dir="rtl"] label,
-[dir="rtl"] input,
-[dir="rtl"] .section-num {
+[dir="rtl"] *:not(.lp, .lp *),
+[dir="rtl"] h1:not(.lp, .lp *),
+[dir="rtl"] h2:not(.lp, .lp *),
+[dir="rtl"] h3:not(.lp, .lp *),
+[dir="rtl"] h4:not(.lp, .lp *),
+[dir="rtl"] p:not(.lp, .lp *),
+[dir="rtl"] span:not(.lp, .lp *),
+[dir="rtl"] a:not(.lp, .lp *),
+[dir="rtl"] button:not(.lp, .lp *),
+[dir="rtl"] li:not(.lp, .lp *),
+[dir="rtl"] label:not(.lp, .lp *),
+[dir="rtl"] input:not(.lp, .lp *),
+[dir="rtl"] .section-num:not(.lp, .lp *) {
   font-family: 'Tajawal', sans-serif !important;
   line-height: 1.5;
 }
