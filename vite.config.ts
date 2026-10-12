@@ -150,10 +150,15 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
-
-export default defineConfig({
-  plugins,
+// The Manus editor helpers (inline runtime script, debug collector and
+// per-element source attributes) are only useful while developing. Keeping
+// them out of the production build makes the live site much lighter.
+export default defineConfig(({ command }) => ({
+  plugins: [
+    react(),
+    tailwindcss(),
+    ...(command === "serve" ? [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()] : []),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -185,4 +190,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
