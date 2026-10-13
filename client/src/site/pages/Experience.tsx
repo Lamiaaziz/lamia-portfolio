@@ -2,7 +2,6 @@ import { CSSProperties } from "react";
 import { experienceContent, TOOLS } from "../content/experience";
 import { SiteLang, usePageMeta } from "../i18n";
 import { SiteLayout } from "../Layout";
-import { ContactCta } from "../components/ContactCta";
 import { useReveal } from "../useReveal";
 import { useScrollFx } from "../scrollFx";
 
@@ -136,8 +135,6 @@ export default function Experience({ lang }: { lang: SiteLang }) {
           </ul>
         </div>
       </section>
-
-      <ContactCta lang={lang} />
     </SiteLayout>
   );
 }

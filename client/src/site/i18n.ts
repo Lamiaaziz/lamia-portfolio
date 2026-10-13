@@ -29,8 +29,6 @@ export function localPath(path: string, lang: SiteLang): string {
 
 export const CONTACT = {
   email: "lamiaaziz90@gmail.com",
-  phone: "+966 58 034 3817",
-  phoneHref: "tel:+966580343817",
   linkedin: "https://www.linkedin.com/in/lamia-a-09179917a/",
   linkedinLabel: "linkedin.com/in/lamia-a",
   cv: asset("/LamiaAlrowaished-CV.pdf"),

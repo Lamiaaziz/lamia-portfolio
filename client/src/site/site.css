@@ -4939,6 +4939,42 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   font-weight: 400;
 }
 
+/* 03 Ownership */
+.lps-ownership .lps-sec__inner {
+  padding-top: 58px;
+  padding-bottom: 76px;
+}
+
+.lps-ownership__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.lps-ownership__list li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  min-height: 104px;
+  padding: 22px 20px;
+  border: 1px solid rgba(206, 218, 224, 0.6);
+  border-radius: 16px;
+  background: var(--white);
+  font-size: 15px;
+  line-height: 24px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lps-ownership__list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(48, 70, 56, 0.1);
+}
+
+.lps-ownership__list .lps-num {
+  color: var(--green-3);
+}
+
 /* Shared white card */
 .lps-card,
 .lps-steps li,
@@ -4949,7 +4985,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   background: var(--white);
 }
 
-/* 03 Challenge & response */
+/* 04 Challenge & response */
 .lps-context .lps-sec__inner {
   padding-top: 58px;
   padding-bottom: 66px;
@@ -4992,7 +5028,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   color: var(--yellow-2);
 }
 
-/* 04 Design approach */
+/* 05 Design approach */
 .lps-approach .lps-sec__inner {
   padding-top: 52px;
   padding-bottom: 92px;
@@ -5052,7 +5088,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   color: var(--green-deep);
 }
 
-/* 05 Connected journeys */
+/* 06 Connected journeys */
 .lps-journeys .lps-sec__inner {
   padding-top: 54px;
   padding-bottom: 92px;
@@ -5100,7 +5136,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   line-height: 26px;
 }
 
-/* 06 Selected screens */
+/* 07 Selected screens */
 .lps-screens .lps-sec__inner {
   padding-top: 54px;
   padding-bottom: 96px;
@@ -5169,7 +5205,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   text-align: end;
 }
 
-/* 07 RTL & design system */
+/* 08 RTL & design system */
 .lps-system .lps-sec__inner {
   padding-top: 52px;
   padding-bottom: 152px;
@@ -5238,7 +5274,7 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   line-height: 23px;
 }
 
-/* 08 Outcome */
+/* 09 Outcome */
 .lps-outcome .lps-sec__inner {
   padding-top: 39px;
   padding-bottom: 110px;
@@ -5406,6 +5442,10 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
     margin-top: 36px;
   }
 
+  .lps-ownership__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lps-steps {
     margin-top: 40px;
   }
@@ -5541,6 +5581,15 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
     padding: 24px 22px;
   }
 
+  .lps-ownership__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .lps-ownership__list li {
+    min-height: 0;
+  }
+
   .lps-card h3 {
     font-size: 24px;
     line-height: 30px;
@@ -5621,7 +5670,8 @@ html.fx-ready:not(.fxoff-sun) .lp-cta__label {
   .lps-shot,
   .lps-shot__frame img,
   .lps-steps li,
-  .lps-principles li {
+  .lps-principles li,
+  .lps-ownership__list li {
     transition: none;
   }
 

@@ -10,6 +10,7 @@ export type SdmContent = {
   hero: { eyebrow: string; title: string[]; summary: string; note: string; visual: string; visualAlt: string };
   overviewLabel: string;
   overview: { label: string; value: string }[];
+  ownership: { eyebrow: string; title: string; intro: string; items: string[] };
   context: {
     eyebrow: string;
     title: string;
@@ -51,6 +52,20 @@ export const sdmContent: Record<SiteLang, SdmContent> = {
       { label: "Platform", value: "Responsive RTL web platform" },
       { label: "Status", value: "Approved & handed off" },
     ],
+    ownership: {
+      eyebrow: "Scope & responsibility",
+      title: "What I owned",
+      intro:
+        "I led the UX/UI work from requirements and journey definition through the approved developer handoff, collaborating with the client and team on scope, feedback, and delivery.",
+      items: [
+        "Stakeholder discovery & requirements synthesis",
+        "Patient and doctor journey mapping",
+        "Information architecture & task flows",
+        "Native RTL interface design",
+        "Reusable design system",
+        "High-fidelity screens & developer handoff",
+      ],
+    },
     context: {
       eyebrow: "Project context",
       title: "The challenge and the response",
@@ -155,6 +170,20 @@ export const sdmContent: Record<SiteLang, SdmContent> = {
       { label: "المنصة", value: "منصة ويب متجاوبة من اليمين لليسار" },
       { label: "الحالة", value: "معتمد ومُسلَّم للتطوير" },
     ],
+    ownership: {
+      eyebrow: "النطاق والمسؤولية",
+      title: "ما تولّيتُ مسؤوليته",
+      intro:
+        "قُدتُ عمل UX/UI من فهم المتطلبات وتحديد الرحلات حتى التسليم المعتمد للمطورين، بالتعاون مع العميل والفريق في تحديد النطاق والملاحظات والتسليم.",
+      items: [
+        "استكشاف احتياجات أصحاب المصلحة وتلخيص المتطلبات",
+        "رسم رحلتَي المريض والطبيب",
+        "بنية المعلومات ومسارات المهام",
+        "تصميم واجهات أصيلة من اليمين لليسار",
+        "نظام تصميم قابل لإعادة الاستخدام",
+        "الشاشات عالية الدقة والتسليم للمطورين",
+      ],
+    },
     context: {
       eyebrow: "سياق المشروع",
       title: "التحدي والاستجابة",

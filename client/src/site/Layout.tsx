@@ -39,7 +39,7 @@ const T = {
     menu: "Menu",
     close: "Close menu",
     footerName: "Lamia Abdulaziz Alrowaished",
-    footerTag: ["UX/UI product designer · Saudi Arabia", "Clear digital products, designed around people."],
+    footerTag: ["UX/UI product designer · UX research focus · Saudi Arabia", "Clear digital products, designed around people."],
     pages: "Pages",
     contact: "Contact",
     cv: "Download CV",
@@ -54,7 +54,7 @@ const T = {
     menu: "القائمة",
     close: "إغلاق القائمة",
     footerName: "لمياء عبدالعزيز الرويشد",
-    footerTag: ["مصممة تجربة وواجهات مستخدم (UX/UI) · المملكة العربية السعودية", "منتجات رقمية واضحة، مصمّمة حول الإنسان."],
+    footerTag: ["مصممة منتجات UX/UI · تركيز على أبحاث المستخدم · المملكة العربية السعودية", "منتجات رقمية واضحة، مصمّمة حول الإنسان."],
     pages: "الصفحات",
     contact: "التواصل",
     cv: "تحميل السيرة الذاتية",
@@ -259,7 +259,6 @@ export function SiteLayout({ lang, active, children }: { lang: SiteLang; active:
             <h2 className="lp-footer__h">{t.contact}</h2>
             <ul>
               <li><a href={`mailto:${CONTACT.email}`} dir="ltr">{CONTACT.email}</a></li>
-              <li><a href={CONTACT.phoneHref} dir="ltr">{CONTACT.phone}</a></li>
               <li><a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" dir="ltr">{CONTACT.linkedinLabel}</a></li>
               <li>
                 <a href={CONTACT.cv} download className="lp-footer__cv">
